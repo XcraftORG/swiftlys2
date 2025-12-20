@@ -14,7 +14,10 @@ namespace SwiftlyS2.Core.SchemaDefinitions;
 
 internal partial class CEntityIOOutputImpl : SchemaClass, CEntityIOOutput
 {
-    public CEntityIOOutputImpl(nint handle) : base(handle) { }
+
+    public CEntityIOOutputImpl( nint handle ) : base(handle)
+    {
+    }
 
     private static nint? _ValueOffset;
 
