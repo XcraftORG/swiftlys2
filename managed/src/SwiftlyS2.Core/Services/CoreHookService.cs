@@ -152,16 +152,18 @@ internal class CoreHookService : IDisposable
         {
             return ( pEntityIO, pActivator, pCaller, pVariant, flDelay, unk1, unk2 ) =>
             {
-                var entityIO = pEntityIO.AsRef<NativeCEntityIOOutput>();
+                var entityIO = pEntityIO.AsRef<CEntityIOOutput>();
 
-                var outputName = InteropHelp.PtrToStringUTF8(entityIO.m_pDesc->m_pName);
+                var outputName = entityIO.Desc.Name.Value;
                 var activator = pActivator != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pActivator) : null;
                 var caller = pCaller != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pCaller) : null;
 
                 var variant = pVariant.AsRef<CVariant>();
 
                 var @event = new OnEntityFireOutputHookEvent {
-                    EntityIO = new CEntityIOOutputImpl(pEntityIO),
+                    _entityIO = (CEntityIOOutput*)pEntityIO,
+                    _variant = (CVariant*)pVariant,
+                    DesignerName = caller?.DesignerName ?? string.Empty,
                     OutputName = outputName,
                     Activator = activator,
                     Caller = caller,

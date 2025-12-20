@@ -1,6 +1,12 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Text;
+using SwiftlyS2.Core.Extensions;
+using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Shared.SchemaDefinitions;
+using SwiftlyS2.Shared.Schemas;
 
 namespace SwiftlyS2.Shared.Natives;
 
@@ -91,303 +97,33 @@ public enum VariantFieldType : byte
     FIELD_TYPECOUNT
 }
 
-[StructLayout(LayoutKind.Sequential, Size = 0x8)]
-public unsafe struct CVariantData
+[Flags]
+public enum CVFlags
 {
-    private fixed byte data[8];
+    FREE = 0x01,
+}
 
-    public bool Bool {
-        readonly get => As<byte>() != 0;
-        set => AsRef<byte>() = value ? (byte)1 : (byte)0;
-    }
+[StructLayout(LayoutKind.Sequential, Size = 0x8)]
+internal unsafe struct CVariantData
+{
+    public nint data;
 
-    public byte Byte {
-        readonly get => As<byte>();
-        set => AsRef<byte>() = value;
-    }
+    public nint ThisPointer => (nint)Unsafe.AsPointer(ref this);
 
-    public short Int16 {
-        readonly get => As<short>();
-        set => AsRef<short>() = value;
-    }
-
-    public ushort UInt16 {
-        readonly get => As<ushort>();
-        set => AsRef<ushort>() = value;
-    }
-
-    public int Int32 {
-        readonly get => As<int>();
-        set => AsRef<int>() = value;
-    }
-
-    public uint UInt32 {
-        readonly get => As<uint>();
-        set => AsRef<uint>() = value;
-    }
-
-    public long Int64 {
-        readonly get => As<long>();
-        set => AsRef<long>() = value;
-    }
-
-    public ulong UInt64 {
-        readonly get => As<ulong>();
-        set => AsRef<ulong>() = value;
-    }
-
-    public float Float {
-        readonly get => As<float>();
-        set => AsRef<float>() = value;
-    }
-
-    public double Double {
-        readonly get => As<double>();
-        set => AsRef<double>() = value;
-    }
-
-    public nint Raw {
-        readonly get => As<nint>();
-        set => AsRef<nint>() = value;
-    }
-
-    public CHandle<CEntityInstance> EntityInstanceHandle {
-        readonly get => As<CHandle<CEntityInstance>>();
-        set => AsRef<CHandle<CEntityInstance>>() = value;
-    }
-
-    public CString String {
-        readonly get => As<CString>();
-        set => AsRef<CString>() = value;
-    }
-
-    public CUtlStringToken StringToken {
-        readonly get => As<CUtlStringToken>();
-        set => AsRef<CUtlStringToken>() = value;
-    }
-
-    public ResourceHandle* ResourceHandle {
-        readonly get => As<nint>() == 0 ? null : (ResourceHandle*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    public Vector* Vector {
-        readonly get => As<nint>() == 0 ? null : (Vector*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    public Vector2D* Vector2D {
-        readonly get => As<nint>() == 0 ? null : (Vector2D*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    public Vector4D* Vector4D {
-        readonly get => As<nint>() == 0 ? null : (Vector4D*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    public QAngle* QAngle {
-        readonly get => As<nint>() == 0 ? null : (QAngle*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    public Quaternion* Quaternion {
-        readonly get => As<nint>() == 0 ? null : (Quaternion*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    public Color* Color {
-        readonly get => As<nint>() == 0 ? null : (Color*)As<nint>();
-        set => AsRef<nint>() = (nint)value;
-    }
-
-    private ref T AsRef<T>() where T : unmanaged
+    public bool TryGetInnerPointer( out nint ptr )
     {
-        fixed (byte* ptr = data)
-        {
-            return ref *(T*)ptr;
-        }
-    }
-
-    private readonly T As<T>() where T : unmanaged
-    {
-        fixed (byte* ptr = data)
-        {
-            return *(T*)ptr;
-        }
-    }
-
-    public readonly bool TryGet<T>( out T result ) where T : unmanaged
-    {
-        if (sizeof(T) <= 8)
-        {
-            fixed (byte* ptr = data)
-            {
-                result = *(T*)ptr;
-                return true;
-            }
-        }
-        result = default;
-        return false;
-    }
-
-    public VariantFieldType Set( object? value )
-    {
-        if (value is bool boolValue)
-        {
-            Byte = boolValue ? (byte)1 : (byte)0;
-            return VariantFieldType.FIELD_BOOLEAN;
-        }
-        else if (value is byte || value is sbyte)
-        {
-            Byte = Convert.ToByte(value);
-            return VariantFieldType.FIELD_CHARACTER;
-        }
-        else if (value is short shortVal)
-        {
-            Int16 = shortVal;
-            return VariantFieldType.FIELD_INT16;
-        }
-        else if (value is ushort ushortVal)
-        {
-            UInt16 = ushortVal;
-            return VariantFieldType.FIELD_UINT16;
-        }
-        else if (value is int intVal)
-        {
-            Int32 = intVal;
-            return VariantFieldType.FIELD_INT32;
-        }
-        else if (value is uint uintVal)
-        {
-            UInt32 = uintVal;
-            return VariantFieldType.FIELD_UINT32;
-        }
-        else if (value is long || value is nint)
-        {
-            Int64 = Convert.ToInt64(value);
-            return VariantFieldType.FIELD_INT64;
-        }
-        else if (value is ulong || value is nuint)
-        {
-            UInt64 = Convert.ToUInt64(value);
-            return VariantFieldType.FIELD_UINT64;
-        }
-        else if (value is float floatVal)
-        {
-            Float = floatVal;
-            return VariantFieldType.FIELD_FLOAT32;
-        }
-        else if (value is double doubleVal)
-        {
-            Double = doubleVal;
-            return VariantFieldType.FIELD_FLOAT64;
-        }
-        else if (value is string stringVal)
-        {
-            String = new CString { Value = stringVal };
-            return VariantFieldType.FIELD_CSTRING;
-        }
-        else if (value is ResourceHandle resourceHandleVal)
-        {
-            ResourceHandle = &resourceHandleVal;
-            return VariantFieldType.FIELD_RESOURCE;
-        }
-        else if (value != null && value.GetType() == typeof(ResourceHandle*))
-        {
-            ResourceHandle = (ResourceHandle*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_RESOURCE;
-        }
-        else if (value is Vector vectorVal)
-        {
-            Vector = &vectorVal;
-            return VariantFieldType.FIELD_VECTOR;
-        }
-        else if (value != null && value.GetType() == typeof(Vector*))
-        {
-            Vector = (Vector*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_VECTOR;
-        }
-        else if (value is QAngle qangleVal)
-        {
-            QAngle = &qangleVal;
-            return VariantFieldType.FIELD_QANGLE;
-        }
-        else if (value != null && value.GetType() == typeof(QAngle*))
-        {
-            QAngle = (QAngle*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_QANGLE;
-        }
-        else if (value is Vector2D vector2DVal)
-        {
-            Vector2D = &vector2DVal;
-            return VariantFieldType.FIELD_VECTOR2D;
-        }
-        else if (value != null && value.GetType() == typeof(Vector2D*))
-        {
-            Vector2D = (Vector2D*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_VECTOR2D;
-        }
-        else if (value is Vector4D vector4DVal)
-        {
-            Vector4D = &vector4DVal;
-            return VariantFieldType.FIELD_VECTOR4D;
-        }
-        else if (value != null && value.GetType() == typeof(Vector4D*))
-        {
-            Vector4D = (Vector4D*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_VECTOR4D;
-        }
-        else if (value is Quaternion quaternionVal)
-        {
-            Quaternion = &quaternionVal;
-            return VariantFieldType.FIELD_QUATERNION;
-        }
-        else if (value != null && value.GetType() == typeof(Quaternion*))
-        {
-            Quaternion = (Quaternion*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_QUATERNION;
-        }
-        else if (value is Color colorVal)
-        {
-            Color = &colorVal;
-            return VariantFieldType.FIELD_COLOR32;
-        }
-        else if (value != null && value.GetType() == typeof(Color*))
-        {
-            Color = (Color*)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_COLOR32;
-        }
-        else if (value is CHandle<CEntityInstance> handleVal)
-        {
-            EntityInstanceHandle = handleVal;
-            return VariantFieldType.FIELD_EHANDLE;
-        }
-        else if (value is CUtlStringToken tokenVal)
-        {
-            StringToken = tokenVal;
-            return VariantFieldType.FIELD_UTLSTRINGTOKEN;
-        }
-        else if (value != null && value.GetType().IsPointer)
-        {
-            Int64 = (long)Pointer.Unbox(value);
-            return VariantFieldType.FIELD_INT64;
-        }
-        else
-        {
-            String = new CString { Value = string.Empty };
-            return VariantFieldType.FIELD_CSTRING;
-        }
+        ptr = data;
+        return ptr.IsValidPtr();
     }
 }
 
 [StructLayout(LayoutKind.Explicit, Size = 0x10)]
 public struct CVariant
 {
-    [FieldOffset(0x0)] public CVariantData Data;            // 8 bytes (union)
+    [FieldOffset(0x0)] private CVariantData Data;            // 8 bytes (union)
     [FieldOffset(0x8)] public VariantFieldType DataType;    // 1 byte (uint8 enum)
     // 1 byte padding
-    [FieldOffset(0xA)] public ushort Flags;                 // 2 bytes
+    [FieldOffset(0xA)] public CVFlags Flags;                 // 2 bytes
     // 4 bytes padding for alignment
 
     public CVariant() : this(null)
@@ -396,11 +132,495 @@ public struct CVariant
 
     public CVariant( object? value )
     {
+        Data = new();
         Set(value);
     }
 
-    public void Set( object? value )
+    private void Free()
     {
-        DataType = Data.Set(value);
+        if (Flags.HasFlag(CVFlags.FREE))
+        {
+            if (Data.TryGetInnerPointer(out nint ptr))
+            {
+                NativeAllocator.Free(ptr);
+            }
+        }
+        Data.ThisPointer.Write(0);
+        Flags &= ~CVFlags.FREE;
+        DataType = VariantFieldType.FIELD_VOID;
+    }
+
+    private void SetAllocated()
+    {
+        Flags |= CVFlags.FREE;
+    }
+    private void CopyData<T>( T value ) where T : unmanaged
+    {
+        unsafe
+        {
+            var memory = NativeAllocator.Alloc((ulong)sizeof(T));
+            memory.Write(value);
+            Data.ThisPointer.Write(memory);
+            SetAllocated();
+        }
+    }
+
+    public readonly bool IsVoid()
+    {
+        return DataType == VariantFieldType.FIELD_VOID;
+    }
+    private bool TryGetUnmanaged<T>( [MaybeNullWhen(false)] out T value, VariantFieldType targetType ) where T : unmanaged
+    {
+        if (IsVoid())
+        {
+            value = default;
+            return false;
+        }
+        if (DataType != targetType)
+        {
+            value = default;
+            return false;
+        }
+        value = Data.ThisPointer.Read<T>();
+        return true;
+    }
+    private bool TryGetAllocated<T>( [MaybeNullWhen(false)] out T value, VariantFieldType targetType ) where T : unmanaged
+    {
+        if (IsVoid())
+        {
+            value = default;
+            return false;
+        }
+        if (DataType != targetType)
+        {
+            value = default;
+            return false;
+        }
+        if (Data.TryGetInnerPointer(out var ptr))
+        {
+            value = ptr.Read<T>();
+            return true;
+        }
+        value = default;
+        return false;
+    }
+
+    public void SetBool( bool value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_BOOLEAN;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetChar( char value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_CHARACTER;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetShort( short value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_INT16;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetUShort( ushort value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_UINT16;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetInt( int value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_INT32;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetUInt( uint value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_UINT32;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetLong( long value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_INT64;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetULong( ulong value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_UINT64;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetFloat( float value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_FLOAT32;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetDouble( double value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_FLOAT64;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetResourceHandle( ResourceHandle value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_RESOURCE;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetUtlStringToken( CUtlStringToken value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_UTLSTRINGTOKEN;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetHScript( HSCRIPT value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_HSCRIPT;
+        Data.ThisPointer.Write(value);
+    }
+    public void SetHandle( ICHandle value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_EHANDLE;
+        Data.ThisPointer.Write(value.Raw);
+    }
+    public void SetString( string value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_STRING;
+        var len = Encoding.UTF8.GetByteCount(value);
+        var buffer = NativeAllocator.Alloc((ulong)(len + 1));
+        buffer.CopyFrom(Encoding.UTF8.GetBytes(value));
+        buffer.Write(len, 0);
+        Data.ThisPointer.Write(buffer);
+        SetAllocated();
+    }
+    public void SetVector2D( Vector2D value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_VECTOR2D;
+        CopyData(value);
+    }
+    public void SetVector( Vector value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_VECTOR;
+        CopyData(value);
+    }
+    public void SetVector4D( Vector4D value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_VECTOR4D;
+        CopyData(value);
+    }
+    public void SetQAngle( QAngle value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_QANGLE;
+        CopyData(value);
+    }
+    public void SetQuaternion( Quaternion value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_QUATERNION;
+        CopyData(value);
+    }
+    public void SetColor( Color value )
+    {
+        Free();
+        DataType = VariantFieldType.FIELD_COLOR32;
+        CopyData(value);
+    }
+
+    public void Set<T>( T value )
+    {
+        unsafe
+        {
+
+            if (value is bool boolValue)
+            {
+                SetBool(boolValue);
+            }
+            else if (value is char charValue)
+            {
+                SetChar(charValue);
+            }
+            else if (value is short shortValue)
+            {
+                SetShort(shortValue);
+            }
+            else if (value is ushort ushortValue)
+            {
+                SetUShort(ushortValue);
+            }
+            else if (value is int intValue)
+            {
+                SetInt(intValue);
+            }
+            else if (value is uint uintValue)
+            {
+                SetUInt(uintValue);
+            }
+            else if (value is long longValue)
+            {
+                SetLong(longValue);
+            }
+            else if (value is ulong ulongValue)
+            {
+                SetULong(ulongValue);
+            }
+            else if (value is float floatValue)
+            {
+                SetFloat(floatValue);
+            }
+            else if (value is double doubleValue)
+            {
+                SetDouble(doubleValue);
+            }
+            else if (value is string stringValue)
+            {
+                SetString(stringValue);
+            }
+            else if (value is ResourceHandle resourceHandle)
+            {
+                SetResourceHandle(resourceHandle);
+            }
+            else if (value is CUtlStringToken utlStringToken)
+            {
+                SetUtlStringToken(utlStringToken);
+            }
+            else if (value is HSCRIPT hscript)
+            {
+                SetHScript(hscript);
+            }
+            else if (value is ICHandle handle)
+            {
+                SetHandle(handle);
+            }
+            else if (value is Vector2D vector2D)
+            {
+                SetVector2D(vector2D);
+            }
+            else if (value is Vector vector)
+            {
+                SetVector(vector);
+            }
+            else if (value is Vector4D vector4D)
+            {
+                SetVector4D(vector4D);
+            }
+            else if (value is QAngle qAngle)
+            {
+                SetQAngle(qAngle);
+            }
+            else if (value is Quaternion quaternion)
+            {
+                SetQuaternion(quaternion);
+            }
+            else if (value is Color color)
+            {
+                SetColor(color);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Unsupported type: {typeof(T).Name}");
+            }
+        }
+    }
+
+    public bool TryGetBool( [MaybeNullWhen(false)] out bool value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_BOOLEAN);
+    }
+    public bool TryGetChar( [MaybeNullWhen(false)] out char value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_CHARACTER);
+    }
+    public bool TryGetInt16( [MaybeNullWhen(false)] out short value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_INT16);
+    }
+    public bool TryGetUInt16( [MaybeNullWhen(false)] out ushort value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_UINT16);
+    }
+    public bool TryGetInt32( [MaybeNullWhen(false)] out int value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_INT32);
+    }
+    public bool TryGetUInt32( [MaybeNullWhen(false)] out uint value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_UINT32);
+    }
+    public bool TryGetInt64( [MaybeNullWhen(false)] out long value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_INT64);
+    }
+    public bool TryGetUInt64( [MaybeNullWhen(false)] out ulong value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_UINT64);
+    }
+    public bool TryGetFloat( [MaybeNullWhen(false)] out float value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_FLOAT32);
+    }
+    public bool TryGetDouble( [MaybeNullWhen(false)] out double value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_FLOAT64);
+    }
+    public bool TryGetResourceHandle( [MaybeNullWhen(false)] out ResourceHandle value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_RESOURCE);
+    }
+    public bool TryGetUtlStringToken( [MaybeNullWhen(false)] out CUtlStringToken value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_UTLSTRINGTOKEN);
+    }
+    public bool TryGetHScript( [MaybeNullWhen(false)] out HSCRIPT value )
+    {
+        return TryGetUnmanaged(out value, VariantFieldType.FIELD_HSCRIPT);
+    }
+    public bool TryGetCHandle<T>( [MaybeNullWhen(false)] out CHandle<T> value ) where T : class, ISchemaClass<T>
+    {
+        if (IsVoid())
+        {
+            value = default;
+            return false;
+        }
+        if (DataType != VariantFieldType.FIELD_EHANDLE)
+        {
+            value = default;
+            return false;
+        }
+        value = new CHandle<T>(Data.ThisPointer.Read<uint>());
+        return true;
+    }
+    public bool TryGetVector2D( [MaybeNullWhen(false)] out Vector2D value )
+    {
+        return TryGetAllocated(out value, VariantFieldType.FIELD_VECTOR2D);
+    }
+    public bool TryGetVector( [MaybeNullWhen(false)] out Vector value )
+    {
+        return TryGetAllocated(out value, VariantFieldType.FIELD_VECTOR);
+    }
+    public bool TryGetVector4D( [MaybeNullWhen(false)] out Vector4D value )
+    {
+        return TryGetAllocated(out value, VariantFieldType.FIELD_VECTOR4D);
+    }
+    public bool TryGetQAngle( [MaybeNullWhen(false)] out QAngle value )
+    {
+        return TryGetAllocated(out value, VariantFieldType.FIELD_QANGLE);
+    }
+    public bool TryGetQuaternion( [MaybeNullWhen(false)] out Quaternion value )
+    {
+        return TryGetAllocated(out value, VariantFieldType.FIELD_QUATERNION);
+    }
+    public bool TryGetColor( [MaybeNullWhen(false)] out Color value )
+    {
+        return TryGetAllocated(out value, VariantFieldType.FIELD_COLOR32);
+    }
+    public bool TryGetString( [MaybeNullWhen(false)] out string value )
+    {
+        if (TryGetUnmanaged(out nint ptr, VariantFieldType.FIELD_STRING))
+        {
+            value = Marshal.PtrToStringUTF8(ptr)!;
+            return true;
+        }
+        value = default;
+        return false;
+    }
+
+    public override string? ToString()
+    {
+        if (TryGetBool(out var boolValue))
+        {
+            return $"CVariant(Type={DataType}, Value={boolValue}, Flags={Flags})";
+        }
+        else if (TryGetChar(out var charValue))
+        {
+            return $"CVariant(Type={DataType}, Value={charValue}, Flags={Flags})";
+        }
+        else if (TryGetInt16(out var int16Value))
+        {
+            return $"CVariant(Type={DataType}, Value={int16Value}, Flags={Flags})";
+        }
+        else if (TryGetUInt16(out var uint16Value))
+        {
+            return $"CVariant(Type={DataType}, Value={uint16Value}, Flags={Flags})";
+        }
+        else if (TryGetInt32(out var int32Value))
+        {
+            return $"CVariant(Type={DataType}, Value={int32Value}, Flags={Flags})";
+        }
+        else if (TryGetUInt32(out var uint32Value))
+        {
+            return $"CVariant(Type={DataType}, Value={uint32Value}, Flags={Flags})";
+        }
+        else if (TryGetInt64(out var int64Value))
+        {
+            return $"CVariant(Type={DataType}, Value={int64Value}, Flags={Flags})";
+        }
+        else if (TryGetUInt64(out var uint64Value))
+        {
+            return $"CVariant(Type={DataType}, Value={uint64Value}, Flags={Flags})";
+        }
+        else if (TryGetFloat(out var floatValue))
+        {
+            return $"CVariant(Type={DataType}, Value={floatValue}, Flags={Flags})";
+        }
+        else if (TryGetDouble(out var doubleValue))
+        {
+            return $"CVariant(Type={DataType}, Value={doubleValue}, Flags={Flags})";
+        }
+        else if (TryGetResourceHandle(out var resourceHandleValue))
+        {
+            return $"CVariant(Type={DataType}, Value={resourceHandleValue}, Flags={Flags})";
+        }
+        else if (TryGetUtlStringToken(out var utlStringTokenValue))
+        {
+            return $"CVariant(Type={DataType}, Value={utlStringTokenValue}, Flags={Flags})";
+        }
+        else if (TryGetHScript(out var hscriptValue))
+        {
+            return $"CVariant(Type={DataType}, Value={hscriptValue}, Flags={Flags})";
+        }
+        else if (TryGetCHandle<CBaseEntity>(out var handleValue))
+        {
+            return $"CVariant(Type={DataType}, Value={handleValue.Raw}, Flags={Flags})";
+        }
+        else if (TryGetVector2D(out var vector2DValue))
+        {
+            return $"CVariant(Type={DataType}, Value={vector2DValue}, Flags={Flags})";
+        }
+        else if (TryGetVector(out var vectorValue))
+        {
+            return $"CVariant(Type={DataType}, Value={vectorValue}, Flags={Flags})";
+        }
+        else if (TryGetVector4D(out var vector4DValue))
+        {
+            return $"CVariant(Type={DataType}, Value={vector4DValue}, Flags={Flags})";
+        }
+        else if (TryGetQAngle(out var qAngleValue))
+        {
+            return $"CVariant(Type={DataType}, Value={qAngleValue}, Flags={Flags})";
+        }
+        else if (TryGetQuaternion(out var quaternionValue))
+        {
+            return $"CVariant(Type={DataType}, Value={quaternionValue}, Flags={Flags})";
+        }
+        else if (TryGetColor(out var colorValue))
+        {
+            return $"CVariant(Type={DataType}, Value={colorValue}, Flags={Flags})";
+        }
+        else if (TryGetString(out var stringValue))
+        {
+            return $"CVariant(Type={DataType}, Value={stringValue}, Flags={Flags})";
+        }
+        return $"CVariant(Type={DataType}, Flags={Flags}, UnknownValue)";
     }
 }

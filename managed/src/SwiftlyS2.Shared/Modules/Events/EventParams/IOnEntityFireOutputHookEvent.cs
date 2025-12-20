@@ -12,7 +12,11 @@ public interface IOnEntityFireOutputHookEvent
     /// <summary>
     /// The entity instance.
     /// </summary>
-    public CEntityIOOutput EntityIO { get; }
+    public ref CEntityIOOutput EntityIO { get; }
+    /// <summary>
+    /// The designer name of the caller.
+    /// </summary>
+    public string DesignerName { get; }
     /// <summary>
     /// The name of the input being accepted.
     /// </summary>
@@ -28,7 +32,7 @@ public interface IOnEntityFireOutputHookEvent
     /// <summary>
     /// The variant value of the input being accepted.
     /// </summary>
-    public CVariant VariantValue { get; }
+    public ref CVariant VariantValue { get; }
     /// <summary>
     /// This delay of this IO event, in seconds.
     /// </summary>

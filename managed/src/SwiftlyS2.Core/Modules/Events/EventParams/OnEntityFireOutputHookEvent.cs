@@ -7,11 +7,29 @@ namespace SwiftlyS2.Core.Events;
 
 internal class OnEntityFireOutputHookEvent : IOnEntityFireOutputHookEvent
 {
-    public required CEntityIOOutput EntityIO { get; init; }
+    public unsafe CEntityIOOutput* _entityIO;
+    public ref CEntityIOOutput EntityIO {
+        get {
+            unsafe
+            {
+                return ref *_entityIO;
+            }
+        }
+    }
+    public required string DesignerName { get; init; }
     public required string OutputName { get; init; }
-    public required CEntityInstance? Activator { get; init; }
-    public required CEntityInstance? Caller { get; init; }
-    public required CVariant VariantValue { get; init; }
-    public required float Delay { get; init; }
-    public required HookResult Result { get; set; }
+    public CEntityInstance? Activator { get; init; }
+    public CEntityInstance? Caller { get; init; }
+
+    public unsafe CVariant* _variant;
+    public ref CVariant VariantValue {
+        get {
+            unsafe
+            {
+                return ref *_variant;
+            }
+        }
+    }
+    public float Delay { get; init; }
+    public HookResult Result { get; set; }
 }
