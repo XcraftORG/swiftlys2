@@ -32,7 +32,7 @@ public interface IOnEntityFireOutputHookEvent
     /// <summary>
     /// The variant value of the input being accepted.
     /// </summary>
-    public ref CVariant VariantValue { get; }
+    public ref CVariant<CVariantDefaultAllocator> VariantValue { get; }
     /// <summary>
     /// This delay of this IO event, in seconds.
     /// </summary>

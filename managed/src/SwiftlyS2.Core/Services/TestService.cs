@@ -92,7 +92,7 @@ internal class TestService
 
     public void Test2()
     {
-        CVariant variant = new CVariant(100);
+        CVariant<CVariantDefaultAllocator> variant = new CVariant<CVariantDefaultAllocator>(100);
         Console.WriteLine(variant.ToString());
         variant.SetString("LOL");
         Console.WriteLine(variant.ToString());

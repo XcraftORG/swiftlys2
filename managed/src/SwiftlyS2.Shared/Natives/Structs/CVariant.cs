@@ -103,6 +103,24 @@ public enum CVFlags
     FREE = 0x01,
 }
 
+public interface IVariantAllocator
+{
+    public static abstract nint Alloc( ulong size );
+    public static abstract void Free( nint ptr );
+}
+
+public interface CVariantDefaultAllocator : IVariantAllocator
+{
+    static nint IVariantAllocator.Alloc( ulong size )
+    {
+        return NativeAllocator.Alloc(size);
+    }
+    static void IVariantAllocator.Free( nint ptr )
+    {
+        NativeAllocator.Free(ptr);
+    }
+}
+
 [StructLayout(LayoutKind.Sequential, Size = 0x8)]
 internal unsafe struct CVariantData
 {
@@ -118,7 +136,7 @@ internal unsafe struct CVariantData
 }
 
 [StructLayout(LayoutKind.Explicit, Size = 0x10)]
-public struct CVariant
+public struct CVariant<TAllocator> where TAllocator : IVariantAllocator
 {
     [FieldOffset(0x0)] private CVariantData Data;            // 8 bytes (union)
     [FieldOffset(0x8)] public VariantFieldType DataType;    // 1 byte (uint8 enum)
@@ -142,7 +160,7 @@ public struct CVariant
         {
             if (Data.TryGetInnerPointer(out nint ptr))
             {
-                NativeAllocator.Free(ptr);
+                TAllocator.Free(ptr);
             }
         }
         Data.ThisPointer.Write(0);
@@ -158,7 +176,7 @@ public struct CVariant
     {
         unsafe
         {
-            var memory = NativeAllocator.Alloc((ulong)sizeof(T));
+            var memory = TAllocator.Alloc((ulong)sizeof(T));
             memory.Write(value);
             Data.ThisPointer.Write(memory);
             SetAllocated();
@@ -294,7 +312,7 @@ public struct CVariant
         Free();
         DataType = VariantFieldType.FIELD_STRING;
         var len = Encoding.UTF8.GetByteCount(value);
-        var buffer = NativeAllocator.Alloc((ulong)(len + 1));
+        var buffer = TAllocator.Alloc((ulong)(len + 1));
         buffer.CopyFrom(Encoding.UTF8.GetBytes(value));
         buffer.Write(len, 0);
         Data.ThisPointer.Write(buffer);

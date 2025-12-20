@@ -21,8 +21,8 @@ internal class OnEntityFireOutputHookEvent : IOnEntityFireOutputHookEvent
     public CEntityInstance? Activator { get; init; }
     public CEntityInstance? Caller { get; init; }
 
-    public unsafe CVariant* _variant;
-    public ref CVariant VariantValue {
+    public unsafe CVariant<CVariantDefaultAllocator>* _variant;
+    public ref CVariant<CVariantDefaultAllocator> VariantValue {
         get {
             unsafe
             {

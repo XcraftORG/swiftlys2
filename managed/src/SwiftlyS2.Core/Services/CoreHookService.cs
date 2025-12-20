@@ -112,31 +112,33 @@ internal class CoreHookService : IDisposable
         {
             return ( pEntityIdentity, pInputName, pActivator, pCaller, pVariant, outputId, unk1, unk2 ) =>
             {
-                var entityIdentity = core.Memory.ToSchemaClass<CEntityIdentity>(pEntityIdentity);
-                var inputName = pInputName.AsRef<CUtlSymbolLarge>();
-                var activator = pActivator != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pActivator) : null;
-                var caller = pCaller != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pCaller) : null;
+                unsafe {
+                    var entityIdentity = core.Memory.ToSchemaClass<CEntityIdentity>(pEntityIdentity);
+                    var inputName = pInputName.AsRef<CUtlSymbolLarge>();
+                    var activator = pActivator != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pActivator) : null;
+                    var caller = pCaller != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pCaller) : null;
 
-                var variant = pVariant.AsRef<CVariant>();
+                    var variant = pVariant.AsRef<CVariant<CVariantDefaultAllocator>>();
 
-                var @event = new OnEntityIdentityAcceptInputHookEvent {
-                    Identity = entityIdentity,
-                    EntityInstance = entityIdentity.EntityInstance,
-                    InputName = inputName.Value,
-                    Activator = activator,
-                    Caller = caller,
-                    VariantValue = variant,
-                    OutputId = outputId,
-                    Result = HookResult.Continue
-                };
-                EventPublisher.InvokeOnEntityIdentityAcceptInputHook(@event);
+                    var @event = new OnEntityIdentityAcceptInputHookEvent {
+                        Identity = entityIdentity,
+                        EntityInstance = entityIdentity.EntityInstance,
+                        InputName = inputName.Value,
+                        Activator = activator,
+                        Caller = caller,
+                        _variant = (CVariant<CVariantDefaultAllocator>*)pVariant,
+                        OutputId = outputId,
+                        Result = HookResult.Continue
+                    };
+                    EventPublisher.InvokeOnEntityIdentityAcceptInputHook(@event);
 
-                if (@event.Result == HookResult.Stop)
-                {
-                    return;
+                    if (@event.Result == HookResult.Stop)
+                    {
+                        return;
+                    }
+
+                    next()(pEntityIdentity, pInputName, pActivator, pCaller, pVariant, outputId, unk1, unk2);
                 }
-
-                next()(pEntityIdentity, pInputName, pActivator, pCaller, pVariant, outputId, unk1, unk2);
             };
         });
     }
@@ -158,11 +160,11 @@ internal class CoreHookService : IDisposable
                 var activator = pActivator != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pActivator) : null;
                 var caller = pCaller != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pCaller) : null;
 
-                var variant = pVariant.AsRef<CVariant>();
+                var variant = pVariant.AsRef<CVariant<CVariantDefaultAllocator>>();
 
                 var @event = new OnEntityFireOutputHookEvent {
                     _entityIO = (CEntityIOOutput*)pEntityIO,
-                    _variant = (CVariant*)pVariant,
+                    _variant = (CVariant<CVariantDefaultAllocator>*)pVariant,
                     DesignerName = caller?.DesignerName ?? string.Empty,
                     OutputName = outputName,
                     Activator = activator,
