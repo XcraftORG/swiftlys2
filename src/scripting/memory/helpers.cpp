@@ -71,6 +71,11 @@ void* Bridge_MemoryHelpers_GetAddressBySignature(const char* binary, const char*
     return FindSignature(binary, rawBytes ? BytesToIdaSignature(reinterpret_cast<const unsigned char*>(signature), len) : signature);
 }
 
+void* Bridge_MemoryHelpers_GetRVAAddressBySignature(const char* binary, const char* signature, int len, bool rawBytes)
+{
+    return FindSignatureRVA(binary, rawBytes ? BytesToIdaSignature(reinterpret_cast<const unsigned char*>(signature), len) : signature);
+}
+
 int Bridge_MemoryHelpers_GetObjectPtrVtableName(char* out, void* objptr)
 {
     char buffer[1024] = { 0 };
@@ -101,6 +106,7 @@ DEFINE_NATIVE("MemoryHelpers.FetchInterfaceByName", Bridge_MemoryHelpers_FetchIn
 DEFINE_NATIVE("MemoryHelpers.GetVirtualTableAddress", Bridge_MemoryHelpers_GetVirtualTableAddress);
 DEFINE_NATIVE("MemoryHelpers.GetVirtualTableAddressNested2", Bridge_MemoryHelpers_GetVirtualTableAddressNested2);
 DEFINE_NATIVE("MemoryHelpers.GetAddressBySignature", Bridge_MemoryHelpers_GetAddressBySignature);
+DEFINE_NATIVE("MemoryHelpers.GetRVAAddressBySignature", Bridge_MemoryHelpers_GetRVAAddressBySignature);
 DEFINE_NATIVE("MemoryHelpers.GetObjectPtrVtableName", Bridge_MemoryHelpers_GetObjectPtrVtableName);
 DEFINE_NATIVE("MemoryHelpers.ObjectPtrHasVtable", Bridge_MemoryHelpers_ObjectPtrHasVtable);
 DEFINE_NATIVE("MemoryHelpers.ObjectPtrHasBaseClass", Bridge_MemoryHelpers_ObjectPtrHasBaseClass);

@@ -34,5 +34,6 @@ private:
 };
 
 void* FindSignature(std::string library, std::string pattern);
+void* FindSignatureRVA(std::string library, std::string pattern);
 
 #endif

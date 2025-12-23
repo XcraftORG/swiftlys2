@@ -103,6 +103,16 @@ internal class MemoryService : IMemoryService, IDisposable
     return ptr;
   }
 
+  public nint? GetRVAAddressBySignature( string library, string signature )
+  {
+    var ptr = NativeMemoryHelpers.GetRVAAddressBySignature(library, signature, 0, false);
+    if (ptr == 0)
+    {
+      return null;
+    }
+    return ptr;
+  }
+
   public nint? GetVTableAddress( string library, string vtableName )
   {
     var classes = vtableName.Split("::");

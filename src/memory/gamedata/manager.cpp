@@ -68,3 +68,10 @@ void* FindSignature(std::string library, std::string pattern)
     s2binlib_pattern_scan(library.c_str(), pattern.c_str(), &result);
     return result;
 }
+
+void* FindSignatureRVA(std::string library, std::string pattern)
+{
+    void* result = 0;
+    s2binlib_pattern_scan_rva(library.c_str(), pattern.c_str(), &result);
+    return result;
+}
