@@ -33,7 +33,7 @@ internal class CoreHookService : IDisposable
         HookFindConCommandTemplate();
         HookCCSPlayerItemServicesCanAcquire();
         HookCCSPlayerWeaponServicesCanUse();
-        HookCBaseEntityTouchTemplate();
+        //HookCBaseEntityTouchTemplate();
         HookSteamServerAPIActivated();
         HookCPlayerMovementServicesRunCommand();
         HookCCSPlayerPawnPostThink();
