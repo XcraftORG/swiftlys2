@@ -39,8 +39,8 @@ void CEntityListener::OnEntitySpawned(CEntityInstance* pEntity)
 
 void CEntityListener::OnEntityParentChanged(CEntityInstance* pEntity, CEntityInstance* pNewParent)
 {
-    if (g_pOnEntityParentChangedCallback)
-        reinterpret_cast<void(*)(void*, void*)>(g_pOnEntityParentChangedCallback)(pEntity, pNewParent);
+    //if (g_pOnEntityParentChangedCallback)
+    //    reinterpret_cast<void(*)(void*, void*)>(g_pOnEntityParentChangedCallback)(pEntity, pNewParent);
 }
 
 void EntityAllowHammerID(CEntityInstance* pEntity)
