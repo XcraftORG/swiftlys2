@@ -44,14 +44,6 @@ public interface IMemoryService
   nint? GetAddressBySignature(string library, string signature);
 
   /// <summary>
-  /// Get the RVA address of a ida-style signature.
-  /// </summary>
-  /// <param name="library">The library of that signature belongs to.</param>
-  /// <param name="signature">The signature of the function.</param>
-  /// <returns>The address of the function. Return null if not found.</returns>
-  nint? GetRVAAddressBySignature(string library, string signature);
-
-  /// <summary>
   /// Get the address of a vtable by its name.
   /// </summary>
   /// <param name="library">The library of that vtable belongs to.</param>

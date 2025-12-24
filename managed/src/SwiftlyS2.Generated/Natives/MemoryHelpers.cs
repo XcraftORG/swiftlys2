@@ -102,28 +102,6 @@ internal static class NativeMemoryHelpers {
     }
   }
 
-  private unsafe static delegate* unmanaged<byte*, byte*, int, byte, nint> _GetRVAAddressBySignature;
-
-  public unsafe static nint GetRVAAddressBySignature(string library, string sig, int len, bool rawBytes) {
-    var pool = ArrayPool<byte>.Shared;
-    var libraryLength = Encoding.UTF8.GetByteCount(library);
-    var libraryBuffer = pool.Rent(libraryLength + 1);
-    Encoding.UTF8.GetBytes(library, libraryBuffer);
-    libraryBuffer[libraryLength] = 0;
-    var sigLength = Encoding.UTF8.GetByteCount(sig);
-    var sigBuffer = pool.Rent(sigLength + 1);
-    Encoding.UTF8.GetBytes(sig, sigBuffer);
-    sigBuffer[sigLength] = 0;
-    fixed (byte* libraryBufferPtr = libraryBuffer) {
-      fixed (byte* sigBufferPtr = sigBuffer) {
-        var ret = _GetRVAAddressBySignature(libraryBufferPtr, sigBufferPtr, len, rawBytes ? (byte)1 : (byte)0);
-        pool.Return(libraryBuffer);
-        pool.Return(sigBuffer);
-        return ret;
-      }
-    }
-  }
-
   private unsafe static delegate* unmanaged<byte*, nint, int> _GetObjectPtrVtableName;
 
   public unsafe static string GetObjectPtrVtableName(nint objptr) {
