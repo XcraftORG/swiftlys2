@@ -225,7 +225,7 @@ void Bridge_GameEvents_FireEventToClient(void* event, int playerid)
 {
     static auto gamedata = g_ifaceService.FetchInterface<IGameDataManager>(GAMEDATA_INTERFACE_VERSION);
     static auto eventmanager = g_ifaceService.FetchInterface<IEventManager>(GAMEEVENTMANAGER_INTERFACE_VERSION);
-    static auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
+    //static auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
 
     auto pListenerSig = gamedata->GetSignatures()->Fetch("LegacyGameEventListener");
     if (!pListenerSig) return;
@@ -235,7 +235,7 @@ void Bridge_GameEvents_FireEventToClient(void* event, int playerid)
 
     if (!eventmanager->GetGameEventManager()->FindListener(listener, ((IGameEvent*)event)->GetName()))
     {
-        return crashreporter->ReportPreventionIncident("GameEvents", fmt::format("Tried to fire event '{}' but the client isn't listening to this event.", ((IGameEvent*)event)->GetName()));
+        return; //crashreporter->ReportPreventionIncident("GameEvents", fmt::format("Tried to fire event '{}' but the client isn't listening to this event.", ((IGameEvent*)event)->GetName()));
     }
 
     listener->FireGameEvent((IGameEvent*)event);

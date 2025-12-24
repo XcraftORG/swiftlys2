@@ -106,8 +106,8 @@ bool SwiftlyCore::Load(BridgeKind_t kind)
         m_sLogPath += WIN_LINUX("\\", "/");
     }
 
-    auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
-    crashreporter->Init();
+    //auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
+    //crashreporter->Init();
 
     s2binlib_initialize(Plat_GetGameDirectory(), "csgo");
 
@@ -173,8 +173,8 @@ bool SwiftlyCore::Load(BridgeKind_t kind)
     {
         if (*level > 0)
         {
-            auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
-            crashreporter->EnableDotnetCrashTracer(*level);
+            //auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
+            //crashreporter->EnableDotnetCrashTracer(*level);
         }
     }
 
@@ -270,14 +270,14 @@ bool SwiftlyCore::Load(BridgeKind_t kind)
 
     if (!InitializeHostFXR(std::string(Plat_GetGameDirectory()) + "/csgo/" + m_sCorePath))
     {
-        auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
-        crashreporter->ReportPreventionIncident("Managed", fmt::format("Couldn't initialize the .NET runtime. Make sure you installed `swiftlys2-{}-{}-with-runtimes.zip`.", WIN_LINUX("windows", "linux"), GetVersion()));
+        //auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
+        //crashreporter->ReportPreventionIncident("Managed", fmt::format("Couldn't initialize the .NET runtime. Make sure you installed `swiftlys2-{}-{}-with-runtimes.zip`.", WIN_LINUX("windows", "linux"), GetVersion()));
         return true;
     }
     if (!InitializeDotNetAPI(scripting->GetNativeFunctions(), scripting->GetNativeFunctionsCount(), std::string(Plat_GetGameDirectory()) + "/csgo/" + m_sLogPath))
     {
-        auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
-        crashreporter->ReportPreventionIncident("Managed", "Couldn't initialize the .NET scripting API.");
+        //auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
+        //crashreporter->ReportPreventionIncident("Managed", "Couldn't initialize the .NET scripting API.");
         return true;
     }
 
@@ -325,8 +325,8 @@ bool SwiftlyCore::Unload()
 
     ShutdownGameSystem();
 
-    auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
-    crashreporter->Shutdown();
+    //auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
+    //crashreporter->Shutdown();
 
     return true;
 }
