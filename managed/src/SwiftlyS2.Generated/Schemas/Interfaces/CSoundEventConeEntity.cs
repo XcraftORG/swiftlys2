@@ -12,7 +12,7 @@ public partial interface CSoundEventConeEntity : CSoundEventEntity, ISchemaClass
 {
     static CSoundEventConeEntity ISchemaClass<CSoundEventConeEntity>.From(nint handle) => new CSoundEventConeEntityImpl(handle);
     static int ISchemaClass<CSoundEventConeEntity>.Size => 1392;
-    static string? ISchemaClass<CSoundEventConeEntity>.ClassName => null;
+    static string? ISchemaClass<CSoundEventConeEntity>.ClassName => "snd_event_cone";
 
 
     public ref float EmitterAngle { get; }
