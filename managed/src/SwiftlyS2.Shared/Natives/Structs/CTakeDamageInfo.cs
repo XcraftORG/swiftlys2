@@ -38,27 +38,24 @@ public unsafe struct CTakeDamageInfo
     private fixed byte _padding1[0xb];
 
     public float OriginalDamage;
-    public bool ShouldBleed;
-    public bool ShouldSpark;
+    public byte ShouldBleed;
+    public byte ShouldSpark;
 
     private short _padding2;
 
     public CGameTrace* Trace;
     public TakeDamageFlags_t DamageFlags;
-    public CString DamageSourceName;
-
     /// <see cref="ActualHitGroup"/>
     [Obsolete("This field somehow holds garbage value in game. Use ActualHitGroup instead.")]
     public HitGroup_t HitGroupId;
     public int NumObjectsPenetrated;
     public float FriendlyFireDamageReductionRatio;
-
-    private fixed byte _padding3[0x5C];
-
+    public byte StoppedBullet;
+    private fixed byte _padding3[0x58];
     public void* ScriptInstance;
     public AttackerInfo_t AttackerInfo;
-    private fixed byte _padding4[0x1C];
-    public bool InTakeDamageFlow;
+    private fixed byte _padding4[0x14];
+    public byte InTakeDamageFlow;
 
     private int Unknown;
 
