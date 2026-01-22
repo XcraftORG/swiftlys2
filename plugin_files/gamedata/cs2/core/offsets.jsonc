@@ -8,16 +8,19 @@
         "linux": 408
     },
     "CCSPlayerController::ChangeTeam": {
-        "windows": 109,
-        "linux": 108
+        "windows": 102,
+        "linux": 101
     },
+    /*
+    Called in CBaseEntityAPI::TeleportToPoint
+    */
     "CBaseEntity::Teleport": {
-        "windows": 168,
-        "linux": 167
+        "windows": 162,
+        "linux": 163
     },
     "CCSPlayerController::Respawn": {
-        "windows": 277,
-        "linux": 279
+        "windows": 272,
+        "linux": 274
     },
     "CBaseEntity::CollisionRulesChanged": {
         "windows": 185,
@@ -169,16 +172,16 @@
         "linux": 40
     },
     "CBaseEntity::StartTouch": {
-        "windows": 153,
-        "linux": 152
+        "windows": 147,
+        "linux": 146
     },
     "CBaseEntity::Touch": {
-        "windows": 154,
-        "linux": 153
+        "windows": 148,
+        "linux": 147
     },
     "CBaseEntity::EndTouch": {
-        "windows": 155,
-        "linux": 154
+        "windows": 149,
+        "linux": 148
     },
     /*
     By tracing the calls in cstrike15_src
