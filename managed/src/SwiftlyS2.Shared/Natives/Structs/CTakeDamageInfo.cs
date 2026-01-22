@@ -92,7 +92,7 @@ public unsafe struct CTakeDamageInfo
     public HitGroup_t ActualHitGroup => Trace->HitBox->m_nGroupId;
 }
 
-[StructLayout(LayoutKind.Sequential, Pack = 8, Size = 40)]
+[StructLayout(LayoutKind.Sequential, Pack = 8, Size = 48)]
 public unsafe struct CTakeDamageResult
 {
     public CTakeDamageInfo* OriginatingInfo;
@@ -102,5 +102,7 @@ public unsafe struct CTakeDamageResult
     public float PreModifiedDamage;
     public int TotalledHealthLost;
     public int TotalledDamageDealt;
-    public bool WasDamageSuppressed;
+    public float TotalledDamage;
+    public byte WasDamageSuppressed;
+    private fixed byte _padding[0xB];
 }

@@ -9,8 +9,8 @@ public class Program
     {
         Console.WriteLine("=================================================");
 
-        Console.WriteLine("CTakeDamageInfo Struct Layout:");
-        PrintStructInfo<CTakeDamageInfo>();
+        Console.WriteLine("CTakeDamageResult Struct Layout:");
+        PrintStructInfo<CTakeDamageResult>();
     }
 
     private static void PrintStructInfo<T>() where T : struct
