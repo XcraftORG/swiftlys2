@@ -16,24 +16,14 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  ************************************************************************************************/
 
-#include "serverlist.h"
-#include "nullificator.h"
-#include "gameban.h"
+#ifndef src_engine_fixes_gameban_h
+#define src_engine_fixes_gameban_h
 
-ServerListFix g_ServerListFix;
-NullificatorFix g_NullificatorFix;
-GameBanFix g_GameBanFix;
-
-void StartFixes()
+class GameBanFix
 {
-    g_ServerListFix.Start();
-    g_NullificatorFix.Start();
-    g_GameBanFix.Start();
-}
+public:
+    void Start();
+    void Stop();
+};
 
-void StopFixes()
-{
-    g_ServerListFix.Stop();
-    g_NullificatorFix.Stop();
-    g_GameBanFix.Stop();
-}
+#endif
