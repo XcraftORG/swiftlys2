@@ -109,19 +109,7 @@ internal static class GameFunctions
     {
         try
         {
-            unsafe
-            {
-                var pool = ArrayPool<byte>.Shared;
-                var nameLength = Encoding.UTF8.GetByteCount(particleName);
-                var nameBuffer = pool.Rent(nameLength + 1);
-                _ = Encoding.UTF8.GetBytes(particleName, nameBuffer);
-                nameBuffer[nameLength] = 0;
-                fixed (byte* pParticleName = nameBuffer)
-                {
-                    pDispatchParticleEffect((nint)pParticleName, attachmentType, entity, attachmentPoint, attachmentName, (byte)(resetAllParticlesOnEntity ? 1 : 0), splitScreenSlot, (nint)(&filter), IntPtr.Zero);
-                    pool.Return(nameBuffer);
-                }
-            }
+            NativeEngineHelpers.DispatchParticleEffect(particleName, attachmentType, entity, attachmentPoint, attachmentName._pString, resetAllParticlesOnEntity, splitScreenSlot, filter.ToMask());
         }
         catch (Exception e)
         {
