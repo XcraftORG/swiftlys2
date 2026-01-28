@@ -123,17 +123,19 @@ internal class CoreHookService : IDisposable
                 unsafe
                 {
                     var entityIdentity = core.Memory.ToSchemaClass<CEntityIdentity>(pEntityIdentity);
-                    var inputName = pInputName.AsRef<CUtlSymbolLarge>();
+                    if (!entityIdentity.IsValid) {
+                        next()(pEntityIdentity, pInputName, pActivator, pCaller, pVariant, outputId, unk1, unk2);
+                        return;
+                    }
+                    var inputName = pInputName != nint.Zero ? pInputName.AsRef<CUtlSymbolLarge>().Value : "";
                     var activator = pActivator != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pActivator) : null;
                     var caller = pCaller != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pCaller) : null;
-
-                    var variant = pVariant.AsRef<CVariant<CVariantDefaultAllocator>>();
 
                     var @event = new OnEntityIdentityAcceptInputHookEvent {
                         Identity = entityIdentity,
                         EntityInstance = entityIdentity.EntityInstance,
-                        DesignerName = entityIdentity?.DesignerName ?? string.Empty,
-                        InputName = inputName.Value,
+                        DesignerName = entityIdentity.DesignerName,
+                        InputName = inputName,
                         Activator = activator,
                         Caller = caller,
                         _variant = (CVariant<CVariantDefaultAllocator>*)pVariant,
