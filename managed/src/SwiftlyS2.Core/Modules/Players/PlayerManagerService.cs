@@ -13,6 +13,7 @@ internal class PlayerManagerService : IPlayerManagerService
 {
     private readonly ITranslationService _translationService;
     public static ConcurrentDictionary<int, IPlayer> PlayerObjects { get; } = new();
+    public static ConcurrentDictionary<ulong, IPlayer> SessionIdToPlayerObjects { get; } = new();
 
     public PlayerManagerService( ITranslationService translationService )
     {
@@ -22,7 +23,9 @@ internal class PlayerManagerService : IPlayerManagerService
     public static void RegisterPlayerObject( int playerid )
     {
         UnregisterPlayerObject(playerid);
-        _ = PlayerObjects.TryAdd(playerid, new Player(playerid));
+        var player = new Player(playerid);
+        _ = PlayerObjects.TryAdd(playerid, player);
+        _ = SessionIdToPlayerObjects.TryAdd(player.SessionId, player);
     }
 
     public static void UnregisterPlayerObject( int playerid )
@@ -30,6 +33,7 @@ internal class PlayerManagerService : IPlayerManagerService
         if (PlayerObjects.TryGetValue(playerid, out var player))
         {
             var p = (Player)player;
+            _ = SessionIdToPlayerObjects.TryRemove(p.SessionId, out var _);
             p.Dispose();
             _ = PlayerObjects.TryRemove(playerid, out var _);
         }
@@ -343,5 +347,28 @@ internal class PlayerManagerService : IPlayerManagerService
     public Task SendMessageAsync( MessageType kind, Func<IPlayer, ILocalizer, string> messageCallback, int htmlDuration = 5000 )
     {
         return SchedulerManager.QueueOrNow(() => SendMessage(kind, messageCallback, htmlDuration));
+    }
+
+    public IPlayer? GetPlayerFromSteamId( ulong steamId, bool allowUnauthorized = true )
+    {
+        return PlayerObjects.Values.FirstOrDefault(p => {
+            if (allowUnauthorized) {
+                if (p.SteamID == steamId) return true;
+                if (p.UnauthorizedSteamID == steamId) return true;
+            } else {
+                if (p.SteamID == steamId && p.IsAuthorized) return true;
+            }
+            return false;
+        });
+    }
+
+    public bool IsSessionIdValid( ulong sessionId )
+    {
+        return SessionIdToPlayerObjects.ContainsKey(sessionId);
+    }
+
+    public IPlayer? GetPlayerFromSessionId( ulong sessionId )
+    {
+        return SessionIdToPlayerObjects.TryGetValue(sessionId, out var player) ? player : null;
     }
 }
