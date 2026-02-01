@@ -6,14 +6,9 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface MatchEndItemUpdates : ITypedProtobuf<MatchEndItemUpdates>
 {
-  static MatchEndItemUpdates ITypedProtobuf<MatchEndItemUpdates>.Wrap(nint handle, bool isManuallyAllocated) => new MatchEndItemUpdatesImpl(handle, isManuallyAllocated);
+    static MatchEndItemUpdates ITypedProtobuf<MatchEndItemUpdates>.Wrap(nint handle, bool isManuallyAllocated) => new MatchEndItemUpdatesImpl(handle, isManuallyAllocated);
 
-
-  public ulong ItemId { get; set; }
-
-
-  public uint ItemAttrDefidx { get; set; }
-
-
-  public uint ItemAttrDeltaValue { get; set; }
+    public ulong ItemId { get; set; }
+    public uint ItemAttrDefidx { get; set; }
+    public uint ItemAttrDeltaValue { get; set; }
 }

@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgGCShowItemsPickedUpImpl : TypedProtobuf<CMsgGCShowItemsPickedUp>, CMsgGCShowItemsPickedUp
 {
-  public CMsgGCShowItemsPickedUpImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgGCShowItemsPickedUpImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public ulong PlayerSteamid
-  { get => Accessor.GetUInt64("player_steamid"); set => Accessor.SetUInt64("player_steamid", value); }
+    public ulong PlayerSteamid
+    { get => Accessor.GetUInt64("player_steamid"); set => Accessor.SetUInt64("player_steamid", value); }
 }

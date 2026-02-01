@@ -6,20 +6,11 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgSource1LegacyGameEvent : ITypedProtobuf<CMsgSource1LegacyGameEvent>
 {
-  static CMsgSource1LegacyGameEvent ITypedProtobuf<CMsgSource1LegacyGameEvent>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgSource1LegacyGameEventImpl(handle, isManuallyAllocated);
+    static CMsgSource1LegacyGameEvent ITypedProtobuf<CMsgSource1LegacyGameEvent>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgSource1LegacyGameEventImpl(handle, isManuallyAllocated);
 
-
-  public string EventName { get; set; }
-
-
-  public int Eventid { get; set; }
-
-
-  public IProtobufRepeatedFieldSubMessageType<CMsgSource1LegacyGameEvent_key_t> Keys { get; }
-
-
-  public int ServerTick { get; set; }
-
-
-  public int Passthrough { get; set; }
+    public string EventName { get; set; }
+    public int Eventid { get; set; }
+    public IProtobufRepeatedFieldSubMessageType<CMsgSource1LegacyGameEvent_key_t> Keys { get; }
+    public int ServerTick { get; set; }
+    public int Passthrough { get; set; }
 }

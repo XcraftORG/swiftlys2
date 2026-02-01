@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgGCUserTrackTimePlayedConsecutivelyImpl : TypedProtobuf<CMsgGCUserTrackTimePlayedConsecutively>, CMsgGCUserTrackTimePlayedConsecutively
 {
-  public CMsgGCUserTrackTimePlayedConsecutivelyImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgGCUserTrackTimePlayedConsecutivelyImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public uint State
-  { get => Accessor.GetUInt32("state"); set => Accessor.SetUInt32("state", value); }
+    public uint State
+    { get => Accessor.GetUInt32("state"); set => Accessor.SetUInt32("state", value); }
 }

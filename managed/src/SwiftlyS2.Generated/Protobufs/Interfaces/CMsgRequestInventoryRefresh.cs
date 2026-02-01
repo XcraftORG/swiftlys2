@@ -6,7 +6,6 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgRequestInventoryRefresh : ITypedProtobuf<CMsgRequestInventoryRefresh>
 {
-  static CMsgRequestInventoryRefresh ITypedProtobuf<CMsgRequestInventoryRefresh>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgRequestInventoryRefreshImpl(handle, isManuallyAllocated);
-
+    static CMsgRequestInventoryRefresh ITypedProtobuf<CMsgRequestInventoryRefresh>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgRequestInventoryRefreshImpl(handle, isManuallyAllocated);
 
 }

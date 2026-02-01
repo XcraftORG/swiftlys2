@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgSystemBroadcast : ITypedProtobuf<CMsgSystemBroadcast>
 {
-  static CMsgSystemBroadcast ITypedProtobuf<CMsgSystemBroadcast>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgSystemBroadcastImpl(handle, isManuallyAllocated);
+    static CMsgSystemBroadcast ITypedProtobuf<CMsgSystemBroadcast>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgSystemBroadcastImpl(handle, isManuallyAllocated);
 
-
-  public string Message { get; set; }
+    public string Message { get; set; }
 }

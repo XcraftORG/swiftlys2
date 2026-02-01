@@ -6,7 +6,6 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCCStrike15_v2_MatchmakingClient2GCHello : ITypedProtobuf<CMsgGCCStrike15_v2_MatchmakingClient2GCHello>
 {
-  static CMsgGCCStrike15_v2_MatchmakingClient2GCHello ITypedProtobuf<CMsgGCCStrike15_v2_MatchmakingClient2GCHello>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCCStrike15_v2_MatchmakingClient2GCHelloImpl(handle, isManuallyAllocated);
-
+    static CMsgGCCStrike15_v2_MatchmakingClient2GCHello ITypedProtobuf<CMsgGCCStrike15_v2_MatchmakingClient2GCHello>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCCStrike15_v2_MatchmakingClient2GCHelloImpl(handle, isManuallyAllocated);
 
 }

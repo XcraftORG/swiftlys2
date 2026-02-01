@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgKickFromParty : ITypedProtobuf<CMsgKickFromParty>
 {
-  static CMsgKickFromParty ITypedProtobuf<CMsgKickFromParty>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgKickFromPartyImpl(handle, isManuallyAllocated);
+    static CMsgKickFromParty ITypedProtobuf<CMsgKickFromParty>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgKickFromPartyImpl(handle, isManuallyAllocated);
 
-
-  public ulong SteamId { get; set; }
+    public ulong SteamId { get; set; }
 }

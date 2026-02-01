@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CDemoSendTables : ITypedProtobuf<CDemoSendTables>
 {
-  static CDemoSendTables ITypedProtobuf<CDemoSendTables>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoSendTablesImpl(handle, isManuallyAllocated);
+    static CDemoSendTables ITypedProtobuf<CDemoSendTables>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoSendTablesImpl(handle, isManuallyAllocated);
 
-
-  public byte[] Data { get; set; }
+    public byte[] Data { get; set; }
 }

@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CDemoStringTables_items_tImpl : TypedProtobuf<CDemoStringTables_items_t>, CDemoStringTables_items_t
 {
-  public CDemoStringTables_items_tImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CDemoStringTables_items_tImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public string Str
-  { get => Accessor.GetString("str"); set => Accessor.SetString("str", value); }
-
-
-  public byte[] Data
-  { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
+    public string Str
+    { get => Accessor.GetString("str"); set => Accessor.SetString("str", value); }
+    public byte[] Data
+    { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
 }

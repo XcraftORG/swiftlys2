@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CUserMessageItemPickupImpl : NetMessage<CUserMessageItemPickup>, CUserMessageItemPickup
 {
-  public CUserMessageItemPickupImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CUserMessageItemPickupImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public string Itemname
-  { get => Accessor.GetString("itemname"); set => Accessor.SetString("itemname", value); }
+    public string Itemname
+    { get => Accessor.GetString("itemname"); set => Accessor.SetString("itemname", value); }
 }

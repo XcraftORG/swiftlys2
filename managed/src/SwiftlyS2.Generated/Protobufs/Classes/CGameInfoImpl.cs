@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CGameInfoImpl : TypedProtobuf<CGameInfo>, CGameInfo
 {
-  public CGameInfoImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CGameInfoImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public CGameInfo_CDotaGameInfo Dota
-  { get => new CGameInfo_CDotaGameInfoImpl(NativeNetMessages.GetNestedMessage(Address, "dota"), false); }
-
-
-  public CGameInfo_CCSGameInfo Cs
-  { get => new CGameInfo_CCSGameInfoImpl(NativeNetMessages.GetNestedMessage(Address, "cs"), false); }
+    public CGameInfo_CDotaGameInfo Dota
+    { get => new CGameInfo_CDotaGameInfoImpl(NativeNetMessages.GetNestedMessage(Address, "dota"), false); }
+    public CGameInfo_CCSGameInfo Cs
+    { get => new CGameInfo_CCSGameInfoImpl(NativeNetMessages.GetNestedMessage(Address, "cs"), false); }
 }

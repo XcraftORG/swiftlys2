@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CCSUsrMsg_XpUpdateImpl : NetMessage<CCSUsrMsg_XpUpdate>, CCSUsrMsg_XpUpdate
 {
-  public CCSUsrMsg_XpUpdateImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CCSUsrMsg_XpUpdateImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public CMsgGCCstrike15_v2_GC2ServerNotifyXPRewarded Data
-  { get => new CMsgGCCstrike15_v2_GC2ServerNotifyXPRewardedImpl(NativeNetMessages.GetNestedMessage(Address, "data"), false); }
+    public CMsgGCCstrike15_v2_GC2ServerNotifyXPRewarded Data
+    { get => new CMsgGCCstrike15_v2_GC2ServerNotifyXPRewardedImpl(NativeNetMessages.GetNestedMessage(Address, "data"), false); }
 }

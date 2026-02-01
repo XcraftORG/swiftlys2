@@ -8,19 +8,14 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgTEEnergySplashImpl : NetMessage<CMsgTEEnergySplash>, CMsgTEEnergySplash
 {
-  public CMsgTEEnergySplashImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CMsgTEEnergySplashImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public Vector Pos
-  { get => Accessor.GetVector("pos"); set => Accessor.SetVector("pos", value); }
-
-
-  public Vector Dir
-  { get => Accessor.GetVector("dir"); set => Accessor.SetVector("dir", value); }
-
-
-  public bool Explosive
-  { get => Accessor.GetBool("explosive"); set => Accessor.SetBool("explosive", value); }
+    public Vector Pos
+    { get => Accessor.GetVector("pos"); set => Accessor.SetVector("pos", value); }
+    public Vector Dir
+    { get => Accessor.GetVector("dir"); set => Accessor.SetVector("dir", value); }
+    public bool Explosive
+    { get => Accessor.GetBool("explosive"); set => Accessor.SetBool("explosive", value); }
 }

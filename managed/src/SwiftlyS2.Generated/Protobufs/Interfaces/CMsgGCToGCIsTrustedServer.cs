@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCToGCIsTrustedServer : ITypedProtobuf<CMsgGCToGCIsTrustedServer>
 {
-  static CMsgGCToGCIsTrustedServer ITypedProtobuf<CMsgGCToGCIsTrustedServer>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCToGCIsTrustedServerImpl(handle, isManuallyAllocated);
+    static CMsgGCToGCIsTrustedServer ITypedProtobuf<CMsgGCToGCIsTrustedServer>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCToGCIsTrustedServerImpl(handle, isManuallyAllocated);
 
-
-  public ulong SteamId { get; set; }
+    public ulong SteamId { get; set; }
 }

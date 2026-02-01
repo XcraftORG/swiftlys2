@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CDemoFullPacketImpl : TypedProtobuf<CDemoFullPacket>, CDemoFullPacket
 {
-  public CDemoFullPacketImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CDemoFullPacketImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public CDemoStringTables StringTable
-  { get => new CDemoStringTablesImpl(NativeNetMessages.GetNestedMessage(Address, "string_table"), false); }
-
-
-  public CDemoPacket Packet
-  { get => new CDemoPacketImpl(NativeNetMessages.GetNestedMessage(Address, "packet"), false); }
+    public CDemoStringTables StringTable
+    { get => new CDemoStringTablesImpl(NativeNetMessages.GetNestedMessage(Address, "string_table"), false); }
+    public CDemoPacket Packet
+    { get => new CDemoPacketImpl(NativeNetMessages.GetNestedMessage(Address, "packet"), false); }
 }

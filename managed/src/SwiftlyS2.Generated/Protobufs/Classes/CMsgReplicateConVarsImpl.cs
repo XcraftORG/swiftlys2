@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgReplicateConVarsImpl : TypedProtobuf<CMsgReplicateConVars>, CMsgReplicateConVars
 {
-  public CMsgReplicateConVarsImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgReplicateConVarsImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldSubMessageType<CMsgConVarValue> Convars
-  { get => new ProtobufRepeatedFieldSubMessageType<CMsgConVarValue>(Accessor, "convars"); }
+    public IProtobufRepeatedFieldSubMessageType<CMsgConVarValue> Convars
+    { get => new ProtobufRepeatedFieldSubMessageType<CMsgConVarValue>(Accessor, "convars"); }
 }

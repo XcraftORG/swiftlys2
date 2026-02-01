@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCStorePurchaseCancel : ITypedProtobuf<CMsgGCStorePurchaseCancel>
 {
-  static CMsgGCStorePurchaseCancel ITypedProtobuf<CMsgGCStorePurchaseCancel>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCStorePurchaseCancelImpl(handle, isManuallyAllocated);
+    static CMsgGCStorePurchaseCancel ITypedProtobuf<CMsgGCStorePurchaseCancel>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCStorePurchaseCancelImpl(handle, isManuallyAllocated);
 
-
-  public ulong TxnId { get; set; }
+    public ulong TxnId { get; set; }
 }

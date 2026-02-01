@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface NetMessageSplitscreenUserChanged : ITypedProtobuf<NetMessageSplitscreenUserChanged>
 {
-  static NetMessageSplitscreenUserChanged ITypedProtobuf<NetMessageSplitscreenUserChanged>.Wrap(nint handle, bool isManuallyAllocated) => new NetMessageSplitscreenUserChangedImpl(handle, isManuallyAllocated);
+    static NetMessageSplitscreenUserChanged ITypedProtobuf<NetMessageSplitscreenUserChanged>.Wrap(nint handle, bool isManuallyAllocated) => new NetMessageSplitscreenUserChangedImpl(handle, isManuallyAllocated);
 
-
-  public uint Slot { get; set; }
+    public uint Slot { get; set; }
 }

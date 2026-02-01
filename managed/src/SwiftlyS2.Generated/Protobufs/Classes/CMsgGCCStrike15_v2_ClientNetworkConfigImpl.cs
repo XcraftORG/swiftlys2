@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgGCCStrike15_v2_ClientNetworkConfigImpl : TypedProtobuf<CMsgGCCStrike15_v2_ClientNetworkConfig>, CMsgGCCStrike15_v2_ClientNetworkConfig
 {
-  public CMsgGCCStrike15_v2_ClientNetworkConfigImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgGCCStrike15_v2_ClientNetworkConfigImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public byte[] Data
-  { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
+    public byte[] Data
+    { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
 }

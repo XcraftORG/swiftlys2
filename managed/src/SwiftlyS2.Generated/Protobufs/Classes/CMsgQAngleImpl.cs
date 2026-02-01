@@ -8,19 +8,14 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgQAngleImpl : TypedProtobuf<CMsgQAngle>, CMsgQAngle
 {
-  public CMsgQAngleImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgQAngleImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public float X
-  { get => Accessor.GetFloat("x"); set => Accessor.SetFloat("x", value); }
-
-
-  public float Y
-  { get => Accessor.GetFloat("y"); set => Accessor.SetFloat("y", value); }
-
-
-  public float Z
-  { get => Accessor.GetFloat("z"); set => Accessor.SetFloat("z", value); }
+    public float X
+    { get => Accessor.GetFloat("x"); set => Accessor.SetFloat("x", value); }
+    public float Y
+    { get => Accessor.GetFloat("y"); set => Accessor.SetFloat("y", value); }
+    public float Z
+    { get => Accessor.GetFloat("z"); set => Accessor.SetFloat("z", value); }
 }

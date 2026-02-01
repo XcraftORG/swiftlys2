@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CDemoSpawnGroupsImpl : TypedProtobuf<CDemoSpawnGroups>, CDemoSpawnGroups
 {
-  public CDemoSpawnGroupsImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CDemoSpawnGroupsImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldValueType<byte[]> Msgs
-  { get => new ProtobufRepeatedFieldValueType<byte[]>(Accessor, "msgs"); }
+    public IProtobufRepeatedFieldValueType<byte[]> Msgs
+    { get => new ProtobufRepeatedFieldValueType<byte[]>(Accessor, "msgs"); }
 }

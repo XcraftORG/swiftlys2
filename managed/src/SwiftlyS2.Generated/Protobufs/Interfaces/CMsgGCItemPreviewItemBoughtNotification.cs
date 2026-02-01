@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCItemPreviewItemBoughtNotification : ITypedProtobuf<CMsgGCItemPreviewItemBoughtNotification>
 {
-  static CMsgGCItemPreviewItemBoughtNotification ITypedProtobuf<CMsgGCItemPreviewItemBoughtNotification>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCItemPreviewItemBoughtNotificationImpl(handle, isManuallyAllocated);
+    static CMsgGCItemPreviewItemBoughtNotification ITypedProtobuf<CMsgGCItemPreviewItemBoughtNotification>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCItemPreviewItemBoughtNotificationImpl(handle, isManuallyAllocated);
 
-
-  public uint ItemDefIndex { get; set; }
+    public uint ItemDefIndex { get; set; }
 }

@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CGCToGCMsgMasterAck_ResponseImpl : TypedProtobuf<CGCToGCMsgMasterAck_Response>, CGCToGCMsgMasterAck_Response
 {
-  public CGCToGCMsgMasterAck_ResponseImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CGCToGCMsgMasterAck_ResponseImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public int Eresult
-  { get => Accessor.GetInt32("eresult"); set => Accessor.SetInt32("eresult", value); }
+    public int Eresult
+    { get => Accessor.GetInt32("eresult"); set => Accessor.SetInt32("eresult", value); }
 }

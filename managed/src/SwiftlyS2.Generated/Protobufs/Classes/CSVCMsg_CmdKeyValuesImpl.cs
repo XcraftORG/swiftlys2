@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CSVCMsg_CmdKeyValuesImpl : NetMessage<CSVCMsg_CmdKeyValues>, CSVCMsg_CmdKeyValues
 {
-  public CSVCMsg_CmdKeyValuesImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CSVCMsg_CmdKeyValuesImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public byte[] Data
-  { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
+    public byte[] Data
+    { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
 }

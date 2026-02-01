@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CCSUsrMsg_HintTextImpl : NetMessage<CCSUsrMsg_HintText>, CCSUsrMsg_HintText
 {
-  public CCSUsrMsg_HintTextImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CCSUsrMsg_HintTextImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public string Message
-  { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
+    public string Message
+    { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
 }

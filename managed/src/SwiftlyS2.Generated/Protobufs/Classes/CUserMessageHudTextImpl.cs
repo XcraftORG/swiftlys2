@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CUserMessageHudTextImpl : NetMessage<CUserMessageHudText>, CUserMessageHudText
 {
-  public CUserMessageHudTextImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CUserMessageHudTextImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public string Message
-  { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
+    public string Message
+    { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
 }

@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class NetMessageConnectionCrashedImpl : TypedProtobuf<NetMessageConnectionCrashed>, NetMessageConnectionCrashed
 {
-  public NetMessageConnectionCrashedImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public NetMessageConnectionCrashedImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public uint Reason
-  { get => Accessor.GetUInt32("reason"); set => Accessor.SetUInt32("reason", value); }
-
-
-  public string Message
-  { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
+    public uint Reason
+    { get => Accessor.GetUInt32("reason"); set => Accessor.SetUInt32("reason", value); }
+    public string Message
+    { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
 }

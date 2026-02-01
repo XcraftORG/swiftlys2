@@ -8,23 +8,16 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgTEDustImpl : NetMessage<CMsgTEDust>, CMsgTEDust
 {
-  public CMsgTEDustImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CMsgTEDustImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public Vector Origin
-  { get => Accessor.GetVector("origin"); set => Accessor.SetVector("origin", value); }
-
-
-  public float Size
-  { get => Accessor.GetFloat("size"); set => Accessor.SetFloat("size", value); }
-
-
-  public float Speed
-  { get => Accessor.GetFloat("speed"); set => Accessor.SetFloat("speed", value); }
-
-
-  public Vector Direction
-  { get => Accessor.GetVector("direction"); set => Accessor.SetVector("direction", value); }
+    public Vector Origin
+    { get => Accessor.GetVector("origin"); set => Accessor.SetVector("origin", value); }
+    public float Size
+    { get => Accessor.GetFloat("size"); set => Accessor.SetFloat("size", value); }
+    public float Speed
+    { get => Accessor.GetFloat("speed"); set => Accessor.SetFloat("speed", value); }
+    public Vector Direction
+    { get => Accessor.GetVector("direction"); set => Accessor.SetVector("direction", value); }
 }

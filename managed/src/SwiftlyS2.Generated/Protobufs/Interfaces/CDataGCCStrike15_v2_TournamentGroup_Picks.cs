@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CDataGCCStrike15_v2_TournamentGroup_Picks : ITypedProtobuf<CDataGCCStrike15_v2_TournamentGroup_Picks>
 {
-  static CDataGCCStrike15_v2_TournamentGroup_Picks ITypedProtobuf<CDataGCCStrike15_v2_TournamentGroup_Picks>.Wrap(nint handle, bool isManuallyAllocated) => new CDataGCCStrike15_v2_TournamentGroup_PicksImpl(handle, isManuallyAllocated);
+    static CDataGCCStrike15_v2_TournamentGroup_Picks ITypedProtobuf<CDataGCCStrike15_v2_TournamentGroup_Picks>.Wrap(nint handle, bool isManuallyAllocated) => new CDataGCCStrike15_v2_TournamentGroup_PicksImpl(handle, isManuallyAllocated);
 
-
-  public IProtobufRepeatedFieldValueType<int> Pickids { get; }
+    public IProtobufRepeatedFieldValueType<int> Pickids { get; }
 }

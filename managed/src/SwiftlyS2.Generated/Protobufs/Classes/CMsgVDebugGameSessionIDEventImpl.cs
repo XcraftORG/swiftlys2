@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgVDebugGameSessionIDEventImpl : NetMessage<CMsgVDebugGameSessionIDEvent>, CMsgVDebugGameSessionIDEvent
 {
-  public CMsgVDebugGameSessionIDEventImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CMsgVDebugGameSessionIDEventImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public int Clientid
-  { get => Accessor.GetInt32("clientid"); set => Accessor.SetInt32("clientid", value); }
-
-
-  public string Gamesessionid
-  { get => Accessor.GetString("gamesessionid"); set => Accessor.SetString("gamesessionid", value); }
+    public int Clientid
+    { get => Accessor.GetInt32("clientid"); set => Accessor.SetInt32("clientid", value); }
+    public string Gamesessionid
+    { get => Accessor.GetString("gamesessionid"); set => Accessor.SetString("gamesessionid", value); }
 }

@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CCSUsrMsg_CurrentRoundOddsImpl : NetMessage<CCSUsrMsg_CurrentRoundOdds>, CCSUsrMsg_CurrentRoundOdds
 {
-  public CCSUsrMsg_CurrentRoundOddsImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CCSUsrMsg_CurrentRoundOddsImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public int Odds
-  { get => Accessor.GetInt32("odds"); set => Accessor.SetInt32("odds", value); }
+    public int Odds
+    { get => Accessor.GetInt32("odds"); set => Accessor.SetInt32("odds", value); }
 }

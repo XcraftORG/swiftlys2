@@ -6,14 +6,9 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CSOQuestProgress : ITypedProtobuf<CSOQuestProgress>
 {
-  static CSOQuestProgress ITypedProtobuf<CSOQuestProgress>.Wrap(nint handle, bool isManuallyAllocated) => new CSOQuestProgressImpl(handle, isManuallyAllocated);
+    static CSOQuestProgress ITypedProtobuf<CSOQuestProgress>.Wrap(nint handle, bool isManuallyAllocated) => new CSOQuestProgressImpl(handle, isManuallyAllocated);
 
-
-  public uint Questid { get; set; }
-
-
-  public uint PointsRemaining { get; set; }
-
-
-  public uint BonusPoints { get; set; }
+    public uint Questid { get; set; }
+    public uint PointsRemaining { get; set; }
+    public uint BonusPoints { get; set; }
 }

@@ -6,11 +6,8 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CClientMsg_CustomGameEvent : ITypedProtobuf<CClientMsg_CustomGameEvent>
 {
-  static CClientMsg_CustomGameEvent ITypedProtobuf<CClientMsg_CustomGameEvent>.Wrap(nint handle, bool isManuallyAllocated) => new CClientMsg_CustomGameEventImpl(handle, isManuallyAllocated);
+    static CClientMsg_CustomGameEvent ITypedProtobuf<CClientMsg_CustomGameEvent>.Wrap(nint handle, bool isManuallyAllocated) => new CClientMsg_CustomGameEventImpl(handle, isManuallyAllocated);
 
-
-  public string EventName { get; set; }
-
-
-  public byte[] Data { get; set; }
+    public string EventName { get; set; }
+    public byte[] Data { get; set; }
 }

@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgSetItemPositionsImpl : TypedProtobuf<CMsgSetItemPositions>, CMsgSetItemPositions
 {
-  public CMsgSetItemPositionsImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgSetItemPositionsImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition> ItemPositions
-  { get => new ProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition>(Accessor, "item_positions"); }
+    public IProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition> ItemPositions
+    { get => new ProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition>(Accessor, "item_positions"); }
 }

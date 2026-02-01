@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CDemoStopImpl : TypedProtobuf<CDemoStop>, CDemoStop
 {
-  public CDemoStopImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
-
+    public CDemoStopImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
 }

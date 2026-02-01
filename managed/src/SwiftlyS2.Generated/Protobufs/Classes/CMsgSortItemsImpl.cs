@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgSortItemsImpl : TypedProtobuf<CMsgSortItems>, CMsgSortItems
 {
-  public CMsgSortItemsImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgSortItemsImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public uint SortType
-  { get => Accessor.GetUInt32("sort_type"); set => Accessor.SetUInt32("sort_type", value); }
+    public uint SortType
+    { get => Accessor.GetUInt32("sort_type"); set => Accessor.SetUInt32("sort_type", value); }
 }

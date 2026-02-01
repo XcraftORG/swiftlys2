@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CSVCMsg_PeerListImpl : NetMessage<CSVCMsg_PeerList>, CSVCMsg_PeerList
 {
-  public CSVCMsg_PeerListImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CSVCMsg_PeerListImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldSubMessageType<CMsgServerPeer> Peer
-  { get => new ProtobufRepeatedFieldSubMessageType<CMsgServerPeer>(Accessor, "peer"); }
+    public IProtobufRepeatedFieldSubMessageType<CMsgServerPeer> Peer
+    { get => new ProtobufRepeatedFieldSubMessageType<CMsgServerPeer>(Accessor, "peer"); }
 }

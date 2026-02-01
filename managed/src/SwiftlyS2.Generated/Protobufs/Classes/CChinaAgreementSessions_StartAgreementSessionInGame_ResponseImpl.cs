@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CChinaAgreementSessions_StartAgreementSessionInGame_ResponseImpl : TypedProtobuf<CChinaAgreementSessions_StartAgreementSessionInGame_Response>, CChinaAgreementSessions_StartAgreementSessionInGame_Response
 {
-  public CChinaAgreementSessions_StartAgreementSessionInGame_ResponseImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CChinaAgreementSessions_StartAgreementSessionInGame_ResponseImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public string AgreementUrl
-  { get => Accessor.GetString("agreement_url"); set => Accessor.SetString("agreement_url", value); }
+    public string AgreementUrl
+    { get => Accessor.GetString("agreement_url"); set => Accessor.SetString("agreement_url", value); }
 }

@@ -6,11 +6,8 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CUIFontFilePackagePB : ITypedProtobuf<CUIFontFilePackagePB>
 {
-  static CUIFontFilePackagePB ITypedProtobuf<CUIFontFilePackagePB>.Wrap(nint handle, bool isManuallyAllocated) => new CUIFontFilePackagePBImpl(handle, isManuallyAllocated);
+    static CUIFontFilePackagePB ITypedProtobuf<CUIFontFilePackagePB>.Wrap(nint handle, bool isManuallyAllocated) => new CUIFontFilePackagePBImpl(handle, isManuallyAllocated);
 
-
-  public uint PackageVersion { get; set; }
-
-
-  public IProtobufRepeatedFieldSubMessageType<CUIFontFilePackagePB_CUIEncryptedFontFilePB> EncryptedFontFiles { get; }
+    public uint PackageVersion { get; set; }
+    public IProtobufRepeatedFieldSubMessageType<CUIFontFilePackagePB_CUIEncryptedFontFilePB> EncryptedFontFiles { get; }
 }

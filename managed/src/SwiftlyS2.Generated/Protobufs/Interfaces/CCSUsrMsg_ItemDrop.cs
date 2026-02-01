@@ -6,11 +6,8 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CCSUsrMsg_ItemDrop : ITypedProtobuf<CCSUsrMsg_ItemDrop>
 {
-  static CCSUsrMsg_ItemDrop ITypedProtobuf<CCSUsrMsg_ItemDrop>.Wrap(nint handle, bool isManuallyAllocated) => new CCSUsrMsg_ItemDropImpl(handle, isManuallyAllocated);
+    static CCSUsrMsg_ItemDrop ITypedProtobuf<CCSUsrMsg_ItemDrop>.Wrap(nint handle, bool isManuallyAllocated) => new CCSUsrMsg_ItemDropImpl(handle, isManuallyAllocated);
 
-
-  public long Itemid { get; set; }
-
-
-  public bool Death { get; set; }
+    public long Itemid { get; set; }
+    public bool Death { get; set; }
 }

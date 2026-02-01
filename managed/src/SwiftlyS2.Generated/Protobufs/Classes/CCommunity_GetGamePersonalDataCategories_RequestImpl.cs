@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CCommunity_GetGamePersonalDataCategories_RequestImpl : TypedProtobuf<CCommunity_GetGamePersonalDataCategories_Request>, CCommunity_GetGamePersonalDataCategories_Request
 {
-  public CCommunity_GetGamePersonalDataCategories_RequestImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CCommunity_GetGamePersonalDataCategories_RequestImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public uint Appid
-  { get => Accessor.GetUInt32("appid"); set => Accessor.SetUInt32("appid", value); }
+    public uint Appid
+    { get => Accessor.GetUInt32("appid"); set => Accessor.SetUInt32("appid", value); }
 }

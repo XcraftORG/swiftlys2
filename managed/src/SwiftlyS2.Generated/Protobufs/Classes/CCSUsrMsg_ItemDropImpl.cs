@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CCSUsrMsg_ItemDropImpl : TypedProtobuf<CCSUsrMsg_ItemDrop>, CCSUsrMsg_ItemDrop
 {
-  public CCSUsrMsg_ItemDropImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CCSUsrMsg_ItemDropImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public long Itemid
-  { get => Accessor.GetInt64("itemid"); set => Accessor.SetInt64("itemid", value); }
-
-
-  public bool Death
-  { get => Accessor.GetBool("death"); set => Accessor.SetBool("death", value); }
+    public long Itemid
+    { get => Accessor.GetInt64("itemid"); set => Accessor.SetInt64("itemid", value); }
+    public bool Death
+    { get => Accessor.GetBool("death"); set => Accessor.SetBool("death", value); }
 }

@@ -6,7 +6,6 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface NetMessagePacketEnd : ITypedProtobuf<NetMessagePacketEnd>
 {
-  static NetMessagePacketEnd ITypedProtobuf<NetMessagePacketEnd>.Wrap(nint handle, bool isManuallyAllocated) => new NetMessagePacketEndImpl(handle, isManuallyAllocated);
-
+    static NetMessagePacketEnd ITypedProtobuf<NetMessagePacketEnd>.Wrap(nint handle, bool isManuallyAllocated) => new NetMessagePacketEndImpl(handle, isManuallyAllocated);
 
 }

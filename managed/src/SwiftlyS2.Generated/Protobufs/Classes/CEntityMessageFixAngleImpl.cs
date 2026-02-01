@@ -8,19 +8,14 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CEntityMessageFixAngleImpl : TypedProtobuf<CEntityMessageFixAngle>, CEntityMessageFixAngle
 {
-  public CEntityMessageFixAngleImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CEntityMessageFixAngleImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public bool Relative
-  { get => Accessor.GetBool("relative"); set => Accessor.SetBool("relative", value); }
-
-
-  public QAngle Angle
-  { get => Accessor.GetQAngle("angle"); set => Accessor.SetQAngle("angle", value); }
-
-
-  public CEntityMsg EntityMsg
-  { get => new CEntityMsgImpl(NativeNetMessages.GetNestedMessage(Address, "entity_msg"), false); }
+    public bool Relative
+    { get => Accessor.GetBool("relative"); set => Accessor.SetBool("relative", value); }
+    public QAngle Angle
+    { get => Accessor.GetQAngle("angle"); set => Accessor.SetQAngle("angle", value); }
+    public CEntityMsg EntityMsg
+    { get => new CEntityMsgImpl(NativeNetMessages.GetNestedMessage(Address, "entity_msg"), false); }
 }

@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class NetMessagePacketStartImpl : TypedProtobuf<NetMessagePacketStart>, NetMessagePacketStart
 {
-  public NetMessagePacketStartImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
-
+    public NetMessagePacketStartImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
 }

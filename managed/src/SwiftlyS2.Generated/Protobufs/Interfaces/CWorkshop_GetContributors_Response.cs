@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CWorkshop_GetContributors_Response : ITypedProtobuf<CWorkshop_GetContributors_Response>
 {
-  static CWorkshop_GetContributors_Response ITypedProtobuf<CWorkshop_GetContributors_Response>.Wrap(nint handle, bool isManuallyAllocated) => new CWorkshop_GetContributors_ResponseImpl(handle, isManuallyAllocated);
+    static CWorkshop_GetContributors_Response ITypedProtobuf<CWorkshop_GetContributors_Response>.Wrap(nint handle, bool isManuallyAllocated) => new CWorkshop_GetContributors_ResponseImpl(handle, isManuallyAllocated);
 
-
-  public IProtobufRepeatedFieldValueType<ulong> Contributors { get; }
+    public IProtobufRepeatedFieldValueType<ulong> Contributors { get; }
 }

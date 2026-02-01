@@ -6,11 +6,8 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgApplyStrangePart : ITypedProtobuf<CMsgApplyStrangePart>
 {
-  static CMsgApplyStrangePart ITypedProtobuf<CMsgApplyStrangePart>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgApplyStrangePartImpl(handle, isManuallyAllocated);
+    static CMsgApplyStrangePart ITypedProtobuf<CMsgApplyStrangePart>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgApplyStrangePartImpl(handle, isManuallyAllocated);
 
-
-  public ulong StrangePartItemId { get; set; }
-
-
-  public ulong ItemItemId { get; set; }
+    public ulong StrangePartItemId { get; set; }
+    public ulong ItemItemId { get; set; }
 }

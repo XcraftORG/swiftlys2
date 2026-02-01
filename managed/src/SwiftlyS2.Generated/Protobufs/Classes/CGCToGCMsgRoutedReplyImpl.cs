@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CGCToGCMsgRoutedReplyImpl : TypedProtobuf<CGCToGCMsgRoutedReply>, CGCToGCMsgRoutedReply
 {
-  public CGCToGCMsgRoutedReplyImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CGCToGCMsgRoutedReplyImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public uint MsgType
-  { get => Accessor.GetUInt32("msg_type"); set => Accessor.SetUInt32("msg_type", value); }
-
-
-  public byte[] NetMessage
-  { get => Accessor.GetBytes("net_message"); set => Accessor.SetBytes("net_message", value); }
+    public uint MsgType
+    { get => Accessor.GetUInt32("msg_type"); set => Accessor.SetUInt32("msg_type", value); }
+    public byte[] NetMessage
+    { get => Accessor.GetBytes("net_message"); set => Accessor.SetBytes("net_message", value); }
 }

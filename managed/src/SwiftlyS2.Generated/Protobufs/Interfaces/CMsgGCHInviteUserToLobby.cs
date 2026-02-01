@@ -6,17 +6,10 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCHInviteUserToLobby : ITypedProtobuf<CMsgGCHInviteUserToLobby>
 {
-  static CMsgGCHInviteUserToLobby ITypedProtobuf<CMsgGCHInviteUserToLobby>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCHInviteUserToLobbyImpl(handle, isManuallyAllocated);
+    static CMsgGCHInviteUserToLobby ITypedProtobuf<CMsgGCHInviteUserToLobby>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCHInviteUserToLobbyImpl(handle, isManuallyAllocated);
 
-
-  public ulong Steamid { get; set; }
-
-
-  public uint Appid { get; set; }
-
-
-  public ulong SteamidInvited { get; set; }
-
-
-  public ulong SteamidLobby { get; set; }
+    public ulong Steamid { get; set; }
+    public uint Appid { get; set; }
+    public ulong SteamidInvited { get; set; }
+    public ulong SteamidLobby { get; set; }
 }

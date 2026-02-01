@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CCSUsrMsg_EndOfMatchAllPlayersDataImpl : NetMessage<CCSUsrMsg_EndOfMatchAllPlayersData>, CCSUsrMsg_EndOfMatchAllPlayersData
 {
-  public CCSUsrMsg_EndOfMatchAllPlayersDataImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CCSUsrMsg_EndOfMatchAllPlayersDataImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldSubMessageType<CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData> Allplayerdata
-  { get => new ProtobufRepeatedFieldSubMessageType<CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData>(Accessor, "allplayerdata"); }
-
-
-  public int Scene
-  { get => Accessor.GetInt32("scene"); set => Accessor.SetInt32("scene", value); }
+    public IProtobufRepeatedFieldSubMessageType<CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData> Allplayerdata
+    { get => new ProtobufRepeatedFieldSubMessageType<CCSUsrMsg_EndOfMatchAllPlayersData_PlayerData>(Accessor, "allplayerdata"); }
+    public int Scene
+    { get => Accessor.GetInt32("scene"); set => Accessor.SetInt32("scene", value); }
 }

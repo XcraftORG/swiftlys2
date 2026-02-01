@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgClearEntityDecalsEventImpl : NetMessage<CMsgClearEntityDecalsEvent>, CMsgClearEntityDecalsEvent
 {
-  public CMsgClearEntityDecalsEventImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CMsgClearEntityDecalsEventImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public uint Flagstoclear
-  { get => Accessor.GetUInt32("flagstoclear"); set => Accessor.SetUInt32("flagstoclear", value); }
+    public uint Flagstoclear
+    { get => Accessor.GetUInt32("flagstoclear"); set => Accessor.SetUInt32("flagstoclear", value); }
 }

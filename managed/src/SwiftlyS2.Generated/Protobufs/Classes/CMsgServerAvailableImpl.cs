@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgServerAvailableImpl : TypedProtobuf<CMsgServerAvailable>, CMsgServerAvailable
 {
-  public CMsgServerAvailableImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
-
+    public CMsgServerAvailableImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
 }

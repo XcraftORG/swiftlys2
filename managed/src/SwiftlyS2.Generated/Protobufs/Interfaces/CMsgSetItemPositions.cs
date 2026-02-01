@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgSetItemPositions : ITypedProtobuf<CMsgSetItemPositions>
 {
-  static CMsgSetItemPositions ITypedProtobuf<CMsgSetItemPositions>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgSetItemPositionsImpl(handle, isManuallyAllocated);
+    static CMsgSetItemPositions ITypedProtobuf<CMsgSetItemPositions>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgSetItemPositionsImpl(handle, isManuallyAllocated);
 
-
-  public IProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition> ItemPositions { get; }
+    public IProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition> ItemPositions { get; }
 }

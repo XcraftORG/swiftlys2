@@ -6,7 +6,6 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CDemoSyncTick : ITypedProtobuf<CDemoSyncTick>
 {
-  static CDemoSyncTick ITypedProtobuf<CDemoSyncTick>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoSyncTickImpl(handle, isManuallyAllocated);
-
+    static CDemoSyncTick ITypedProtobuf<CDemoSyncTick>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoSyncTickImpl(handle, isManuallyAllocated);
 
 }

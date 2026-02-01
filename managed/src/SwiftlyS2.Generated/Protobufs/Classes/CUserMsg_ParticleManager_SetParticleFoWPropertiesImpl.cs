@@ -8,19 +8,14 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CUserMsg_ParticleManager_SetParticleFoWPropertiesImpl : TypedProtobuf<CUserMsg_ParticleManager_SetParticleFoWProperties>, CUserMsg_ParticleManager_SetParticleFoWProperties
 {
-  public CUserMsg_ParticleManager_SetParticleFoWPropertiesImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CUserMsg_ParticleManager_SetParticleFoWPropertiesImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public int FowControlPoint
-  { get => Accessor.GetInt32("fow_control_point"); set => Accessor.SetInt32("fow_control_point", value); }
-
-
-  public int FowControlPoint2
-  { get => Accessor.GetInt32("fow_control_point2"); set => Accessor.SetInt32("fow_control_point2", value); }
-
-
-  public float FowRadius
-  { get => Accessor.GetFloat("fow_radius"); set => Accessor.SetFloat("fow_radius", value); }
+    public int FowControlPoint
+    { get => Accessor.GetInt32("fow_control_point"); set => Accessor.SetInt32("fow_control_point", value); }
+    public int FowControlPoint2
+    { get => Accessor.GetInt32("fow_control_point2"); set => Accessor.SetInt32("fow_control_point2", value); }
+    public float FowRadius
+    { get => Accessor.GetFloat("fow_radius"); set => Accessor.SetFloat("fow_radius", value); }
 }

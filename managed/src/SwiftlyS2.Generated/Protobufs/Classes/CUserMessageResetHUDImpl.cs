@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CUserMessageResetHUDImpl : NetMessage<CUserMessageResetHUD>, CUserMessageResetHUD
 {
-  public CUserMessageResetHUDImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
-
+    public CUserMessageResetHUDImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
 }

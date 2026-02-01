@@ -6,11 +6,8 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CEntityMessageRemoveAllDecals : ITypedProtobuf<CEntityMessageRemoveAllDecals>
 {
-  static CEntityMessageRemoveAllDecals ITypedProtobuf<CEntityMessageRemoveAllDecals>.Wrap(nint handle, bool isManuallyAllocated) => new CEntityMessageRemoveAllDecalsImpl(handle, isManuallyAllocated);
+    static CEntityMessageRemoveAllDecals ITypedProtobuf<CEntityMessageRemoveAllDecals>.Wrap(nint handle, bool isManuallyAllocated) => new CEntityMessageRemoveAllDecalsImpl(handle, isManuallyAllocated);
 
-
-  public bool RemoveDecals { get; set; }
-
-
-  public CEntityMsg EntityMsg { get; }
+    public bool RemoveDecals { get; set; }
+    public CEntityMsg EntityMsg { get; }
 }

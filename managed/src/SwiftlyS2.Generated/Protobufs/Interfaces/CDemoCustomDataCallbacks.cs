@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CDemoCustomDataCallbacks : ITypedProtobuf<CDemoCustomDataCallbacks>
 {
-  static CDemoCustomDataCallbacks ITypedProtobuf<CDemoCustomDataCallbacks>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoCustomDataCallbacksImpl(handle, isManuallyAllocated);
+    static CDemoCustomDataCallbacks ITypedProtobuf<CDemoCustomDataCallbacks>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoCustomDataCallbacksImpl(handle, isManuallyAllocated);
 
-
-  public IProtobufRepeatedFieldValueType<string> SaveId { get; }
+    public IProtobufRepeatedFieldValueType<string> SaveId { get; }
 }

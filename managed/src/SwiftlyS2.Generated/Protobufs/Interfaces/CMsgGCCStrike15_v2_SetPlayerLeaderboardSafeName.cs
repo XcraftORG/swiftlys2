@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName : ITypedProtobuf<CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName>
 {
-  static CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName ITypedProtobuf<CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeNameImpl(handle, isManuallyAllocated);
+    static CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName ITypedProtobuf<CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeName>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeNameImpl(handle, isManuallyAllocated);
 
-
-  public string LeaderboardSafeName { get; set; }
+    public string LeaderboardSafeName { get; set; }
 }

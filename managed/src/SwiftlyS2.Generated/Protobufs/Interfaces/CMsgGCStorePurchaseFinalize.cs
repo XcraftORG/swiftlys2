@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCStorePurchaseFinalize : ITypedProtobuf<CMsgGCStorePurchaseFinalize>
 {
-  static CMsgGCStorePurchaseFinalize ITypedProtobuf<CMsgGCStorePurchaseFinalize>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCStorePurchaseFinalizeImpl(handle, isManuallyAllocated);
+    static CMsgGCStorePurchaseFinalize ITypedProtobuf<CMsgGCStorePurchaseFinalize>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCStorePurchaseFinalizeImpl(handle, isManuallyAllocated);
 
-
-  public ulong TxnId { get; set; }
+    public ulong TxnId { get; set; }
 }

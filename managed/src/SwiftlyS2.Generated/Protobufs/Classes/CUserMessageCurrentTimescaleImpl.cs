@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CUserMessageCurrentTimescaleImpl : NetMessage<CUserMessageCurrentTimescale>, CUserMessageCurrentTimescale
 {
-  public CUserMessageCurrentTimescaleImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CUserMessageCurrentTimescaleImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public float Current
-  { get => Accessor.GetFloat("current"); set => Accessor.SetFloat("current", value); }
+    public float Current
+    { get => Accessor.GetFloat("current"); set => Accessor.SetFloat("current", value); }
 }

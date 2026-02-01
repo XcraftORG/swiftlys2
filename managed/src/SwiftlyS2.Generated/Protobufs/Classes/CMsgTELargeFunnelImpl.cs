@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgTELargeFunnelImpl : NetMessage<CMsgTELargeFunnel>, CMsgTELargeFunnel
 {
-  public CMsgTELargeFunnelImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CMsgTELargeFunnelImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public Vector Origin
-  { get => Accessor.GetVector("origin"); set => Accessor.SetVector("origin", value); }
-
-
-  public uint Reversed
-  { get => Accessor.GetUInt32("reversed"); set => Accessor.SetUInt32("reversed", value); }
+    public Vector Origin
+    { get => Accessor.GetVector("origin"); set => Accessor.SetVector("origin", value); }
+    public uint Reversed
+    { get => Accessor.GetUInt32("reversed"); set => Accessor.SetUInt32("reversed", value); }
 }

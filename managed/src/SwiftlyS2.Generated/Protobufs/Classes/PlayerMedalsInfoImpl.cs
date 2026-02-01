@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class PlayerMedalsInfoImpl : TypedProtobuf<PlayerMedalsInfo>, PlayerMedalsInfo
 {
-  public PlayerMedalsInfoImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public PlayerMedalsInfoImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldValueType<uint> DisplayItemsDefidx
-  { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "display_items_defidx"); }
-
-
-  public uint FeaturedDisplayItemDefidx
-  { get => Accessor.GetUInt32("featured_display_item_defidx"); set => Accessor.SetUInt32("featured_display_item_defidx", value); }
+    public IProtobufRepeatedFieldValueType<uint> DisplayItemsDefidx
+    { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "display_items_defidx"); }
+    public uint FeaturedDisplayItemDefidx
+    { get => Accessor.GetUInt32("featured_display_item_defidx"); set => Accessor.SetUInt32("featured_display_item_defidx", value); }
 }

@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgGCToGCBannedWordListBroadcast : ITypedProtobuf<CMsgGCToGCBannedWordListBroadcast>
 {
-  static CMsgGCToGCBannedWordListBroadcast ITypedProtobuf<CMsgGCToGCBannedWordListBroadcast>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCToGCBannedWordListBroadcastImpl(handle, isManuallyAllocated);
+    static CMsgGCToGCBannedWordListBroadcast ITypedProtobuf<CMsgGCToGCBannedWordListBroadcast>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgGCToGCBannedWordListBroadcastImpl(handle, isManuallyAllocated);
 
-
-  public CMsgGCBannedWordListResponse Broadcast { get; }
+    public CMsgGCBannedWordListResponse Broadcast { get; }
 }

@@ -6,11 +6,8 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CDemoCustomData : ITypedProtobuf<CDemoCustomData>
 {
-  static CDemoCustomData ITypedProtobuf<CDemoCustomData>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoCustomDataImpl(handle, isManuallyAllocated);
+    static CDemoCustomData ITypedProtobuf<CDemoCustomData>.Wrap(nint handle, bool isManuallyAllocated) => new CDemoCustomDataImpl(handle, isManuallyAllocated);
 
-
-  public int CallbackIndex { get; set; }
-
-
-  public byte[] Data { get; set; }
+    public int CallbackIndex { get; set; }
+    public byte[] Data { get; set; }
 }

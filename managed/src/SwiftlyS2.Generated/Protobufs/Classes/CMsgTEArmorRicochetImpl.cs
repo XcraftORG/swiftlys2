@@ -8,15 +8,12 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgTEArmorRicochetImpl : NetMessage<CMsgTEArmorRicochet>, CMsgTEArmorRicochet
 {
-  public CMsgTEArmorRicochetImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CMsgTEArmorRicochetImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public Vector Pos
-  { get => Accessor.GetVector("pos"); set => Accessor.SetVector("pos", value); }
-
-
-  public Vector Dir
-  { get => Accessor.GetVector("dir"); set => Accessor.SetVector("dir", value); }
+    public Vector Pos
+    { get => Accessor.GetVector("pos"); set => Accessor.SetVector("pos", value); }
+    public Vector Dir
+    { get => Accessor.GetVector("dir"); set => Accessor.SetVector("dir", value); }
 }

@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgGCRequestAnnouncementsImpl : TypedProtobuf<CMsgGCRequestAnnouncements>, CMsgGCRequestAnnouncements
 {
-  public CMsgGCRequestAnnouncementsImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
-
+    public CMsgGCRequestAnnouncementsImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
 }

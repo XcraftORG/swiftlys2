@@ -6,8 +6,7 @@ namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public interface CMsgConsumableExhausted : ITypedProtobuf<CMsgConsumableExhausted>
 {
-  static CMsgConsumableExhausted ITypedProtobuf<CMsgConsumableExhausted>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgConsumableExhaustedImpl(handle, isManuallyAllocated);
+    static CMsgConsumableExhausted ITypedProtobuf<CMsgConsumableExhausted>.Wrap(nint handle, bool isManuallyAllocated) => new CMsgConsumableExhaustedImpl(handle, isManuallyAllocated);
 
-
-  public int ItemDefId { get; set; }
+    public int ItemDefId { get; set; }
 }

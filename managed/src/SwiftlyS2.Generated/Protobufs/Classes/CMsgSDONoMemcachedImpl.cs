@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgSDONoMemcachedImpl : TypedProtobuf<CMsgSDONoMemcached>, CMsgSDONoMemcached
 {
-  public CMsgSDONoMemcachedImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
-
+    public CMsgSDONoMemcachedImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
 }

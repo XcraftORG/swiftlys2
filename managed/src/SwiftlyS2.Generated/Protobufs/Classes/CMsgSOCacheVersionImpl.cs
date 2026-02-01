@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgSOCacheVersionImpl : TypedProtobuf<CMsgSOCacheVersion>, CMsgSOCacheVersion
 {
-  public CMsgSOCacheVersionImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgSOCacheVersionImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public ulong Version
-  { get => Accessor.GetUInt64("version"); set => Accessor.SetUInt64("version", value); }
+    public ulong Version
+    { get => Accessor.GetUInt64("version"); set => Accessor.SetUInt64("version", value); }
 }

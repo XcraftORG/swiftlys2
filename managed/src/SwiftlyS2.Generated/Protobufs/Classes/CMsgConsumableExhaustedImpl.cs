@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgConsumableExhaustedImpl : TypedProtobuf<CMsgConsumableExhausted>, CMsgConsumableExhausted
 {
-  public CMsgConsumableExhaustedImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CMsgConsumableExhaustedImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public int ItemDefId
-  { get => Accessor.GetInt32("item_def_id"); set => Accessor.SetInt32("item_def_id", value); }
+    public int ItemDefId
+    { get => Accessor.GetInt32("item_def_id"); set => Accessor.SetInt32("item_def_id", value); }
 }

@@ -8,19 +8,14 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CSOVolatileItemClaimedRewardsImpl : TypedProtobuf<CSOVolatileItemClaimedRewards>, CSOVolatileItemClaimedRewards
 {
-  public CSOVolatileItemClaimedRewardsImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CSOVolatileItemClaimedRewardsImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public uint Defidx
-  { get => Accessor.GetUInt32("defidx"); set => Accessor.SetUInt32("defidx", value); }
-
-
-  public IProtobufRepeatedFieldValueType<uint> Reward
-  { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "reward"); }
-
-
-  public IProtobufRepeatedFieldValueType<uint> GenerationTime
-  { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "generation_time"); }
+    public uint Defidx
+    { get => Accessor.GetUInt32("defidx"); set => Accessor.SetUInt32("defidx", value); }
+    public IProtobufRepeatedFieldValueType<uint> Reward
+    { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "reward"); }
+    public IProtobufRepeatedFieldValueType<uint> GenerationTime
+    { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "generation_time"); }
 }

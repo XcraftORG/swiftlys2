@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CClientMsg_RotateAnchorImpl : TypedProtobuf<CClientMsg_RotateAnchor>, CClientMsg_RotateAnchor
 {
-  public CClientMsg_RotateAnchorImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
+    public CClientMsg_RotateAnchorImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
-
-  public float Angle
-  { get => Accessor.GetFloat("angle"); set => Accessor.SetFloat("angle", value); }
+    public float Angle
+    { get => Accessor.GetFloat("angle"); set => Accessor.SetFloat("angle", value); }
 }

@@ -8,11 +8,10 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CUserMessageRequestDiagnosticImpl : NetMessage<CUserMessageRequestDiagnostic>, CUserMessageRequestDiagnostic
 {
-  public CUserMessageRequestDiagnosticImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
-  {
-  }
+    public CUserMessageRequestDiagnosticImpl(nint handle, bool isManuallyAllocated) : base(handle, isManuallyAllocated)
+    {
+    }
 
-
-  public IProtobufRepeatedFieldSubMessageType<CUserMessageRequestDiagnostic_Diagnostic> Diagnostics
-  { get => new ProtobufRepeatedFieldSubMessageType<CUserMessageRequestDiagnostic_Diagnostic>(Accessor, "diagnostics"); }
+    public IProtobufRepeatedFieldSubMessageType<CUserMessageRequestDiagnostic_Diagnostic> Diagnostics
+    { get => new ProtobufRepeatedFieldSubMessageType<CUserMessageRequestDiagnostic_Diagnostic>(Accessor, "diagnostics"); }
 }

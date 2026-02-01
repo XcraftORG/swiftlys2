@@ -8,9 +8,8 @@ namespace SwiftlyS2.Core.ProtobufDefinitions;
 
 internal class CMsgRequestInventoryRefreshImpl : TypedProtobuf<CMsgRequestInventoryRefresh>, CMsgRequestInventoryRefresh
 {
-  public CMsgRequestInventoryRefreshImpl(nint handle, bool isManuallyAllocated): base(handle)
-  {
-  }
-
+    public CMsgRequestInventoryRefreshImpl(nint handle, bool isManuallyAllocated) : base(handle)
+    {
+    }
 
 }
