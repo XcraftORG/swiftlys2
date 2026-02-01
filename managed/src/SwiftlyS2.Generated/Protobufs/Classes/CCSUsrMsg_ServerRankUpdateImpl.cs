@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_ServerRankUpdateImpl : NetMessage<CCSUsrMsg_ServerRankU
 
   public IProtobufRepeatedFieldSubMessageType<CCSUsrMsg_ServerRankUpdate_RankUpdate> RankUpdate
   { get => new ProtobufRepeatedFieldSubMessageType<CCSUsrMsg_ServerRankUpdate_RankUpdate>(Accessor, "rank_update"); }
-
 }

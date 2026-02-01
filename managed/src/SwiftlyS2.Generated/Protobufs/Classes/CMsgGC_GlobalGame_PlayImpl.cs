@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGC_GlobalGame_PlayImpl : TypedProtobuf<CMsgGC_GlobalGame_Play
 
   public uint Msperpoint
   { get => Accessor.GetUInt32("msperpoint"); set => Accessor.SetUInt32("msperpoint", value); }
-
 }

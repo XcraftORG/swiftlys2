@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgApplyEggEssenceImpl : TypedProtobuf<CMsgApplyEggEssence>, CMs
 
   public ulong EggItemId
   { get => Accessor.GetUInt64("egg_item_id"); set => Accessor.SetUInt64("egg_item_id", value); }
-
 }

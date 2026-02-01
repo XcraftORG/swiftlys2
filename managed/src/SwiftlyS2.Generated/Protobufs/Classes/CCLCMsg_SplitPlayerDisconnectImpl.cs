@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCLCMsg_SplitPlayerDisconnectImpl : NetMessage<CCLCMsg_SplitPlaye
 
   public int Slot
   { get => Accessor.GetInt32("slot"); set => Accessor.SetInt32("slot", value); }
-
 }

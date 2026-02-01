@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -68,5 +67,4 @@ internal class DeepPlayerMatchEventImpl : TypedProtobuf<DeepPlayerMatchEvent>, D
 
   public int EventData
   { get => Accessor.GetInt32("event_data"); set => Accessor.SetInt32("event_data", value); }
-
 }

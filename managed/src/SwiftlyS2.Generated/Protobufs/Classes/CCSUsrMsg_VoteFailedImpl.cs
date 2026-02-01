@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -7,9 +6,9 @@ using SwiftlyS2.Shared.ProtobufDefinitions;
 
 namespace SwiftlyS2.Core.ProtobufDefinitions;
 
-internal class CCSUsrMsg_VoteFailedImpl : NetMessage<CCSUsrMsg_VoteFailed>, CCSUsrMsg_VoteFailed
+internal class CCSUsrMsg_VoteFailedImpl : TypedProtobuf<CCSUsrMsg_VoteFailed>, CCSUsrMsg_VoteFailed
 {
-  public CCSUsrMsg_VoteFailedImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
+  public CCSUsrMsg_VoteFailedImpl(nint handle, bool isManuallyAllocated): base(handle)
   {
   }
 
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_VoteFailedImpl : NetMessage<CCSUsrMsg_VoteFailed>, CCSU
 
   public int Reason
   { get => Accessor.GetInt32("reason"); set => Accessor.SetInt32("reason", value); }
-
 }

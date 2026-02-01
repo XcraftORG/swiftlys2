@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_ScoreLeaderboardDataImpl : NetMessage<CCSUsrMsg_ScoreLe
 
   public ScoreLeaderboardData Data
   { get => new ScoreLeaderboardDataImpl(NativeNetMessages.GetNestedMessage(Address, "data"), false); }
-
 }

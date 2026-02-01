@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_Broadcast_CommandImpl : NetMessage<CSVCMsg_Broadcast_Comm
 
   public string Cmd
   { get => Accessor.GetString("cmd"); set => Accessor.SetString("cmd", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_SetPlayerLeaderboardSafeNameImpl : TypedProtob
 
   public string LeaderboardSafeName
   { get => Accessor.GetString("leaderboard_safe_name"); set => Accessor.SetString("leaderboard_safe_name", value); }
-
 }

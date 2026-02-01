@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -19,5 +18,4 @@ public interface CCSUsrMsg_ServerRankRevealAll : ITypedProtobuf<CCSUsrMsg_Server
 
 
   public CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve Reservation { get; }
-
 }

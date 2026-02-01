@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgTEPlayerAnimEventImpl : NetMessage<CMsgTEPlayerAnimEvent>, CM
 
   public int Data
   { get => Accessor.GetInt32("data"); set => Accessor.SetInt32("data", value); }
-
 }

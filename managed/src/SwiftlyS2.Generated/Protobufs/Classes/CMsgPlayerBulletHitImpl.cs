@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CMsgPlayerBulletHitImpl : TypedProtobuf<CMsgPlayerBulletHit>, CMs
 
   public bool IsKill
   { get => Accessor.GetBool("is_kill"); set => Accessor.SetBool("is_kill", value); }
-
 }

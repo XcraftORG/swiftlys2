@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -14,5 +13,4 @@ public interface CWorkshop_GetContributors_Request : ITypedProtobuf<CWorkshop_Ge
 
 
   public uint Gameitemid { get; set; }
-
 }

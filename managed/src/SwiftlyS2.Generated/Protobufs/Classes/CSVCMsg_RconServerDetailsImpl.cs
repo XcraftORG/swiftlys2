@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_RconServerDetailsImpl : NetMessage<CSVCMsg_RconServerDeta
 
   public string Details
   { get => Accessor.GetString("details"); set => Accessor.SetString("details", value); }
-
 }

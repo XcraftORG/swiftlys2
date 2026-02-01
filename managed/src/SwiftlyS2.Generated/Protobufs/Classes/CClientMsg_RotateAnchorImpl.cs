@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CClientMsg_RotateAnchorImpl : TypedProtobuf<CClientMsg_RotateAnch
 
   public float Angle
   { get => Accessor.GetFloat("angle"); set => Accessor.SetFloat("angle", value); }
-
 }

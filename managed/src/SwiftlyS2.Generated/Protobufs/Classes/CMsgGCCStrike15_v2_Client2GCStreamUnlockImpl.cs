@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_Client2GCStreamUnlockImpl : TypedProtobuf<CMsg
 
   public int Os
   { get => Accessor.GetInt32("os"); set => Accessor.SetInt32("os", value); }
-
 }

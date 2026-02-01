@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCommunity_TerminateGamePersonalDataEntries_ResponseImpl : TypedP
 
   public uint Gceresult
   { get => Accessor.GetUInt32("gceresult"); set => Accessor.SetUInt32("gceresult", value); }
-
 }

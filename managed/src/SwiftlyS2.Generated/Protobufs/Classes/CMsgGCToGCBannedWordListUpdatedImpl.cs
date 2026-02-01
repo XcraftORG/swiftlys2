@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCToGCBannedWordListUpdatedImpl : TypedProtobuf<CMsgGCToGCBan
 
   public uint GroupId
   { get => Accessor.GetUInt32("group_id"); set => Accessor.SetUInt32("group_id", value); }
-
 }

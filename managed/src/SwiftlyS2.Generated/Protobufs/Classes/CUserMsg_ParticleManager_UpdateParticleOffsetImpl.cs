@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CUserMsg_ParticleManager_UpdateParticleOffsetImpl : TypedProtobuf
 
   public QAngle AngleOffset
   { get => Accessor.GetQAngle("angle_offset"); set => Accessor.SetQAngle("angle_offset", value); }
-
 }

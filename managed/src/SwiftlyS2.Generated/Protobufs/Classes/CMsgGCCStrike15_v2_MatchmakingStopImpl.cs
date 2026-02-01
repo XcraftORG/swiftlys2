@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingStopImpl : TypedProtobuf<CMsgGCCStr
 
   public int Abandon
   { get => Accessor.GetInt32("abandon"); set => Accessor.SetInt32("abandon", value); }
-
 }

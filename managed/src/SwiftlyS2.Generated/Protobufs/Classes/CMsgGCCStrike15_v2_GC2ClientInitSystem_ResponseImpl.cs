@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CMsgGCCStrike15_v2_GC2ClientInitSystem_ResponseImpl : TypedProtob
 
   public int AuxSystem2
   { get => Accessor.GetInt32("aux_system2"); set => Accessor.SetInt32("aux_system2", value); }
-
 }

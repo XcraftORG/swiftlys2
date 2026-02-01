@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgSortItemsImpl : TypedProtobuf<CMsgSortItems>, CMsgSortItems
 
   public uint SortType
   { get => Accessor.GetUInt32("sort_type"); set => Accessor.SetUInt32("sort_type", value); }
-
 }

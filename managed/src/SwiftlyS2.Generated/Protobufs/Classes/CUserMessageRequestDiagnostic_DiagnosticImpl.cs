@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -64,5 +63,4 @@ internal class CUserMessageRequestDiagnostic_DiagnosticImpl : TypedProtobuf<CUse
 
   public int Context
   { get => Accessor.GetInt32("context"); set => Accessor.SetInt32("context", value); }
-
 }

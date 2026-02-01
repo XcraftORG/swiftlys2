@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CGameServers_AggregationQuery_Response_GroupImpl : TypedProtobuf<
 
   public uint PlayerCapacity
   { get => Accessor.GetUInt32("player_capacity"); set => Accessor.SetUInt32("player_capacity", value); }
-
 }

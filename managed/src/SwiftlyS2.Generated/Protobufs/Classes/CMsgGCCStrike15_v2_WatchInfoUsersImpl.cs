@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCCStrike15_v2_WatchInfoUsersImpl : TypedProtobuf<CMsgGCCStri
 
   public uint ExtendedTimeout
   { get => Accessor.GetUInt32("extended_timeout"); set => Accessor.SetUInt32("extended_timeout", value); }
-
 }

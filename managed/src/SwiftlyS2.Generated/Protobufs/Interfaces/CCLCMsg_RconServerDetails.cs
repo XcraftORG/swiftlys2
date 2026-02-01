@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -16,5 +15,4 @@ public interface CCLCMsg_RconServerDetails : ITypedProtobuf<CCLCMsg_RconServerDe
 
 
   public byte[] Token { get; set; }
-
 }

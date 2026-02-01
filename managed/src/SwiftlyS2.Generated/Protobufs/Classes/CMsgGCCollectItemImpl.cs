@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCollectItemImpl : TypedProtobuf<CMsgGCCollectItem>, CMsgGCC
 
   public ulong SubjectItemId
   { get => Accessor.GetUInt64("subject_item_id"); set => Accessor.SetUInt64("subject_item_id", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -16,5 +15,4 @@ public interface CCSUsrMsg_XpUpdate : ITypedProtobuf<CCSUsrMsg_XpUpdate>, INetMe
 
 
   public CMsgGCCstrike15_v2_GC2ServerNotifyXPRewarded Data { get; }
-
 }

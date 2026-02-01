@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CNETMsg_SetConVarImpl : NetMessage<CNETMsg_SetConVar>, CNETMsg_Se
 
   public CMsg_CVars Convars
   { get => new CMsg_CVarsImpl(NativeNetMessages.GetNestedMessage(Address, "convars"), false); }
-
 }

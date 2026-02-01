@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CCLCMsg_DiagnosticImpl : NetMessage<CCLCMsg_Diagnostic>, CCLCMsg_
 
   public IProtobufRepeatedFieldSubMessageType<CMsgSource2PerfIntervalSample> PerfSamples
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgSource2PerfIntervalSample>(Accessor, "perf_samples"); }
-
 }

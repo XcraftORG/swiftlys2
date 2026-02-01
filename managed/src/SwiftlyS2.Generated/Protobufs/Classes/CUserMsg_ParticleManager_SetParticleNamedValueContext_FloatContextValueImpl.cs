@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContex
 
   public float Value
   { get => Accessor.GetFloat("value"); set => Accessor.SetFloat("value", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_GC2ServerReservationUpdateImpl : TypedProtobuf
 
   public uint ViewersExternalSteam
   { get => Accessor.GetUInt32("viewers_external_steam"); set => Accessor.SetUInt32("viewers_external_steam", value); }
-
 }

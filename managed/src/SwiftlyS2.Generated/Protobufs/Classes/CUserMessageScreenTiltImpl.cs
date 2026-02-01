@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CUserMessageScreenTiltImpl : NetMessage<CUserMessageScreenTilt>, 
 
   public float Time
   { get => Accessor.GetFloat("time"); set => Accessor.SetFloat("time", value); }
-
 }

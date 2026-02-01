@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsgList_GameEvents_event_tImpl : TypedProtobuf<CSVCMsgList_Ga
 
   public CSVCMsg_GameEvent Event
   { get => new CSVCMsg_GameEventImpl(NativeNetMessages.GetNestedMessage(Address, "event"), false); }
-
 }

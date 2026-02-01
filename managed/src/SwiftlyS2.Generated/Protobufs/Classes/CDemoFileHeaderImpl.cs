@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -72,5 +71,4 @@ internal class CDemoFileHeaderImpl : TypedProtobuf<CDemoFileHeader>, CDemoFileHe
 
   public int ServerStartTick
   { get => Accessor.GetInt32("server_start_tick"); set => Accessor.SetInt32("server_start_tick", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCLCMsg_BaselineAckImpl : NetMessage<CCLCMsg_BaselineAck>, CCLCMs
 
   public int BaselineNr
   { get => Accessor.GetInt32("baseline_nr"); set => Accessor.SetInt32("baseline_nr", value); }
-
 }

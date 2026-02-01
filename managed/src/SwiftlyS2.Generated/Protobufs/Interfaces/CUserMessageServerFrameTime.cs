@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -16,5 +15,4 @@ public interface CUserMessageServerFrameTime : ITypedProtobuf<CUserMessageServer
 
 
   public float FrameTime { get; set; }
-
 }

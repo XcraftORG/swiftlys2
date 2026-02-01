@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSOPartyInviteImpl : TypedProtobuf<CSOPartyInvite>, CSOPartyInvit
 
   public string SenderName
   { get => Accessor.GetString("sender_name"); set => Accessor.SetString("sender_name", value); }
-
 }

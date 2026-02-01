@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CNETMsg_SpawnGroup_LoadCompletedImpl : NetMessage<CNETMsg_SpawnGr
 
   public uint Spawngrouphandle
   { get => Accessor.GetUInt32("spawngrouphandle"); set => Accessor.SetUInt32("spawngrouphandle", value); }
-
 }

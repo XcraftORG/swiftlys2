@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCLCMsg_VoiceDataImpl : NetMessage<CCLCMsg_VoiceData>, CCLCMsg_Vo
 
   public uint Tick
   { get => Accessor.GetUInt32("tick"); set => Accessor.SetUInt32("tick", value); }
-
 }

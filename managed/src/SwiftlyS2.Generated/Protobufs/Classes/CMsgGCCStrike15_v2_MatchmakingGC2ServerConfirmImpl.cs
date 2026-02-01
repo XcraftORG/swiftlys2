@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingGC2ServerConfirmImpl : TypedProtobu
 
   public uint Retry
   { get => Accessor.GetUInt32("retry"); set => Accessor.SetUInt32("retry", value); }
-
 }

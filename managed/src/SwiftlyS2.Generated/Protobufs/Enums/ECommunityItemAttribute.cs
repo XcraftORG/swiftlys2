@@ -1,4 +1,3 @@
-
 namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public enum ECommunityItemAttribute

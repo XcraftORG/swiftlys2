@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgRecurringMissionSchemaImpl : TypedProtobuf<CMsgRecurringMissi
 
   public IProtobufRepeatedFieldSubMessageType<CMsgRecurringMissionSchema_MissionTemplateList> Missions
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgRecurringMissionSchema_MissionTemplateList>(Accessor, "missions"); }
-
 }

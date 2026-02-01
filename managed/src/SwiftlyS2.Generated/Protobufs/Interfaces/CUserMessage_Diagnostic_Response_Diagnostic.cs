@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -53,5 +52,4 @@ public interface CUserMessage_Diagnostic_Response_Diagnostic : ITypedProtobuf<CU
 
 
   public long Placebo { get; set; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMessageShakeDirImpl : NetMessage<CUserMessageShakeDir>, CUse
 
   public Vector Direction
   { get => Accessor.GetVector("direction"); set => Accessor.SetVector("direction", value); }
-
 }

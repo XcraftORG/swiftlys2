@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgStoreGetUserDataResponseImpl : TypedProtobuf<CMsgStoreGetUser
 
   public byte[] PriceSheet
   { get => Accessor.GetBytes("price_sheet"); set => Accessor.SetBytes("price_sheet", value); }
-
 }

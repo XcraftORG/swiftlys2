@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class OperationalVarValueImpl : TypedProtobuf<OperationalVarValue>, Ope
 
   public byte[] Svalue
   { get => Accessor.GetBytes("svalue"); set => Accessor.SetBytes("svalue", value); }
-
 }

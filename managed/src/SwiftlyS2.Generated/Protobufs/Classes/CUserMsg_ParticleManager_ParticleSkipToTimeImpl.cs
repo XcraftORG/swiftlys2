@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_ParticleSkipToTimeImpl : TypedProtobuf<C
 
   public float SkipToTime
   { get => Accessor.GetFloat("skip_to_time"); set => Accessor.SetFloat("skip_to_time", value); }
-
 }

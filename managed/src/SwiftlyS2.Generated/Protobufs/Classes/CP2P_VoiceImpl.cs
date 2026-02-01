@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CP2P_VoiceImpl : TypedProtobuf<CP2P_Voice>, CP2P_Voice
 
   public uint BroadcastGroup
   { get => Accessor.GetUInt32("broadcast_group"); set => Accessor.SetUInt32("broadcast_group", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCToGCDirtyMultipleSDOCacheImpl : TypedProtobuf<CMsgGCToGCDir
 
   public IProtobufRepeatedFieldValueType<ulong> KeyUint64
   { get => new ProtobufRepeatedFieldValueType<ulong>(Accessor, "key_uint64"); }
-
 }

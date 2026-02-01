@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CMsgCStrike15WelcomeImpl : TypedProtobuf<CMsgCStrike15Welcome>, C
 
   public ulong Uniqueid
   { get => Accessor.GetUInt64("uniqueid"); set => Accessor.SetUInt64("uniqueid", value); }
-
 }

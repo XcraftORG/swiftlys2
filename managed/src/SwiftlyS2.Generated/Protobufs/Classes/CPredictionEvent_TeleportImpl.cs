@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CPredictionEvent_TeleportImpl : TypedProtobuf<CPredictionEvent_Te
 
   public float DropToGroundRange
   { get => Accessor.GetFloat("drop_to_ground_range"); set => Accessor.SetFloat("drop_to_ground_range", value); }
-
 }

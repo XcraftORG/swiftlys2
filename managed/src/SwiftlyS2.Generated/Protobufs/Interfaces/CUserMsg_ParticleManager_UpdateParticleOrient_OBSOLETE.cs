@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -23,5 +22,4 @@ public interface CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE : ITyped
 
 
   public Vector Left { get; set; }
-
 }

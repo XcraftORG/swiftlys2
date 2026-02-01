@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class MLRoundStateImpl : TypedProtobuf<MLRoundState>, MLRoundState
 
   public string BombState
   { get => Accessor.GetString("bomb_state"); set => Accessor.SetString("bomb_state", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMessageSendAudioImpl : NetMessage<CUserMessageSendAudio>, CU
 
   public bool Stop
   { get => Accessor.GetBool("stop"); set => Accessor.SetBool("stop", value); }
-
 }

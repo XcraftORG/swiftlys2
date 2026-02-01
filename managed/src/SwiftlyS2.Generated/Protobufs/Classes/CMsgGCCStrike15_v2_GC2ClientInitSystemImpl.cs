@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CMsgGCCStrike15_v2_GC2ClientInitSystemImpl : TypedProtobuf<CMsgGC
 
   public bool LoadSystem
   { get => Accessor.GetBool("load_system"); set => Accessor.SetBool("load_system", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgGCCStrike15_v2_Party_SearchImpl : TypedProtobuf<CMsgGCCStrike
 
   public uint GameType
   { get => Accessor.GetUInt32("game_type"); set => Accessor.SetUInt32("game_type", value); }
-
 }

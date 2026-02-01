@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CUserMessageCameraTransition_Transition_DataDrivenImpl : TypedPro
 
   public float Duration
   { get => Accessor.GetFloat("duration"); set => Accessor.SetFloat("duration", value); }
-
 }

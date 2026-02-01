@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_EntityOutlineHighlightImpl : NetMessage<CCSUsrMsg_Entit
 
   public bool Removehighlight
   { get => Accessor.GetBool("removehighlight"); set => Accessor.SetBool("removehighlight", value); }
-
 }

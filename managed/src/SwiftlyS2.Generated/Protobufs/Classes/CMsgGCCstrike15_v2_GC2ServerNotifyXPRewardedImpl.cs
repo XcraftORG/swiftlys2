@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CMsgGCCstrike15_v2_GC2ServerNotifyXPRewardedImpl : TypedProtobuf<
 
   public uint XpTrailLevel
   { get => Accessor.GetUInt32("xp_trail_level"); set => Accessor.SetUInt32("xp_trail_level", value); }
-
 }

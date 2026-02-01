@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSOAccountRecurringSubscriptionImpl : TypedProtobuf<CSOAccountRec
 
   public uint TimeInitiated
   { get => Accessor.GetUInt32("time_initiated"); set => Accessor.SetUInt32("time_initiated", value); }
-
 }

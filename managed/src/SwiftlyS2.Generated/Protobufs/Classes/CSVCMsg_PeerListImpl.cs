@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_PeerListImpl : NetMessage<CSVCMsg_PeerList>, CSVCMsg_Peer
 
   public IProtobufRepeatedFieldSubMessageType<CMsgServerPeer> Peer
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgServerPeer>(Accessor, "peer"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_RumbleImpl : NetMessage<CCSUsrMsg_Rumble>, CCSUsrMsg_Ru
 
   public int Flags
   { get => Accessor.GetInt32("flags"); set => Accessor.SetInt32("flags", value); }
-
 }

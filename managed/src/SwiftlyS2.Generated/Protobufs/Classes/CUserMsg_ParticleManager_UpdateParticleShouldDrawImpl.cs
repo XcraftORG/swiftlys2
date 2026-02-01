@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_UpdateParticleShouldDrawImpl : TypedProt
 
   public bool ShouldDraw
   { get => Accessor.GetBool("should_draw"); set => Accessor.SetBool("should_draw", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CUserMsg_ParticleManager_CreateParticleImpl : TypedProtobuf<CUser
 
   public Vector AggregationPosition
   { get => Accessor.GetVector("aggregation_position"); set => Accessor.SetVector("aggregation_position", value); }
-
 }

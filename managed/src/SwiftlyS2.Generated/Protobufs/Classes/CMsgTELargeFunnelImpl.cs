@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgTELargeFunnelImpl : NetMessage<CMsgTELargeFunnel>, CMsgTELarg
 
   public uint Reversed
   { get => Accessor.GetUInt32("reversed"); set => Accessor.SetUInt32("reversed", value); }
-
 }

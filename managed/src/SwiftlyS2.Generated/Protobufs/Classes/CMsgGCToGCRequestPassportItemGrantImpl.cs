@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCToGCRequestPassportItemGrantImpl : TypedProtobuf<CMsgGCToGC
 
   public int RewardFlag
   { get => Accessor.GetInt32("reward_flag"); set => Accessor.SetInt32("reward_flag", value); }
-
 }

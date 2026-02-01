@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CCSUsrMsg_VoteStartImpl : NetMessage<CCSUsrMsg_VoteStart>, CCSUsr
 
   public int PlayerSlotTarget
   { get => Accessor.GetInt32("player_slot_target"); set => Accessor.SetInt32("player_slot_target", value); }
-
 }

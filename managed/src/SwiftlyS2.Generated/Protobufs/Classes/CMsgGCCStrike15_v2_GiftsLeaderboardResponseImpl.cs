@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgGCCStrike15_v2_GiftsLeaderboardResponseImpl : TypedProtobuf<C
 
   public IProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_GiftsLeaderboardResponse_GiftLeaderboardEntry> Entries
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_GiftsLeaderboardResponse_GiftLeaderboardEntry>(Accessor, "entries"); }
-
 }

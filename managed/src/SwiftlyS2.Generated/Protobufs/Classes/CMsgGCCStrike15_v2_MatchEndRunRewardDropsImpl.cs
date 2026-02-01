@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_MatchEndRunRewardDropsImpl : TypedProtobuf<CMs
 
   public CMsgGC_ServerQuestUpdateData MatchEndQuestData
   { get => new CMsgGC_ServerQuestUpdateDataImpl(NativeNetMessages.GetNestedMessage(Address, "match_end_quest_data"), false); }
-
 }

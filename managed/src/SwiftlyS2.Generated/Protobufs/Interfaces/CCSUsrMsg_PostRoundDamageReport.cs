@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -34,5 +33,4 @@ public interface CCSUsrMsg_PostRoundDamageReport : ITypedProtobuf<CCSUsrMsg_Post
 
 
   public int TakenNumHits { get; set; }
-
 }

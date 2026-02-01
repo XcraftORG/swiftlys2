@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_SSUIImpl : NetMessage<CCSUsrMsg_SSUI>, CCSUsrMsg_SSUI
 
   public float EndTime
   { get => Accessor.GetFloat("end_time"); set => Accessor.SetFloat("end_time", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CSVCMsg_SendTable_sendprop_tImpl : TypedProtobuf<CSVCMsg_SendTabl
 
   public int NumBits
   { get => Accessor.GetInt32("num_bits"); set => Accessor.SetInt32("num_bits", value); }
-
 }

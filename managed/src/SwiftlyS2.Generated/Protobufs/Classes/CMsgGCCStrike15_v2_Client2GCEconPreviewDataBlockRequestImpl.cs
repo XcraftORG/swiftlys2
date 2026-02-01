@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCCStrike15_v2_Client2GCEconPreviewDataBlockRequestImpl : Typ
 
   public ulong ParamM
   { get => Accessor.GetUInt64("param_m"); set => Accessor.SetUInt64("param_m", value); }
-
 }

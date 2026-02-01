@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgModifyItemAttributeImpl : TypedProtobuf<CMsgModifyItemAttribu
 
   public uint AttrValue
   { get => Accessor.GetUInt32("attr_value"); set => Accessor.SetUInt32("attr_value", value); }
-
 }

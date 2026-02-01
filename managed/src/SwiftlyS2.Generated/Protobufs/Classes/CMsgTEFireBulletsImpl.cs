@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -88,5 +87,4 @@ internal class CMsgTEFireBulletsImpl : NetMessage<CMsgTEFireBullets>, CMsgTEFire
 
   public CMsgTEFireBullets_Extra Extra
   { get => new CMsgTEFireBullets_ExtraImpl(NativeNetMessages.GetNestedMessage(Address, "extra"), false); }
-
 }

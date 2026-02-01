@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgTEEnergySplashImpl : NetMessage<CMsgTEEnergySplash>, CMsgTEEn
 
   public bool Explosive
   { get => Accessor.GetBool("explosive"); set => Accessor.SetBool("explosive", value); }
-
 }

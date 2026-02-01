@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CSVCMsg_BSPDecalImpl : NetMessage<CSVCMsg_BSPDecal>, CSVCMsg_BSPD
 
   public bool LowPriority
   { get => Accessor.GetBool("low_priority"); set => Accessor.SetBool("low_priority", value); }
-
 }

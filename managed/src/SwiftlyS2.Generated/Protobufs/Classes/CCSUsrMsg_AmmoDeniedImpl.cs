@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_AmmoDeniedImpl : NetMessage<CCSUsrMsg_AmmoDenied>, CCSU
 
   public int Ammoidx
   { get => Accessor.GetInt32("ammoidx"); set => Accessor.SetInt32("ammoidx", value); }
-
 }

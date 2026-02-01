@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingGC2ClientSearchStatsImpl : TypedPro
 
   public uint NoteLevel
   { get => Accessor.GetUInt32("note_level"); set => Accessor.SetUInt32("note_level", value); }
-
 }

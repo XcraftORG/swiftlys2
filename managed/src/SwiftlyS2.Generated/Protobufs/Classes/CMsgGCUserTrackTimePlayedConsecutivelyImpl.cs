@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCUserTrackTimePlayedConsecutivelyImpl : TypedProtobuf<CMsgGC
 
   public uint State
   { get => Accessor.GetUInt32("state"); set => Accessor.SetUInt32("state", value); }
-
 }

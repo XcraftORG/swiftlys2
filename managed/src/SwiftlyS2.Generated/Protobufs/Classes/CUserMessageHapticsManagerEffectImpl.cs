@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CUserMessageHapticsManagerEffectImpl : NetMessage<CUserMessageHap
 
   public float EffectScale
   { get => Accessor.GetFloat("effect_scale"); set => Accessor.SetFloat("effect_scale", value); }
-
 }

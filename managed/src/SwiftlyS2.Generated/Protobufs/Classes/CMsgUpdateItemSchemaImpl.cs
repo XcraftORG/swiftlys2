@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgUpdateItemSchemaImpl : TypedProtobuf<CMsgUpdateItemSchema>, C
 
   public string ItemsGameUrl
   { get => Accessor.GetString("items_game_url"); set => Accessor.SetString("items_game_url", value); }
-
 }

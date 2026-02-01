@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGC_GlobalGame_UnsubscribeImpl : TypedProtobuf<CMsgGC_GlobalGa
 
   public int Timeleft
   { get => Accessor.GetInt32("timeleft"); set => Accessor.SetInt32("timeleft", value); }
-
 }

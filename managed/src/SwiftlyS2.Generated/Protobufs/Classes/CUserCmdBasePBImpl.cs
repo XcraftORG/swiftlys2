@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserCmdBasePBImpl : TypedProtobuf<CUserCmdBasePB>, CUserCmdBaseP
 
   public CBaseUserCmdPB Base
   { get => new CBaseUserCmdPBImpl(NativeNetMessages.GetNestedMessage(Address, "base"), false); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_ServerRankRevealAllImpl : NetMessage<CCSUsrMsg_ServerRa
 
   public CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve Reservation
   { get => new CMsgGCCStrike15_v2_MatchmakingGC2ServerReserveImpl(NativeNetMessages.GetNestedMessage(Address, "reservation"), false); }
-
 }

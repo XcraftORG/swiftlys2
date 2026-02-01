@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgGCCStrike15_v2_ClientRequestJoinFriendDataImpl : TypedProtobu
 
   public string Errormsg
   { get => Accessor.GetString("errormsg"); set => Accessor.SetString("errormsg", value); }
-
 }

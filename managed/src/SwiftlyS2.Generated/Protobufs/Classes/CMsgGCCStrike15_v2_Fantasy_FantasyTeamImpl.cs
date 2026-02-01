@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_Fantasy_FantasyTeamImpl : TypedProtobuf<CMsgGC
 
   public IProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_Fantasy_FantasySlot> Slots
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_Fantasy_FantasySlot>(Accessor, "slots"); }
-
 }

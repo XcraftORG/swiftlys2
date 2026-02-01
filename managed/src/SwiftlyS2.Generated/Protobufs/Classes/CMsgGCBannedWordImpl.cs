@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCBannedWordImpl : TypedProtobuf<CMsgGCBannedWord>, CMsgGCBan
 
   public string Word
   { get => Accessor.GetString("word"); set => Accessor.SetString("word", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CDataGCCStrike15_v2_TournamentSectionImpl : TypedProtobuf<CDataGC
 
   public IProtobufRepeatedFieldSubMessageType<CDataGCCStrike15_v2_TournamentGroup> Groups
   { get => new ProtobufRepeatedFieldSubMessageType<CDataGCCStrike15_v2_TournamentGroup>(Accessor, "groups"); }
-
 }

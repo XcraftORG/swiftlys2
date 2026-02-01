@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgCasketItemImpl : TypedProtobuf<CMsgCasketItem>, CMsgCasketIte
 
   public ulong ItemItemId
   { get => Accessor.GetUInt64("item_item_id"); set => Accessor.SetUInt64("item_item_id", value); }
-
 }

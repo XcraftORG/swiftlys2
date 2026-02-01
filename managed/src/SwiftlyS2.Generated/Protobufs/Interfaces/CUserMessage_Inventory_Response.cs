@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -47,5 +46,4 @@ public interface CUserMessage_Inventory_Response : ITypedProtobuf<CUserMessage_I
 
 
   public long StartTime { get; set; }
-
 }

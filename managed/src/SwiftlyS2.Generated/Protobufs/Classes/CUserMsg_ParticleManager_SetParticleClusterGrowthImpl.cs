@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMsg_ParticleManager_SetParticleClusterGrowthImpl : TypedProt
 
   public Vector Origin
   { get => Accessor.GetVector("origin"); set => Accessor.SetVector("origin", value); }
-
 }

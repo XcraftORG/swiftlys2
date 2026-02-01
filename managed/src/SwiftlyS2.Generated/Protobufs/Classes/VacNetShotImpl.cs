@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class VacNetShotImpl : TypedProtobuf<VacNetShot>, VacNetShot
 
   public IProtobufRepeatedFieldValueType<float> DeltaPitchWindow
   { get => new ProtobufRepeatedFieldValueType<float>(Accessor, "delta_pitch_window"); }
-
 }

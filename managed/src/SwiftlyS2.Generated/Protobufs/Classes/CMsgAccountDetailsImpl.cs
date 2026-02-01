@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -84,5 +83,4 @@ internal class CMsgAccountDetailsImpl : TypedProtobuf<CMsgAccountDetails>, CMsgA
 
   public bool EligibleForCommunityMarket
   { get => Accessor.GetBool("eligible_for_community_market"); set => Accessor.SetBool("eligible_for_community_market", value); }
-
 }

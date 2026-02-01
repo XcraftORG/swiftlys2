@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CClientMsg_ClientUIEventImpl : TypedProtobuf<CClientMsg_ClientUIE
 
   public string Data2
   { get => Accessor.GetString("data2"); set => Accessor.SetString("data2", value); }
-
 }

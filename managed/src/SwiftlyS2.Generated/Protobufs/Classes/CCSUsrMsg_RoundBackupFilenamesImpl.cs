@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_RoundBackupFilenamesImpl : NetMessage<CCSUsrMsg_RoundBa
 
   public string Nicename
   { get => Accessor.GetString("nicename"); set => Accessor.SetString("nicename", value); }
-
 }

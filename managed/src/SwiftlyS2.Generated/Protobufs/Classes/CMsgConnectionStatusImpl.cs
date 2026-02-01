@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgConnectionStatusImpl : TypedProtobuf<CMsgConnectionStatus>, C
 
   public int EstimatedWaitSecondsRemaining
   { get => Accessor.GetInt32("estimated_wait_seconds_remaining"); set => Accessor.SetInt32("estimated_wait_seconds_remaining", value); }
-
 }

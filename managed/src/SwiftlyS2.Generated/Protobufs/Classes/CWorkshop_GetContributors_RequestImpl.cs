@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CWorkshop_GetContributors_RequestImpl : TypedProtobuf<CWorkshop_G
 
   public uint Gameitemid
   { get => Accessor.GetUInt32("gameitemid"); set => Accessor.SetUInt32("gameitemid", value); }
-
 }

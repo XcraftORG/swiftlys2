@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgSource2PerfIntervalSampleImpl : TypedProtobuf<CMsgSource2Perf
 
   public IProtobufRepeatedFieldSubMessageType<CMsgSource2PerfIntervalSample_Tag> Tags
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgSource2PerfIntervalSample_Tag>(Accessor, "tags"); }
-
 }

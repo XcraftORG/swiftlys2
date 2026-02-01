@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgSosStartSoundEventImpl : NetMessage<CMsgSosStartSoundEvent>, 
 
   public float StartTime
   { get => Accessor.GetFloat("start_time"); set => Accessor.SetFloat("start_time", value); }
-
 }

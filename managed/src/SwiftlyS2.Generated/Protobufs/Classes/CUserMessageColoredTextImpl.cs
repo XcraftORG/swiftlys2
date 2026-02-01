@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CUserMessageColoredTextImpl : NetMessage<CUserMessageColoredText>
 
   public int ContextTeamId
   { get => Accessor.GetInt32("context_team_id"); set => Accessor.SetInt32("context_team_id", value); }
-
 }

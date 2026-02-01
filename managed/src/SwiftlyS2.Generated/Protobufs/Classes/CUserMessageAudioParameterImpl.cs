@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CUserMessageAudioParameterImpl : NetMessage<CUserMessageAudioPara
 
   public uint IntValue
   { get => Accessor.GetUInt32("int_value"); set => Accessor.SetUInt32("int_value", value); }
-
 }

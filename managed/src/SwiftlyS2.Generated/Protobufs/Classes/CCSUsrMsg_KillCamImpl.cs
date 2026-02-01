@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_KillCamImpl : NetMessage<CCSUsrMsg_KillCam>, CCSUsrMsg_
 
   public int SecondTarget
   { get => Accessor.GetInt32("second_target"); set => Accessor.SetInt32("second_target", value); }
-
 }

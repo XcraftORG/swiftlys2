@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CNETMsg_SpawnGroup_SetCreationTickImpl : NetMessage<CNETMsg_Spawn
 
   public uint Creationsequence
   { get => Accessor.GetUInt32("creationsequence"); set => Accessor.SetUInt32("creationsequence", value); }
-
 }

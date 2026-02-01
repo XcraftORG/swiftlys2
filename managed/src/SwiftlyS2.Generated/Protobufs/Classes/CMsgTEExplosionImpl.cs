@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -56,5 +55,4 @@ internal class CMsgTEExplosionImpl : NetMessage<CMsgTEExplosion>, CMsgTEExplosio
 
   public uint DebrisSurfaceprop
   { get => Accessor.GetUInt32("debris_surfaceprop"); set => Accessor.SetUInt32("debris_surfaceprop", value); }
-
 }

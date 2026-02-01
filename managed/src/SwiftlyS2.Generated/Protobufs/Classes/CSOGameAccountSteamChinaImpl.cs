@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSOGameAccountSteamChinaImpl : TypedProtobuf<CSOGameAccountSteamC
 
   public uint TimePlayBan
   { get => Accessor.GetUInt32("time_play_ban"); set => Accessor.SetUInt32("time_play_ban", value); }
-
 }

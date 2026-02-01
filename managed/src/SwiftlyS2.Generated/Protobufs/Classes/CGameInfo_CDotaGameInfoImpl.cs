@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -56,5 +55,4 @@ internal class CGameInfo_CDotaGameInfoImpl : TypedProtobuf<CGameInfo_CDotaGameIn
 
   public uint EndTime
   { get => Accessor.GetUInt32("end_time"); set => Accessor.SetUInt32("end_time", value); }
-
 }

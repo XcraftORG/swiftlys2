@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgSerializedSOCache_CacheImpl : TypedProtobuf<CMsgSerializedSOC
 
   public IProtobufRepeatedFieldSubMessageType<CMsgSerializedSOCache_TypeCache> TypeCaches
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgSerializedSOCache_TypeCache>(Accessor, "type_caches"); }
-
 }

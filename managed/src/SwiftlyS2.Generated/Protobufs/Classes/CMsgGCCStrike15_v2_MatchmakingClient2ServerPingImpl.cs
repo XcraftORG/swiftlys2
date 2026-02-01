@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingClient2ServerPingImpl : TypedProtob
 
   public string DebugMessage
   { get => Accessor.GetString("debug_message"); set => Accessor.SetString("debug_message", value); }
-
 }

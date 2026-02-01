@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_VoteSetupImpl : NetMessage<CCSUsrMsg_VoteSetup>, CCSUsr
 
   public IProtobufRepeatedFieldValueType<string> PotentialIssues
   { get => new ProtobufRepeatedFieldValueType<string>(Accessor, "potential_issues"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CUserMessage_Inventory_Response_InventoryDetailImpl : TypedProtob
 
   public int BaseHash
   { get => Accessor.GetInt32("base_hash"); set => Accessor.SetInt32("base_hash", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CDemoClassInfoImpl : TypedProtobuf<CDemoClassInfo>, CDemoClassInf
 
   public IProtobufRepeatedFieldSubMessageType<CDemoClassInfo_class_t> Classes
   { get => new ProtobufRepeatedFieldSubMessageType<CDemoClassInfo_class_t>(Accessor, "classes"); }
-
 }

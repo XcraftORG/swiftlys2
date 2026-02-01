@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CWorkshop_SetItemPaymentRules_RequestImpl : TypedProtobuf<CWorksh
 
   public CWorkshop_SetItemPaymentRules_Request_WorkshopDirectPaymentRule AssociatedWorkshopFileForDirectPayments
   { get => new CWorkshop_SetItemPaymentRules_Request_WorkshopDirectPaymentRuleImpl(NativeNetMessages.GetNestedMessage(Address, "associated_workshop_file_for_direct_payments"), false); }
-
 }

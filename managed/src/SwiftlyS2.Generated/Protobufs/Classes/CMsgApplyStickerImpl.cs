@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -56,5 +55,4 @@ internal class CMsgApplyStickerImpl : TypedProtobuf<CMsgApplySticker>, CMsgApply
 
   public float StickerWearTarget
   { get => Accessor.GetFloat("sticker_wear_target"); set => Accessor.SetFloat("sticker_wear_target", value); }
-
 }

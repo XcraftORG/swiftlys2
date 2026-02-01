@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETEImpl : Type
 
   public Vector Left
   { get => Accessor.GetVector("left"); set => Accessor.SetVector("left", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -25,5 +24,4 @@ public interface CSVCMsg_HLTVStatus : ITypedProtobuf<CSVCMsg_HLTVStatus>, INetMe
 
 
   public int Proxies { get; set; }
-
 }

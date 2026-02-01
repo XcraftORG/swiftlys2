@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgClearWorldDecalsEventImpl : NetMessage<CMsgClearWorldDecalsEv
 
   public uint Flagstoclear
   { get => Accessor.GetUInt32("flagstoclear"); set => Accessor.SetUInt32("flagstoclear", value); }
-
 }

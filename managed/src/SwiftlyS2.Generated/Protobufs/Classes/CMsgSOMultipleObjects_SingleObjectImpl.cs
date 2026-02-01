@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSOMultipleObjects_SingleObjectImpl : TypedProtobuf<CMsgSOMult
 
   public byte[] ObjectData
   { get => Accessor.GetBytes("object_data"); set => Accessor.SetBytes("object_data", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CMsgTEFireBullets_ExtraImpl : TypedProtobuf<CMsgTEFireBullets_Ext
 
   public int Type
   { get => Accessor.GetInt32("type"); set => Accessor.SetInt32("type", value); }
-
 }

@@ -1,9 +1,7 @@
-
 namespace SwiftlyS2.Shared.ProtobufDefinitions;
 
 public enum EMsg
 {
-
   k_EMsgInvalid = 0,
   k_EMsgMulti = 1,
   k_EMsgProtobufWrapped = 2,

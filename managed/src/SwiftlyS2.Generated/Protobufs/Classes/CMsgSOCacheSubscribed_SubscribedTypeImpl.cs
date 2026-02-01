@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSOCacheSubscribed_SubscribedTypeImpl : TypedProtobuf<CMsgSOCa
 
   public IProtobufRepeatedFieldValueType<byte[]> ObjectData
   { get => new ProtobufRepeatedFieldValueType<byte[]>(Accessor, "object_data"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCToGCIsTrustedServerResponseImpl : TypedProtobuf<CMsgGCToGCI
 
   public bool IsTrusted
   { get => Accessor.GetBool("is_trusted"); set => Accessor.SetBool("is_trusted", value); }
-
 }

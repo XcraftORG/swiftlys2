@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgConVarValueImpl : TypedProtobuf<CMsgConVarValue>, CMsgConVarV
 
   public string Value
   { get => Accessor.GetString("value"); set => Accessor.SetString("value", value); }
-
 }

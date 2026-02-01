@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgApplyPennantUpgradeImpl : TypedProtobuf<CMsgApplyPennantUpgra
 
   public ulong PennantItemId
   { get => Accessor.GetUInt64("pennant_item_id"); set => Accessor.SetUInt64("pennant_item_id", value); }
-
 }

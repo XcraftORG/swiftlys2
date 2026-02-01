@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgSerializedSOCache_TypeCacheImpl : TypedProtobuf<CMsgSerialize
 
   public uint ServiceId
   { get => Accessor.GetUInt32("service_id"); set => Accessor.SetUInt32("service_id", value); }
-
 }

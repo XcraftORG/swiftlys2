@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_EndOfMatchAllPlayersDataImpl : NetMessage<CCSUsrMsg_End
 
   public int Scene
   { get => Accessor.GetInt32("scene"); set => Accessor.SetInt32("scene", value); }
-
 }

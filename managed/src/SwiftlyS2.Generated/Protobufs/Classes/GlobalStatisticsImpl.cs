@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -72,5 +71,4 @@ internal class GlobalStatisticsImpl : TypedProtobuf<GlobalStatistics>, GlobalSta
 
   public uint RequiredAppidVersion2
   { get => Accessor.GetUInt32("required_appid_version2"); set => Accessor.SetUInt32("required_appid_version2", value); }
-
 }

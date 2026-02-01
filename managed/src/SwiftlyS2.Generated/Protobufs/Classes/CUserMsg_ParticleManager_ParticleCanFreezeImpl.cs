@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_ParticleCanFreezeImpl : TypedProtobuf<CU
 
   public bool CanFreeze
   { get => Accessor.GetBool("can_freeze"); set => Accessor.SetBool("can_freeze", value); }
-
 }

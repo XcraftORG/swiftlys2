@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_MatchStatsUpdateImpl : NetMessage<CCSUsrMsg_MatchStatsU
 
   public string Update
   { get => Accessor.GetString("update"); set => Accessor.SetString("update", value); }
-
 }

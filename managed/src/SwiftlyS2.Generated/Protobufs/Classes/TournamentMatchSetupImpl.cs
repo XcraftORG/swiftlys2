@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class TournamentMatchSetupImpl : TypedProtobuf<TournamentMatchSetup>, T
 
   public int EventStageId
   { get => Accessor.GetInt32("event_stage_id"); set => Accessor.SetInt32("event_stage_id", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_ClientAuthKeyCodeImpl : TypedProtobuf<CMsgGCCS
 
   public string Code
   { get => Accessor.GetString("code"); set => Accessor.SetString("code", value); }
-
 }

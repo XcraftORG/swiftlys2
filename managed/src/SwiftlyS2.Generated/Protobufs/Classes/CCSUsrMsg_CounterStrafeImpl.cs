@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_CounterStrafeImpl : NetMessage<CCSUsrMsg_CounterStrafe>
 
   public int TotalKeysDown
   { get => Accessor.GetInt32("total_keys_down"); set => Accessor.SetInt32("total_keys_down", value); }
-
 }

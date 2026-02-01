@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_MenuImpl : NetMessage<CSVCMsg_Menu>, CSVCMsg_Menu
 
   public byte[] MenuKeyValues
   { get => Accessor.GetBytes("menu_key_values"); set => Accessor.SetBytes("menu_key_values", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -56,5 +55,4 @@ internal class CMsgLegacySource1ClientWelcomeImpl : TypedProtobuf<CMsgLegacySour
 
   public string TxnCountryCode
   { get => Accessor.GetString("txn_country_code"); set => Accessor.SetString("txn_country_code", value); }
-
 }

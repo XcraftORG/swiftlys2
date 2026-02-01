@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -68,5 +67,4 @@ internal class CMsgSource2SystemSpecsImpl : TypedProtobuf<CMsgSource2SystemSpecs
 
   public uint BackbufferHeight
   { get => Accessor.GetUInt32("backbuffer_height"); set => Accessor.SetUInt32("backbuffer_height", value); }
-
 }

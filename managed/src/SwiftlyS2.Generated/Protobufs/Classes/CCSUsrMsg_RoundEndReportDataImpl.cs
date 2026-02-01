@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_RoundEndReportDataImpl : NetMessage<CCSUsrMsg_RoundEndR
 
   public IProtobufRepeatedFieldSubMessageType<CCSUsrMsg_RoundEndReportData_RerEvent> AllRerEventData
   { get => new ProtobufRepeatedFieldSubMessageType<CCSUsrMsg_RoundEndReportData_RerEvent>(Accessor, "all_rer_event_data"); }
-
 }

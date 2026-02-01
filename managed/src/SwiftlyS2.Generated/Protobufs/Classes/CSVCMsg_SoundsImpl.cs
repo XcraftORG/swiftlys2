@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_SoundsImpl : NetMessage<CSVCMsg_Sounds>, CSVCMsg_Sounds
 
   public IProtobufRepeatedFieldSubMessageType<CSVCMsg_Sounds_sounddata_t> Sounds
   { get => new ProtobufRepeatedFieldSubMessageType<CSVCMsg_Sounds_sounddata_t>(Accessor, "sounds"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_ClassInfoImpl : NetMessage<CSVCMsg_ClassInfo>, CSVCMsg_Cl
 
   public IProtobufRepeatedFieldSubMessageType<CSVCMsg_ClassInfo_class_t> Classes
   { get => new ProtobufRepeatedFieldSubMessageType<CSVCMsg_ClassInfo_class_t>(Accessor, "classes"); }
-
 }

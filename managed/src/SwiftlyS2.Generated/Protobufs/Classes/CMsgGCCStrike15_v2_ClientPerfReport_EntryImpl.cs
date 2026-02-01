@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgGCCStrike15_v2_ClientPerfReport_EntryImpl : TypedProtobuf<CMs
 
   public uint Status
   { get => Accessor.GetUInt32("status"); set => Accessor.SetUInt32("status", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -19,5 +18,4 @@ public interface CSVCMsg_HltvFixupOperatorStatus : ITypedProtobuf<CSVCMsg_HltvFi
 
 
   public string OverrideOperatorName { get; set; }
-
 }

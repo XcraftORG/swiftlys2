@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_UpdateScreenHealthBarImpl : NetMessage<CCSUsrMsg_Update
 
   public int Style
   { get => Accessor.GetInt32("style"); set => Accessor.SetInt32("style", value); }
-
 }

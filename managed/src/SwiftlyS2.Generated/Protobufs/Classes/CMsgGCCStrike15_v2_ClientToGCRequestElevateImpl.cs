@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_ClientToGCRequestElevateImpl : TypedProtobuf<C
 
   public uint Stage
   { get => Accessor.GetUInt32("stage"); set => Accessor.SetUInt32("stage", value); }
-
 }

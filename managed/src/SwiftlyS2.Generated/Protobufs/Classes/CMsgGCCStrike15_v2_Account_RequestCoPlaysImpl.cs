@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_Account_RequestCoPlaysImpl : TypedProtobuf<CMs
 
   public uint Servertime
   { get => Accessor.GetUInt32("servertime"); set => Accessor.SetUInt32("servertime", value); }
-
 }

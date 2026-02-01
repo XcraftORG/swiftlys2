@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgPlayerInfoImpl : TypedProtobuf<CMsgPlayerInfo>, CMsgPlayerInf
 
   public bool Ishltv
   { get => Accessor.GetBool("ishltv"); set => Accessor.SetBool("ishltv", value); }
-
 }

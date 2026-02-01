@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_ReportHitImpl : NetMessage<CCSUsrMsg_ReportHit>, CCSUsr
 
   public float PosZ
   { get => Accessor.GetFloat("pos_z"); set => Accessor.SetFloat("pos_z", value); }
-
 }

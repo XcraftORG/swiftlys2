@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSosSetLibraryStackFieldsImpl : NetMessage<CMsgSosSetLibrarySt
 
   public byte[] PackedFields
   { get => Accessor.GetBytes("packed_fields"); set => Accessor.SetBytes("packed_fields", value); }
-
 }

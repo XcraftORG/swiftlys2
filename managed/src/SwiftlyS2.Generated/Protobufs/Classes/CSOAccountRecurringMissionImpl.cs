@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CSOAccountRecurringMissionImpl : TypedProtobuf<CSOAccountRecurrin
 
   public uint Progress
   { get => Accessor.GetUInt32("progress"); set => Accessor.SetUInt32("progress", value); }
-
 }

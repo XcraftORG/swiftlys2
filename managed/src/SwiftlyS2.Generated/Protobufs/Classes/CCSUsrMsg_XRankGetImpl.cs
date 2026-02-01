@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_XRankGetImpl : NetMessage<CCSUsrMsg_XRankGet>, CCSUsrMs
 
   public int Controller
   { get => Accessor.GetInt32("controller"); set => Accessor.SetInt32("controller", value); }
-
 }

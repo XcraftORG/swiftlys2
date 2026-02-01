@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CCSUsrMsg_SurvivalStats_DamageImpl : TypedProtobuf<CCSUsrMsg_Surv
 
   public int FromHits
   { get => Accessor.GetInt32("from_hits"); set => Accessor.SetInt32("from_hits", value); }
-
 }

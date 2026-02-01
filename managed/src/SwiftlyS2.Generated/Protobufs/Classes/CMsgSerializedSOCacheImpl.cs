@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgSerializedSOCacheImpl : TypedProtobuf<CMsgSerializedSOCache>,
 
   public uint GcSocacheFileVersion
   { get => Accessor.GetUInt32("gc_socache_file_version"); set => Accessor.SetUInt32("gc_socache_file_version", value); }
-
 }

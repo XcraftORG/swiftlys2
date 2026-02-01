@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CSOEconEquipSlotImpl : TypedProtobuf<CSOEconEquipSlot>, CSOEconEq
 
   public uint ItemDefinition
   { get => Accessor.GetUInt32("item_definition"); set => Accessor.SetUInt32("item_definition", value); }
-
 }

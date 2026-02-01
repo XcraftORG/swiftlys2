@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgClearDecalsForEntityEventImpl : NetMessage<CMsgClearDecalsFor
 
   public uint Entityhandle
   { get => Accessor.GetUInt32("entityhandle"); set => Accessor.SetUInt32("entityhandle", value); }
-
 }

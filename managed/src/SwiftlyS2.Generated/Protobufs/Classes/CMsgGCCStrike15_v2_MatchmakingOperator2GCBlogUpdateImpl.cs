@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingOperator2GCBlogUpdateImpl : TypedPr
 
   public string MainPostUrl
   { get => Accessor.GetString("main_post_url"); set => Accessor.SetString("main_post_url", value); }
-
 }

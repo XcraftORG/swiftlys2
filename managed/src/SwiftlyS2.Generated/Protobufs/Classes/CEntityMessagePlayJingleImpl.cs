@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CEntityMessagePlayJingleImpl : TypedProtobuf<CEntityMessagePlayJi
 
   public CEntityMsg EntityMsg
   { get => new CEntityMsgImpl(NativeNetMessages.GetNestedMessage(Address, "entity_msg"), false); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class PlayerMedalsInfoImpl : TypedProtobuf<PlayerMedalsInfo>, PlayerMed
 
   public uint FeaturedDisplayItemDefidx
   { get => Accessor.GetUInt32("featured_display_item_defidx"); set => Accessor.SetUInt32("featured_display_item_defidx", value); }
-
 }

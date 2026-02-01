@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_SetSceneObjectGenericFlagImpl : TypedPro
 
   public bool FlagValue
   { get => Accessor.GetBool("flag_value"); set => Accessor.SetBool("flag_value", value); }
-
 }

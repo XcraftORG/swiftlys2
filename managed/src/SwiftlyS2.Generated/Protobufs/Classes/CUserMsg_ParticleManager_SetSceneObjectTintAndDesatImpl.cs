@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMsg_ParticleManager_SetSceneObjectTintAndDesatImpl : TypedPr
 
   public float Desat
   { get => Accessor.GetFloat("desat"); set => Accessor.SetFloat("desat", value); }
-
 }

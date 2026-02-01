@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSVCMsg_UpdateStringTableImpl : NetMessage<CSVCMsg_UpdateStringTa
 
   public byte[] StringData
   { get => Accessor.GetBytes("string_data"); set => Accessor.SetBytes("string_data", value); }
-
 }

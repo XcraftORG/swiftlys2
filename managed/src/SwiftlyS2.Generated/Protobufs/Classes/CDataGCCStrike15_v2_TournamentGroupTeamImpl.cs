@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CDataGCCStrike15_v2_TournamentGroupTeamImpl : TypedProtobuf<CData
 
   public bool Correctpick
   { get => Accessor.GetBool("correctpick"); set => Accessor.SetBool("correctpick", value); }
-
 }

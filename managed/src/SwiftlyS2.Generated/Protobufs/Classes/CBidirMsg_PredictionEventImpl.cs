@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CBidirMsg_PredictionEventImpl : TypedProtobuf<CBidirMsg_Predictio
 
   public uint SyncValUint32
   { get => Accessor.GetUInt32("sync_val_uint32"); set => Accessor.SetUInt32("sync_val_uint32", value); }
-
 }

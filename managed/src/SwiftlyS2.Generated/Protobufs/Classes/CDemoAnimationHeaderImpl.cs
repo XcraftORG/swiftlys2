@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CDemoAnimationHeaderImpl : TypedProtobuf<CDemoAnimationHeader>, C
 
   public byte[] Data
   { get => Accessor.GetBytes("data"); set => Accessor.SetBytes("data", value); }
-
 }

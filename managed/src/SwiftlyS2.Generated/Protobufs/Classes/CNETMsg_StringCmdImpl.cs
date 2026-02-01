@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CNETMsg_StringCmdImpl : NetMessage<CNETMsg_StringCmd>, CNETMsg_St
 
   public uint PredictionSync
   { get => Accessor.GetUInt32("prediction_sync"); set => Accessor.SetUInt32("prediction_sync", value); }
-
 }

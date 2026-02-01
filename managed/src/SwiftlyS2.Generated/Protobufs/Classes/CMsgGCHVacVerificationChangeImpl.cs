@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCHVacVerificationChangeImpl : TypedProtobuf<CMsgGCHVacVerifi
 
   public bool IsVerified
   { get => Accessor.GetBool("is_verified"); set => Accessor.SetBool("is_verified", value); }
-
 }

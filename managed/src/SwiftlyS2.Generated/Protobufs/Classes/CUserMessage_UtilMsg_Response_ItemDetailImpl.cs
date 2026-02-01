@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CUserMessage_UtilMsg_Response_ItemDetailImpl : TypedProtobuf<CUse
 
   public string Name
   { get => Accessor.GetString("name"); set => Accessor.SetString("name", value); }
-
 }

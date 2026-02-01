@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -38,5 +37,4 @@ public interface C2S_CONNECT_Message : ITypedProtobuf<C2S_CONNECT_Message>
 
 
   public C2S_CONNECT_SameProcessCheck LocalhostSameProcessCheck { get; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_SendPlayerLoadout_LoadoutItemImpl : TypedProtobuf<CCSUs
 
   public int Slot
   { get => Accessor.GetInt32("slot"); set => Accessor.SetInt32("slot", value); }
-
 }

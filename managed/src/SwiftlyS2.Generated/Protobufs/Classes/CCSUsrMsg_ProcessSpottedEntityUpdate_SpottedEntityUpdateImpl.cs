@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CCSUsrMsg_ProcessSpottedEntityUpdate_SpottedEntityUpdateImpl : Ty
 
   public bool PlayerHasC4
   { get => Accessor.GetBool("player_has_c4"); set => Accessor.SetBool("player_has_c4", value); }
-
 }

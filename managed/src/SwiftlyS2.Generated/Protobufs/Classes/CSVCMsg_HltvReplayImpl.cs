@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CSVCMsg_HltvReplayImpl : TypedProtobuf<CSVCMsg_HltvReplay>, CSVCM
 
   public int Reason
   { get => Accessor.GetInt32("reason"); set => Accessor.SetInt32("reason", value); }
-
 }

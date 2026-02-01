@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_HudErrorImpl : TypedProtobuf<CUserMsg_HudError>, CUserMs
 
   public int OrderId
   { get => Accessor.GetInt32("order_id"); set => Accessor.SetInt32("order_id", value); }
-
 }

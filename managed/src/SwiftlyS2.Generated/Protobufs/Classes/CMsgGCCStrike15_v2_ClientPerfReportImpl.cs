@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_ClientPerfReportImpl : TypedProtobuf<CMsgGCCSt
 
   public IProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_ClientPerfReport_Entry> Entries
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_ClientPerfReport_Entry>(Accessor, "entries"); }
-
 }

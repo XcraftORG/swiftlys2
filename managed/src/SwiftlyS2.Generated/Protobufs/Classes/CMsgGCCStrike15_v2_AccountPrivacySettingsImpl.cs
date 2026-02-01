@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_AccountPrivacySettingsImpl : TypedProtobuf<CMs
 
   public IProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_AccountPrivacySettings_Setting> Settings
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_AccountPrivacySettings_Setting>(Accessor, "settings"); }
-
 }

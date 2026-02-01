@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class DataCenterPingImpl : TypedProtobuf<DataCenterPing>, DataCenterPin
 
   public int Ping
   { get => Accessor.GetInt32("ping"); set => Accessor.SetInt32("ping", value); }
-
 }

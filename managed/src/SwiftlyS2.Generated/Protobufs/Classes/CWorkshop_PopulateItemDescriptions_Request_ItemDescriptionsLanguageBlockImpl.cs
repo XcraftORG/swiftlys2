@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CWorkshop_PopulateItemDescriptions_Request_ItemDescriptionsLangua
 
   public IProtobufRepeatedFieldSubMessageType<CWorkshop_PopulateItemDescriptions_Request_SingleItemDescription> Descriptions
   { get => new ProtobufRepeatedFieldSubMessageType<CWorkshop_PopulateItemDescriptions_Request_SingleItemDescription>(Accessor, "descriptions"); }
-
 }

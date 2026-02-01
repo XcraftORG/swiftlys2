@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_RadioTextImpl : NetMessage<CCSUsrMsg_RadioText>, CCSUsr
 
   public IProtobufRepeatedFieldValueType<string> Params
   { get => new ProtobufRepeatedFieldValueType<string>(Accessor, "params"); }
-
 }

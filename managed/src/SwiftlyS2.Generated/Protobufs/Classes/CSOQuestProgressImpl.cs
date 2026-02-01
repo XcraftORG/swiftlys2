@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSOQuestProgressImpl : TypedProtobuf<CSOQuestProgress>, CSOQuestP
 
   public uint BonusPoints
   { get => Accessor.GetUInt32("bonus_points"); set => Accessor.SetUInt32("bonus_points", value); }
-
 }

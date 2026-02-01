@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CGCStorePurchaseInit_LineItemImpl : TypedProtobuf<CGCStorePurchas
 
   public ulong SupplementalData
   { get => Accessor.GetUInt64("supplemental_data"); set => Accessor.SetUInt64("supplemental_data", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -100,5 +99,4 @@ internal class CSVCMsg_PacketEntitiesImpl : NetMessage<CSVCMsg_PacketEntities>, 
 
   public byte[] DevPadding
   { get => Accessor.GetBytes("dev_padding"); set => Accessor.SetBytes("dev_padding", value); }
-
 }

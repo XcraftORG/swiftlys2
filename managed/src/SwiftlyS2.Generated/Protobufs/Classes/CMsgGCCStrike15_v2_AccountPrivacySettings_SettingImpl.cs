@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_AccountPrivacySettings_SettingImpl : TypedProt
 
   public uint SettingValue
   { get => Accessor.GetUInt32("setting_value"); set => Accessor.SetUInt32("setting_value", value); }
-
 }

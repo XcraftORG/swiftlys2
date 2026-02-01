@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -19,5 +18,4 @@ public interface CCSUsrMsg_CounterStrafe : ITypedProtobuf<CCSUsrMsg_CounterStraf
 
 
   public int TotalKeysDown { get; set; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUIFontFilePBImpl : TypedProtobuf<CUIFontFilePB>, CUIFontFilePB
 
   public byte[] OpentypeFontData
   { get => Accessor.GetBytes("opentype_font_data"); set => Accessor.SetBytes("opentype_font_data", value); }
-
 }

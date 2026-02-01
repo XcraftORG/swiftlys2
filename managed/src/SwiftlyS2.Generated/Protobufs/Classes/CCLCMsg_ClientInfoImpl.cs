@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CCLCMsg_ClientInfoImpl : NetMessage<CCLCMsg_ClientInfo>, CCLCMsg_
 
   public string FriendsName
   { get => Accessor.GetString("friends_name"); set => Accessor.SetString("friends_name", value); }
-
 }

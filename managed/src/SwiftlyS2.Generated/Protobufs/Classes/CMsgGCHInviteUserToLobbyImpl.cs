@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCHInviteUserToLobbyImpl : TypedProtobuf<CMsgGCHInviteUserToL
 
   public ulong SteamidLobby
   { get => Accessor.GetUInt64("steamid_lobby"); set => Accessor.SetUInt64("steamid_lobby", value); }
-
 }

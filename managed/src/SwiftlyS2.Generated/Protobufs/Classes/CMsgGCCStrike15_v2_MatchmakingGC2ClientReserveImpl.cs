@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingGC2ClientReserveImpl : TypedProtobu
 
   public uint GsLocationId
   { get => Accessor.GetUInt32("gs_location_id"); set => Accessor.SetUInt32("gs_location_id", value); }
-
 }

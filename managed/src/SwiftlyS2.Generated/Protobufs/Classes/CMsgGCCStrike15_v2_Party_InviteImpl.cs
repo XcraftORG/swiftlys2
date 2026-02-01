@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_Party_InviteImpl : TypedProtobuf<CMsgGCCStrike
 
   public uint Lobbyid
   { get => Accessor.GetUInt32("lobbyid"); set => Accessor.SetUInt32("lobbyid", value); }
-
 }

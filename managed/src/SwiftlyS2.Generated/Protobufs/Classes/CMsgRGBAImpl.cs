@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgRGBAImpl : TypedProtobuf<CMsgRGBA>, CMsgRGBA
 
   public int A
   { get => Accessor.GetInt32("a"); set => Accessor.SetInt32("a", value); }
-
 }

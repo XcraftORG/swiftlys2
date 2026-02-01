@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_SetVDataImpl : TypedProtobuf<CUserMsg_Pa
 
   public string VdataName
   { get => Accessor.GetString("vdata_name"); set => Accessor.SetString("vdata_name", value); }
-
 }

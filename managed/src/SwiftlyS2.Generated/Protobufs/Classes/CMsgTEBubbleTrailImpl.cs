@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgTEBubbleTrailImpl : NetMessage<CMsgTEBubbleTrail>, CMsgTEBubb
 
   public float Speed
   { get => Accessor.GetFloat("speed"); set => Accessor.SetFloat("speed", value); }
-
 }

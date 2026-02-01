@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgTEGlowSpriteImpl : NetMessage<CMsgTEGlowSprite>, CMsgTEGlowSp
 
   public uint Brightness
   { get => Accessor.GetUInt32("brightness"); set => Accessor.SetUInt32("brightness", value); }
-
 }

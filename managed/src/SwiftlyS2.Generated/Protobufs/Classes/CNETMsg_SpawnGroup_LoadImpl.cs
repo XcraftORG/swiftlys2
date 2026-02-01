@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -92,5 +91,4 @@ internal class CNETMsg_SpawnGroup_LoadImpl : NetMessage<CNETMsg_SpawnGroup_Load>
 
   public string Worldgroupname
   { get => Accessor.GetString("worldgroupname"); set => Accessor.SetString("worldgroupname", value); }
-
 }

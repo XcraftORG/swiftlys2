@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class PlayerQuestDataImpl : TypedProtobuf<PlayerQuestData>, PlayerQuest
 
   public IProtobufRepeatedFieldSubMessageType<CMsgCsgoSteamUserStatChange> Userstatchanges
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgCsgoSteamUserStatChange>(Accessor, "userstatchanges"); }
-
 }

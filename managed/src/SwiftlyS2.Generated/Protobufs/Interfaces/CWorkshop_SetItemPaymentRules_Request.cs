@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -29,5 +28,4 @@ public interface CWorkshop_SetItemPaymentRules_Request : ITypedProtobuf<CWorksho
 
 
   public CWorkshop_SetItemPaymentRules_Request_WorkshopDirectPaymentRule AssociatedWorkshopFileForDirectPayments { get; }
-
 }

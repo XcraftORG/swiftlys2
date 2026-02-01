@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -7,9 +6,9 @@ using SwiftlyS2.Shared.ProtobufDefinitions;
 
 namespace SwiftlyS2.Core.ProtobufDefinitions;
 
-internal class CCSUsrMsg_ItemDropImpl : NetMessage<CCSUsrMsg_ItemDrop>, CCSUsrMsg_ItemDrop
+internal class CCSUsrMsg_ItemDropImpl : TypedProtobuf<CCSUsrMsg_ItemDrop>, CCSUsrMsg_ItemDrop
 {
-  public CCSUsrMsg_ItemDropImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
+  public CCSUsrMsg_ItemDropImpl(nint handle, bool isManuallyAllocated): base(handle)
   {
   }
 
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_ItemDropImpl : NetMessage<CCSUsrMsg_ItemDrop>, CCSUsrMs
 
   public bool Death
   { get => Accessor.GetBool("death"); set => Accessor.SetBool("death", value); }
-
 }

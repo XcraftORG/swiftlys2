@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgTEBeamEntPointImpl : NetMessage<CMsgTEBeamEntPoint>, CMsgTEBe
 
   public Vector End
   { get => Accessor.GetVector("end"); set => Accessor.SetVector("end", value); }
-
 }

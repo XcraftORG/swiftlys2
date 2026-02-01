@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -19,5 +18,4 @@ public interface CSVCMsg_NextMsgPredicted : ITypedProtobuf<CSVCMsg_NextMsgPredic
 
 
   public uint MessageTypeId { get; set; }
-
 }

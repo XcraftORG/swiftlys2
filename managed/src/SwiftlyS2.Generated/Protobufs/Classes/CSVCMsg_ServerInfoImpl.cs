@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -76,5 +75,4 @@ internal class CSVCMsg_ServerInfoImpl : NetMessage<CSVCMsg_ServerInfo>, CSVCMsg_
 
   public byte[] GameSessionManifest
   { get => Accessor.GetBytes("game_session_manifest"); set => Accessor.SetBytes("game_session_manifest", value); }
-
 }

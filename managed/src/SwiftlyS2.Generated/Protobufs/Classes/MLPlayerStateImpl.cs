@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -92,5 +91,4 @@ internal class MLPlayerStateImpl : TypedProtobuf<MLPlayerState>, MLPlayerState
 
   public IProtobufRepeatedFieldSubMessageType<MLWeaponState> Weapons
   { get => new ProtobufRepeatedFieldSubMessageType<MLWeaponState>(Accessor, "weapons"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCommunity_TerminateGamePersonalDataEntries_RequestImpl : TypedPr
 
   public ulong Steamid
   { get => Accessor.GetUInt64("steamid"); set => Accessor.SetUInt64("steamid", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgGCCStrike15_v2_MatchListImpl : TypedProtobuf<CMsgGCCStrike15_
 
   public CDataGCCStrike15_v2_TournamentInfo Tournamentinfo
   { get => new CDataGCCStrike15_v2_TournamentInfoImpl(NativeNetMessages.GetNestedMessage(Address, "tournamentinfo"), false); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class MLDictImpl : TypedProtobuf<MLDict>, MLDict
 
   public float ValFloat
   { get => Accessor.GetFloat("val_float"); set => Accessor.SetFloat("val_float", value); }
-
 }

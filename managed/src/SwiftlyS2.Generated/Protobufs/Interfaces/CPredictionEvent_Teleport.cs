@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -17,5 +16,4 @@ public interface CPredictionEvent_Teleport : ITypedProtobuf<CPredictionEvent_Tel
 
 
   public float DropToGroundRange { get; set; }
-
 }

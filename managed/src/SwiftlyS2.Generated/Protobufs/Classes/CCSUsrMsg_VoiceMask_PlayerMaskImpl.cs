@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_VoiceMask_PlayerMaskImpl : TypedProtobuf<CCSUsrMsg_Voic
 
   public int BanMasks
   { get => Accessor.GetInt32("ban_masks"); set => Accessor.SetInt32("ban_masks", value); }
-
 }

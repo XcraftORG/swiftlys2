@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CCSUsrMsg_WeaponSoundImpl : NetMessage<CCSUsrMsg_WeaponSound>, CC
 
   public uint SourceSoundscapeid
   { get => Accessor.GetUInt32("source_soundscapeid"); set => Accessor.SetUInt32("source_soundscapeid", value); }
-
 }

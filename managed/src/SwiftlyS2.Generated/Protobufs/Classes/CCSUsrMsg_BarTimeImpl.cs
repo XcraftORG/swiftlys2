@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_BarTimeImpl : NetMessage<CCSUsrMsg_BarTime>, CCSUsrMsg_
 
   public string Time
   { get => Accessor.GetString("time"); set => Accessor.SetString("time", value); }
-
 }

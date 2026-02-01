@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CUserMessageSayText2Impl : NetMessage<CUserMessageSayText2>, CUse
 
   public string Param4
   { get => Accessor.GetString("param4"); set => Accessor.SetString("param4", value); }
-
 }

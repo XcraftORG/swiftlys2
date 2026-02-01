@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -29,5 +28,4 @@ public interface CMsgCStrike15Welcome : ITypedProtobuf<CMsgCStrike15Welcome>
 
 
   public ulong Uniqueid { get; set; }
-
 }

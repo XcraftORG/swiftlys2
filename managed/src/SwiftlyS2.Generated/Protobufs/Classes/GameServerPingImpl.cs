@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class GameServerPingImpl : TypedProtobuf<GameServerPing>, GameServerPin
 
   public uint Instances
   { get => Accessor.GetUInt32("instances"); set => Accessor.SetUInt32("instances", value); }
-
 }

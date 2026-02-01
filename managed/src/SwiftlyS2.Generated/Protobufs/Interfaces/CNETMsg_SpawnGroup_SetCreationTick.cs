@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -22,5 +21,4 @@ public interface CNETMsg_SpawnGroup_SetCreationTick : ITypedProtobuf<CNETMsg_Spa
 
 
   public uint Creationsequence { get; set; }
-
 }

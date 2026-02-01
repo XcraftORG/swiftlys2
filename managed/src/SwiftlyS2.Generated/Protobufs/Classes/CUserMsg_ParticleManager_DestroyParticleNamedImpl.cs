@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CUserMsg_ParticleManager_DestroyParticleNamedImpl : TypedProtobuf
 
   public bool PlayEndcap
   { get => Accessor.GetBool("play_endcap"); set => Accessor.SetBool("play_endcap", value); }
-
 }

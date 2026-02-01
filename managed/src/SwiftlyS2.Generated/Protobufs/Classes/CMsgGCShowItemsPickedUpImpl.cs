@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCShowItemsPickedUpImpl : TypedProtobuf<CMsgGCShowItemsPicked
 
   public ulong PlayerSteamid
   { get => Accessor.GetUInt64("player_steamid"); set => Accessor.SetUInt64("player_steamid", value); }
-
 }

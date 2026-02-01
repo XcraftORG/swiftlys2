@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSVCMsg_GameEventList_descriptor_tImpl : TypedProtobuf<CSVCMsg_Ga
 
   public IProtobufRepeatedFieldSubMessageType<CSVCMsg_GameEventList_key_t> Keys
   { get => new ProtobufRepeatedFieldSubMessageType<CSVCMsg_GameEventList_key_t>(Accessor, "keys"); }
-
 }

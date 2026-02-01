@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CBidirMsg_RebroadcastGameEventImpl : TypedProtobuf<CBidirMsg_Rebr
 
   public ulong Receivingclients
   { get => Accessor.GetUInt64("receivingclients"); set => Accessor.SetUInt64("receivingclients", value); }
-
 }

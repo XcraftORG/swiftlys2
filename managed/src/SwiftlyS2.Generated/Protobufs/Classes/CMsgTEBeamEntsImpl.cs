@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgTEBeamEntsImpl : NetMessage<CMsgTEBeamEnts>, CMsgTEBeamEnts
 
   public uint Endentity
   { get => Accessor.GetUInt32("endentity"); set => Accessor.SetUInt32("endentity", value); }
-
 }

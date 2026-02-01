@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CUserMessage_Diagnostic_ResponseImpl : TypedProtobuf<CUserMessage
 
   public int Platform
   { get => Accessor.GetInt32("platform"); set => Accessor.SetInt32("platform", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -29,5 +28,4 @@ public interface CSource2Metrics_MatchPerfSummary_Notification : ITypedProtobuf<
 
 
   public string Map { get; set; }
-
 }

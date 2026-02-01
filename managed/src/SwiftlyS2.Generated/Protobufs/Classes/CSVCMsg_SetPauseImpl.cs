@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_SetPauseImpl : NetMessage<CSVCMsg_SetPause>, CSVCMsg_SetP
 
   public bool Paused
   { get => Accessor.GetBool("paused"); set => Accessor.SetBool("paused", value); }
-
 }

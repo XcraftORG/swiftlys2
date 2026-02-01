@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgTERadioIconImpl : TypedProtobuf<CMsgTERadioIcon>, CMsgTERadio
 
   public uint Player
   { get => Accessor.GetUInt32("player"); set => Accessor.SetUInt32("player", value); }
-
 }

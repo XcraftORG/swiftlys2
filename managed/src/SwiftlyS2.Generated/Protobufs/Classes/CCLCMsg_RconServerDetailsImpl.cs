@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCLCMsg_RconServerDetailsImpl : NetMessage<CCLCMsg_RconServerDeta
 
   public byte[] Token
   { get => Accessor.GetBytes("token"); set => Accessor.SetBytes("token", value); }
-
 }

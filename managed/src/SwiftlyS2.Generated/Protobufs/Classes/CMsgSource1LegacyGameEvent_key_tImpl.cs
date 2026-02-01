@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CMsgSource1LegacyGameEvent_key_tImpl : TypedProtobuf<CMsgSource1L
 
   public ulong ValUint64
   { get => Accessor.GetUInt64("val_uint64"); set => Accessor.SetUInt64("val_uint64", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_VotePassImpl : NetMessage<CCSUsrMsg_VotePass>, CCSUsrMs
 
   public string DetailsStr
   { get => Accessor.GetString("details_str"); set => Accessor.SetString("details_str", value); }
-
 }

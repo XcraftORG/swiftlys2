@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgAcknowledgeRentalExpirationImpl : TypedProtobuf<CMsgAcknowled
 
   public ulong CrateItemId
   { get => Accessor.GetUInt64("crate_item_id"); set => Accessor.SetUInt64("crate_item_id", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_NextMsgPredictedImpl : NetMessage<CSVCMsg_NextMsgPredicte
 
   public uint MessageTypeId
   { get => Accessor.GetUInt32("message_type_id"); set => Accessor.SetUInt32("message_type_id", value); }
-
 }

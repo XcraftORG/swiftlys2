@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_ClassInfo_class_tImpl : TypedProtobuf<CSVCMsg_ClassInfo_c
 
   public string ClassName
   { get => Accessor.GetString("class_name"); set => Accessor.SetString("class_name", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class MatchEndItemUpdatesImpl : TypedProtobuf<MatchEndItemUpdates>, Mat
 
   public uint ItemAttrDeltaValue
   { get => Accessor.GetUInt32("item_attr_delta_value"); set => Accessor.SetUInt32("item_attr_delta_value", value); }
-
 }

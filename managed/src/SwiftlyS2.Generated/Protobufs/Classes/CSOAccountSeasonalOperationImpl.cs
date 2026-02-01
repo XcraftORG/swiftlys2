@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CSOAccountSeasonalOperationImpl : TypedProtobuf<CSOAccountSeasona
 
   public uint SeasonPassTime
   { get => Accessor.GetUInt32("season_pass_time"); set => Accessor.SetUInt32("season_pass_time", value); }
-
 }

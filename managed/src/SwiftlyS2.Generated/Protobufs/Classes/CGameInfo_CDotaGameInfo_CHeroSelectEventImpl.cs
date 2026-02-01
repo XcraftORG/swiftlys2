@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CGameInfo_CDotaGameInfo_CHeroSelectEventImpl : TypedProtobuf<CGam
 
   public int HeroId
   { get => Accessor.GetInt32("hero_id"); set => Accessor.SetInt32("hero_id", value); }
-
 }

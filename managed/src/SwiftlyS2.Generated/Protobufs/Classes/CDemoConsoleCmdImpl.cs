@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CDemoConsoleCmdImpl : TypedProtobuf<CDemoConsoleCmd>, CDemoConsol
 
   public string Cmdstring
   { get => Accessor.GetString("cmdstring"); set => Accessor.SetString("cmdstring", value); }
-
 }

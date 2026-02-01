@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -32,5 +31,4 @@ public interface CP2P_WatchSynchronization : ITypedProtobuf<CP2P_WatchSynchroniz
 
 
   public int DotaReplaySpeed { get; set; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CGameInfoImpl : TypedProtobuf<CGameInfo>, CGameInfo
 
   public CGameInfo_CCSGameInfo Cs
   { get => new CGameInfo_CCSGameInfoImpl(NativeNetMessages.GetNestedMessage(Address, "cs"), false); }
-
 }

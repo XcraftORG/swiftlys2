@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgAdjustEquipSlotsImpl : TypedProtobuf<CMsgAdjustEquipSlots>, C
 
   public uint ChangeNum
   { get => Accessor.GetUInt32("change_num"); set => Accessor.SetUInt32("change_num", value); }
-
 }

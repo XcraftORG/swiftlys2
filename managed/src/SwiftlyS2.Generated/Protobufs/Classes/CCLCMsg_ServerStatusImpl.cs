@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCLCMsg_ServerStatusImpl : NetMessage<CCLCMsg_ServerStatus>, CCLC
 
   public bool Simplified
   { get => Accessor.GetBool("simplified"); set => Accessor.SetBool("simplified", value); }
-
 }

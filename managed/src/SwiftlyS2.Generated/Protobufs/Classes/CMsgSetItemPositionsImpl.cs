@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgSetItemPositionsImpl : TypedProtobuf<CMsgSetItemPositions>, C
 
   public IProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition> ItemPositions
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgSetItemPositions_ItemPosition>(Accessor, "item_positions"); }
-
 }

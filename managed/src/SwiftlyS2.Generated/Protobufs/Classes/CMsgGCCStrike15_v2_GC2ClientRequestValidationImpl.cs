@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_GC2ClientRequestValidationImpl : TypedProtobuf
 
   public string Module
   { get => Accessor.GetString("module"); set => Accessor.SetString("module", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_GotvSyncPacketImpl : TypedProtobuf<CMsgGCCStrike1
 
   public CEngineGotvSyncPacket Data
   { get => new CEngineGotvSyncPacketImpl(NativeNetMessages.GetNestedMessage(Address, "data"), false); }
-
 }

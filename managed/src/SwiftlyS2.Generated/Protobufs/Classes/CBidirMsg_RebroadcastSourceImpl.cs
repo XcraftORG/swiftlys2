@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CBidirMsg_RebroadcastSourceImpl : TypedProtobuf<CBidirMsg_Rebroad
 
   public int Eventsource
   { get => Accessor.GetInt32("eventsource"); set => Accessor.SetInt32("eventsource", value); }
-
 }

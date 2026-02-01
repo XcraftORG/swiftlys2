@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCLCMsg_SplitPlayerConnectImpl : NetMessage<CCLCMsg_SplitPlayerCo
 
   public string Playername
   { get => Accessor.GetString("playername"); set => Accessor.SetString("playername", value); }
-
 }

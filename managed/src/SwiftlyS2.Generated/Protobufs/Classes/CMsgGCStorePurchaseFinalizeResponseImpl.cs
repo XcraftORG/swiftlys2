@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCStorePurchaseFinalizeResponseImpl : TypedProtobuf<CMsgGCSto
 
   public IProtobufRepeatedFieldValueType<ulong> ItemIds
   { get => new ProtobufRepeatedFieldValueType<ulong>(Accessor, "item_ids"); }
-
 }

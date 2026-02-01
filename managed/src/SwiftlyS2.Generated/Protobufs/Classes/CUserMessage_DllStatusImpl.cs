@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CUserMessage_DllStatusImpl : TypedProtobuf<CUserMessage_DllStatus
 
   public IProtobufRepeatedFieldSubMessageType<CUserMessage_DllStatus_CModule> Modules
   { get => new ProtobufRepeatedFieldSubMessageType<CUserMessage_DllStatus_CModule>(Accessor, "modules"); }
-
 }

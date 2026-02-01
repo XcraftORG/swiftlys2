@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CGCToGCMsgMasterAck_ResponseImpl : TypedProtobuf<CGCToGCMsgMaster
 
   public int Eresult
   { get => Accessor.GetInt32("eresult"); set => Accessor.SetInt32("eresult", value); }
-
 }

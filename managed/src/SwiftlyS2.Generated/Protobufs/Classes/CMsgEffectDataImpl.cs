@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -88,5 +87,4 @@ internal class CMsgEffectDataImpl : TypedProtobuf<CMsgEffectData>, CMsgEffectDat
 
   public uint Attachmentname
   { get => Accessor.GetUInt32("attachmentname"); set => Accessor.SetUInt32("attachmentname", value); }
-
 }

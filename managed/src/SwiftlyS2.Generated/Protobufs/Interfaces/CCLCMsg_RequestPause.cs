@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -19,5 +18,4 @@ public interface CCLCMsg_RequestPause : ITypedProtobuf<CCLCMsg_RequestPause>, IN
 
 
   public int PauseGroup { get; set; }
-
 }

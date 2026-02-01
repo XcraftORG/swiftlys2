@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_TrainImpl : NetMessage<CCSUsrMsg_Train>, CCSUsrMsg_Trai
 
   public int Train
   { get => Accessor.GetInt32("train"); set => Accessor.SetInt32("train", value); }
-
 }

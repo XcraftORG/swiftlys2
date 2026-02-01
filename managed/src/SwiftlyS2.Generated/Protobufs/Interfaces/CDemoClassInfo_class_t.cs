@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -17,5 +16,4 @@ public interface CDemoClassInfo_class_t : ITypedProtobuf<CDemoClassInfo_class_t>
 
 
   public string TableName { get; set; }
-
 }

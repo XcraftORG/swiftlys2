@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CClientHeaderOverwatchEvidenceImpl : TypedProtobuf<CClientHeaderO
 
   public ulong Caseid
   { get => Accessor.GetUInt64("caseid"); set => Accessor.SetUInt64("caseid", value); }
-
 }

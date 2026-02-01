@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_PacketEntities_alternate_baseline_tImpl : TypedProtobuf<C
 
   public int BaselineIndex
   { get => Accessor.GetInt32("baseline_index"); set => Accessor.SetInt32("baseline_index", value); }
-
 }

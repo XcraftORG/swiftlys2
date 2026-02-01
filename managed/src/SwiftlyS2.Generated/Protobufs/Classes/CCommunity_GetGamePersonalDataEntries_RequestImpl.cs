@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCommunity_GetGamePersonalDataEntries_RequestImpl : TypedProtobuf
 
   public string ContinueToken
   { get => Accessor.GetString("continue_token"); set => Accessor.SetString("continue_token", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CUserMessageSayTextImpl : NetMessage<CUserMessageSayText>, CUserM
 
   public bool Chat
   { get => Accessor.GetBool("chat"); set => Accessor.SetBool("chat", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class MLDemoHeaderImpl : TypedProtobuf<MLDemoHeader>, MLDemoHeader
 
   public uint SteamUniverse
   { get => Accessor.GetUInt32("steam_universe"); set => Accessor.SetUInt32("steam_universe", value); }
-
 }

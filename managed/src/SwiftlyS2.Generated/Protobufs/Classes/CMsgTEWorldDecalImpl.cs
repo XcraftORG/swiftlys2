@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgTEWorldDecalImpl : NetMessage<CMsgTEWorldDecal>, CMsgTEWorldD
 
   public uint Index
   { get => Accessor.GetUInt32("index"); set => Accessor.SetUInt32("index", value); }
-
 }

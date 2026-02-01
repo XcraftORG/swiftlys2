@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CUserMessageHapticsManagerPulseImpl : NetMessage<CUserMessageHapt
 
   public float EffectDuration
   { get => Accessor.GetFloat("effect_duration"); set => Accessor.SetFloat("effect_duration", value); }
-
 }

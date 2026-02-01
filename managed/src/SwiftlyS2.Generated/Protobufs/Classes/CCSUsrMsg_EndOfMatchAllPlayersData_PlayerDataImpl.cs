@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CCSUsrMsg_EndOfMatchAllPlayersData_PlayerDataImpl : TypedProtobuf
 
   public bool Isbot
   { get => Accessor.GetBool("isbot"); set => Accessor.SetBool("isbot", value); }
-
 }

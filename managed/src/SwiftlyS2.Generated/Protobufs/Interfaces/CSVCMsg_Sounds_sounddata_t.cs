@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -65,5 +64,4 @@ public interface CSVCMsg_Sounds_sounddata_t : ITypedProtobuf<CSVCMsg_Sounds_soun
 
 
   public ulong SoundResourceId { get; set; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class C2S_CONNECT_MessageImpl : TypedProtobuf<C2S_CONNECT_Message>, C2S
 
   public C2S_CONNECT_SameProcessCheck LocalhostSameProcessCheck
   { get => new C2S_CONNECT_SameProcessCheckImpl(NativeNetMessages.GetNestedMessage(Address, "localhost_same_process_check"), false); }
-
 }

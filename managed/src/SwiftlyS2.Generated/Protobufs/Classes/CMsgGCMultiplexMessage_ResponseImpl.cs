@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCMultiplexMessage_ResponseImpl : TypedProtobuf<CMsgGCMultipl
 
   public uint Msgtype
   { get => Accessor.GetUInt32("msgtype"); set => Accessor.SetUInt32("msgtype", value); }
-
 }

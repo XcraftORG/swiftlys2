@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_VGUIMenuImpl : NetMessage<CCSUsrMsg_VGUIMenu>, CCSUsrMs
 
   public IProtobufRepeatedFieldSubMessageType<CCSUsrMsg_VGUIMenu_Keys> Keys
   { get => new ProtobufRepeatedFieldSubMessageType<CCSUsrMsg_VGUIMenu_Keys>(Accessor, "keys"); }
-
 }

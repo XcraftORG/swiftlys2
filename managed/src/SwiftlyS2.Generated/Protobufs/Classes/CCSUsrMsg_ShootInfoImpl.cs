@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_ShootInfoImpl : NetMessage<CCSUsrMsg_ShootInfo>, CCSUsr
 
   public QAngle ShootDir
   { get => Accessor.GetQAngle("shoot_dir"); set => Accessor.SetQAngle("shoot_dir", value); }
-
 }

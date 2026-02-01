@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_DamageImpl : NetMessage<CCSUsrMsg_Damage>, CCSUsrMsg_Da
 
   public int VictimEntindex
   { get => Accessor.GetInt32("victim_entindex"); set => Accessor.SetInt32("victim_entindex", value); }
-
 }

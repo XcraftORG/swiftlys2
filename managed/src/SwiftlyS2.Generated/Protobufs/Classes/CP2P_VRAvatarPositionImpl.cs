@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CP2P_VRAvatarPositionImpl : TypedProtobuf<CP2P_VRAvatarPosition>,
 
   public int WorldScale
   { get => Accessor.GetInt32("world_scale"); set => Accessor.SetInt32("world_scale", value); }
-
 }

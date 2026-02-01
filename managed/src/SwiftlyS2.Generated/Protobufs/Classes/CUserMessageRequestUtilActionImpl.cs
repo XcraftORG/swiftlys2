@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CUserMessageRequestUtilActionImpl : NetMessage<CUserMessageReques
 
   public int Util5
   { get => Accessor.GetInt32("util5"); set => Accessor.SetInt32("util5", value); }
-
 }

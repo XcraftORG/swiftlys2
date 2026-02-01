@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class PlayerQuestData_QuestItemDataImpl : TypedProtobuf<PlayerQuestData
 
   public QuestType QuestType
   { get => (QuestType)Accessor.GetInt32("quest_type"); set => Accessor.SetInt32("quest_type", (int)value); }
-
 }

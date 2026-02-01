@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCLCMsg_MoveImpl : NetMessage<CCLCMsg_Move>, CCLCMsg_Move
 
   public uint LastCommandNumber
   { get => Accessor.GetUInt32("last_command_number"); set => Accessor.SetUInt32("last_command_number", value); }
-
 }

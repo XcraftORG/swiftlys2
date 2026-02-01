@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCommunity_GetGamePersonalDataCategories_RequestImpl : TypedProto
 
   public uint Appid
   { get => Accessor.GetUInt32("appid"); set => Accessor.SetUInt32("appid", value); }
-
 }

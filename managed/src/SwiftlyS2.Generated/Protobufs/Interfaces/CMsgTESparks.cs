@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -25,5 +24,4 @@ public interface CMsgTESparks : ITypedProtobuf<CMsgTESparks>, INetMessage<CMsgTE
 
 
   public Vector Direction { get; set; }
-
 }

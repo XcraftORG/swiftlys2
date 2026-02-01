@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -88,5 +87,4 @@ internal class CSOItemRecipeImpl : TypedProtobuf<CSOItemRecipe>, CSOItemRecipe
 
   public IProtobufRepeatedFieldValueType<uint> InputItemDupeCounts
   { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "input_item_dupe_counts"); }
-
 }

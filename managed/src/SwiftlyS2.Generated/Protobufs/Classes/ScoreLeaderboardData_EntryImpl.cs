@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class ScoreLeaderboardData_EntryImpl : TypedProtobuf<ScoreLeaderboardDa
 
   public uint Val
   { get => Accessor.GetUInt32("val"); set => Accessor.SetUInt32("val", value); }
-
 }

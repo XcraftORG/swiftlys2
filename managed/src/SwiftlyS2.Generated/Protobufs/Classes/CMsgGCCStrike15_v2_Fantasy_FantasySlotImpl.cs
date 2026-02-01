@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCCStrike15_v2_Fantasy_FantasySlotImpl : TypedProtobuf<CMsgGC
 
   public ulong Itemid
   { get => Accessor.GetUInt64("itemid"); set => Accessor.SetUInt64("itemid", value); }
-
 }

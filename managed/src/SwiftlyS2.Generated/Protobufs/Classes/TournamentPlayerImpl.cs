@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class TournamentPlayerImpl : TypedProtobuf<TournamentPlayer>, Tournamen
 
   public string PlayerDesc
   { get => Accessor.GetString("player_desc"); set => Accessor.SetString("player_desc", value); }
-
 }

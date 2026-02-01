@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -60,5 +59,4 @@ internal class CUserMessage_NotifyResponseFoundImpl : NetMessage<CUserMessage_No
 
   public int SpeakResult
   { get => Accessor.GetInt32("speak_result"); set => Accessor.SetInt32("speak_result", value); }
-
 }

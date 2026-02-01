@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgSource2VProfLiteReportImpl : TypedProtobuf<CMsgSource2VProfLi
 
   public uint DiscardedFrames
   { get => Accessor.GetUInt32("discarded_frames"); set => Accessor.SetUInt32("discarded_frames", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgSource1LegacyGameEventListImpl : NetMessage<CMsgSource1Legacy
 
   public IProtobufRepeatedFieldSubMessageType<CMsgSource1LegacyGameEventList_descriptor_t> Descriptors
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgSource1LegacyGameEventList_descriptor_t>(Accessor, "descriptors"); }
-
 }

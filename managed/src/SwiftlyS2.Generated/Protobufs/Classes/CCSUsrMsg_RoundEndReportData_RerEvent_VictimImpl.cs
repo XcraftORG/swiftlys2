@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CCSUsrMsg_RoundEndReportData_RerEvent_VictimImpl : TypedProtobuf<
 
   public bool IsDead
   { get => Accessor.GetBool("is_dead"); set => Accessor.SetBool("is_dead", value); }
-
 }

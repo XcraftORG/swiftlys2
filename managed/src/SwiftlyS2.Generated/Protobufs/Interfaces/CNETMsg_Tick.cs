@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -43,5 +42,4 @@ public interface CNETMsg_Tick : ITypedProtobuf<CNETMsg_Tick>, INetMessage<CNETMs
 
 
   public uint HostFrameIrregularArrivalPctX10 { get; set; }
-
 }

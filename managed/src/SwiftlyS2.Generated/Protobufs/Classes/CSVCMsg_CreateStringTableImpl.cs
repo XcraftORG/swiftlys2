@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CSVCMsg_CreateStringTableImpl : NetMessage<CSVCMsg_CreateStringTa
 
   public bool UsingVarintBitcounts
   { get => Accessor.GetBool("using_varint_bitcounts"); set => Accessor.SetBool("using_varint_bitcounts", value); }
-
 }

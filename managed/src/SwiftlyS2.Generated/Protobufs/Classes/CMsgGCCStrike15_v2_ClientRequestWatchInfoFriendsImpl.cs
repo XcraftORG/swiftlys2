@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgGCCStrike15_v2_ClientRequestWatchInfoFriendsImpl : TypedProto
 
   public IProtobufRepeatedFieldSubMessageType<DataCenterPing> DataCenterPings
   { get => new ProtobufRepeatedFieldSubMessageType<DataCenterPing>(Accessor, "data_center_pings"); }
-
 }

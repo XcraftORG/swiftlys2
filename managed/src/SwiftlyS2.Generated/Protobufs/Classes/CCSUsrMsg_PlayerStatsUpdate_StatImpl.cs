@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_PlayerStatsUpdate_StatImpl : TypedProtobuf<CCSUsrMsg_Pl
 
   public int Delta
   { get => Accessor.GetInt32("delta"); set => Accessor.SetInt32("delta", value); }
-
 }

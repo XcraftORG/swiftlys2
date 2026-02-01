@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -56,5 +55,4 @@ internal class CMsgGCCStrike15_v2_PlayerOverwatchCaseAssignmentImpl : TypedProto
 
   public uint Reason
   { get => Accessor.GetUInt32("reason"); set => Accessor.SetUInt32("reason", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CSOItemCriteriaConditionImpl : TypedProtobuf<CSOItemCriteriaCondi
 
   public string StringValue
   { get => Accessor.GetString("string_value"); set => Accessor.SetString("string_value", value); }
-
 }

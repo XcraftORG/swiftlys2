@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -84,5 +83,4 @@ internal class CUserMsg_ParticleManager_AddFanImpl : TypedProtobuf<CUserMsg_Part
 
   public string AttachmentName
   { get => Accessor.GetString("attachment_name"); set => Accessor.SetString("attachment_name", value); }
-
 }

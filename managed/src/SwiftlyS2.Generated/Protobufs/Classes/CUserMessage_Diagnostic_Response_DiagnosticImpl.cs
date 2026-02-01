@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -72,5 +71,4 @@ internal class CUserMessage_Diagnostic_Response_DiagnosticImpl : TypedProtobuf<C
 
   public long Placebo
   { get => Accessor.GetInt64("placebo"); set => Accessor.SetInt64("placebo", value); }
-
 }

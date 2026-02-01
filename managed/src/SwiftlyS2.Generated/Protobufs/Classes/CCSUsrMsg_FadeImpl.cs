@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_FadeImpl : NetMessage<CCSUsrMsg_Fade>, CCSUsrMsg_Fade
 
   public Color Clr
   { get => Accessor.GetColor("clr"); set => Accessor.SetColor("clr", value); }
-
 }

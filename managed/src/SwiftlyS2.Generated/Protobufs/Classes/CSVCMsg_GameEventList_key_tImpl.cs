@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_GameEventList_key_tImpl : TypedProtobuf<CSVCMsg_GameEvent
 
   public string Name
   { get => Accessor.GetString("name"); set => Accessor.SetString("name", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -92,5 +91,4 @@ internal class CDataGCCStrike15_v2_TournamentMatchDraftImpl : TypedProtobuf<CDat
 
   public float VotePhaseLength
   { get => Accessor.GetFloat("vote_phase_length"); set => Accessor.SetFloat("vote_phase_length", value); }
-
 }

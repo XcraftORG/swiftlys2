@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_QuestProgressImpl : NetMessage<CCSUsrMsg_QuestProgress>
 
   public bool IsEventQuest
   { get => Accessor.GetBool("is_event_quest"); set => Accessor.SetBool("is_event_quest", value); }
-
 }

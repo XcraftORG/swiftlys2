@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgGCCstrike15_v2_ClientRedeemMissionRewardImpl : TypedProtobuf<
 
   public int BidControl
   { get => Accessor.GetInt32("bid_control"); set => Accessor.SetInt32("bid_control", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CDemoRecovery_DemoInitialSpawnGroupEntryImpl : TypedProtobuf<CDem
 
   public bool WasCreated
   { get => Accessor.GetBool("was_created"); set => Accessor.SetBool("was_created", value); }
-
 }

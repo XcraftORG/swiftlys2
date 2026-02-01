@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgTEEffectDispatchImpl : NetMessage<CMsgTEEffectDispatch>, CMsg
 
   public CMsgEffectData Effectdata
   { get => new CMsgEffectDataImpl(NativeNetMessages.GetNestedMessage(Address, "effectdata"), false); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSteam_Voice_EncodingImpl : TypedProtobuf<CSteam_Voice_Encoding>,
 
   public byte[] VoiceData
   { get => Accessor.GetBytes("voice_data"); set => Accessor.SetBytes("voice_data", value); }
-
 }

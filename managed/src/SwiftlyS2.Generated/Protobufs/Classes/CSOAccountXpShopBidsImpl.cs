@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CSOAccountXpShopBidsImpl : TypedProtobuf<CSOAccountXpShopBids>, C
 
   public uint GenerationTime
   { get => Accessor.GetUInt32("generation_time"); set => Accessor.SetUInt32("generation_time", value); }
-
 }

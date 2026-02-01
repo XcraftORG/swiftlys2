@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CClientMsg_WorldUIControllerHasPanelChangedEventImpl : TypedProto
 
   public uint LiteralHandType
   { get => Accessor.GetUInt32("literal_hand_type"); set => Accessor.SetUInt32("literal_hand_type", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgReplicateConVarsImpl : TypedProtobuf<CMsgReplicateConVars>, C
 
   public IProtobufRepeatedFieldSubMessageType<CMsgConVarValue> Convars
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgConVarValue>(Accessor, "convars"); }
-
 }

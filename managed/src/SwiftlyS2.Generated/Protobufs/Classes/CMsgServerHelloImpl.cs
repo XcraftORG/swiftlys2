@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CMsgServerHelloImpl : TypedProtobuf<CMsgServerHello>, CMsgServerH
 
   public uint SocacheControl
   { get => Accessor.GetUInt32("socache_control"); set => Accessor.SetUInt32("socache_control", value); }
-
 }

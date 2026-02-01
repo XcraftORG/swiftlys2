@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgSOSingleObjectImpl : TypedProtobuf<CMsgSOSingleObject>, CMsgS
 
   public CMsgSOIDOwner OwnerSoid
   { get => new CMsgSOIDOwnerImpl(NativeNetMessages.GetNestedMessage(Address, "owner_soid"), false); }
-
 }

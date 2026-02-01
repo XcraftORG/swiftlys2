@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_ClearModellistOverrideImpl : TypedProtob
 
   public uint Groupid
   { get => Accessor.GetUInt32("groupid"); set => Accessor.SetUInt32("groupid", value); }
-
 }

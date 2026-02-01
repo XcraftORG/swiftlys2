@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCRequestSessionIPResponseImpl : TypedProtobuf<CMsgGCRequestS
 
   public uint Ip
   { get => Accessor.GetUInt32("ip"); set => Accessor.SetUInt32("ip", value); }
-
 }

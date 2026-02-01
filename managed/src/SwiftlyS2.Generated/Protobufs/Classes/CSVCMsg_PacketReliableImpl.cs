@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSVCMsg_PacketReliableImpl : NetMessage<CSVCMsg_PacketReliable>, 
 
   public bool State
   { get => Accessor.GetBool("state"); set => Accessor.SetBool("state", value); }
-
 }

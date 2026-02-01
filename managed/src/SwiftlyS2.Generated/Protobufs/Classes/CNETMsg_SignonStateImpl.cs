@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CNETMsg_SignonStateImpl : NetMessage<CNETMsg_SignonState>, CNETMs
 
   public string Addons
   { get => Accessor.GetString("addons"); set => Accessor.SetString("addons", value); }
-
 }

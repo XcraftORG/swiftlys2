@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CUserMessageHudMsgImpl : NetMessage<CUserMessageHudMsg>, CUserMes
 
   public string Message
   { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
-
 }

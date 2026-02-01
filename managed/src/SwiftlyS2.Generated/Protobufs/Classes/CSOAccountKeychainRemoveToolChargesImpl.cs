@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSOAccountKeychainRemoveToolChargesImpl : TypedProtobuf<CSOAccoun
 
   public uint Charges
   { get => Accessor.GetUInt32("charges"); set => Accessor.SetUInt32("charges", value); }
-
 }

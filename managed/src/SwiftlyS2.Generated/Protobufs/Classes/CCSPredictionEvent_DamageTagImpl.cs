@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSPredictionEvent_DamageTagImpl : TypedProtobuf<CCSPredictionEve
 
   public float FriendlyFireDamageReductionRatio
   { get => Accessor.GetFloat("friendly_fire_damage_reduction_ratio"); set => Accessor.SetFloat("friendly_fire_damage_reduction_ratio", value); }
-
 }

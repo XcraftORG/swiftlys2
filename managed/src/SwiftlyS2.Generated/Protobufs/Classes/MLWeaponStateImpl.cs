@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class MLWeaponStateImpl : TypedProtobuf<MLWeaponState>, MLWeaponState
 
   public float RecoilIndex
   { get => Accessor.GetFloat("recoil_index"); set => Accessor.SetFloat("recoil_index", value); }
-
 }

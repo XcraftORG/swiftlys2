@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -26,5 +25,4 @@ public interface CMsgGCCStrike15_v2_Party_Search : ITypedProtobuf<CMsgGCCStrike1
 
 
   public uint GameType { get; set; }
-
 }

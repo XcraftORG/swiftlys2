@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -62,5 +61,4 @@ public interface CMsgSource2VProfLiteReportItem : ITypedProtobuf<CMsgSource2VPro
 
 
   public uint Usec1secmaxP99All { get; set; }
-
 }

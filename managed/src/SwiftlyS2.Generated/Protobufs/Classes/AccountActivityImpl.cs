@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class AccountActivityImpl : TypedProtobuf<AccountActivity>, AccountActi
 
   public ulong Matchid
   { get => Accessor.GetUInt64("matchid"); set => Accessor.SetUInt64("matchid", value); }
-
 }

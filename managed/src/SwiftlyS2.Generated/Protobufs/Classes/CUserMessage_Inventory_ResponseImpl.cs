@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -64,5 +63,4 @@ internal class CUserMessage_Inventory_ResponseImpl : TypedProtobuf<CUserMessage_
 
   public long StartTime
   { get => Accessor.GetInt64("start_time"); set => Accessor.SetInt64("start_time", value); }
-
 }

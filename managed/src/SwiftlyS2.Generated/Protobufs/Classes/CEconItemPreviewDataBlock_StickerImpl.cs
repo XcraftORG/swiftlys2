@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -60,5 +59,4 @@ internal class CEconItemPreviewDataBlock_StickerImpl : TypedProtobuf<CEconItemPr
 
   public uint WrappedSticker
   { get => Accessor.GetUInt32("wrapped_sticker"); set => Accessor.SetUInt32("wrapped_sticker", value); }
-
 }

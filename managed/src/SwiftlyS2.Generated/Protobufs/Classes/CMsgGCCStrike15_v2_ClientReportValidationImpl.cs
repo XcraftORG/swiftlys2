@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -92,5 +91,4 @@ internal class CMsgGCCStrike15_v2_ClientReportValidationImpl : TypedProtobuf<CMs
 
   public IProtobufRepeatedFieldSubMessageType<CVDiagnostic> Diagnostics
   { get => new ProtobufRepeatedFieldSubMessageType<CVDiagnostic>(Accessor, "diagnostics"); }
-
 }

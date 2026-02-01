@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgReplayUploadedToYouTubeImpl : TypedProtobuf<CMsgReplayUploade
 
   public ulong SessionId
   { get => Accessor.GetUInt64("session_id"); set => Accessor.SetUInt64("session_id", value); }
-
 }

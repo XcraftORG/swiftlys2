@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_FixAngleImpl : TypedProtobuf<CSVCMsg_FixAngle>, CSVCMsg_F
 
   public QAngle Angle
   { get => Accessor.GetQAngle("angle"); set => Accessor.SetQAngle("angle", value); }
-
 }

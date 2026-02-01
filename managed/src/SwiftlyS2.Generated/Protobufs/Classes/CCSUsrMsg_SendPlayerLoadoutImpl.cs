@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_SendPlayerLoadoutImpl : NetMessage<CCSUsrMsg_SendPlayer
 
   public int Playerslot
   { get => Accessor.GetInt32("playerslot"); set => Accessor.SetInt32("playerslot", value); }
-
 }

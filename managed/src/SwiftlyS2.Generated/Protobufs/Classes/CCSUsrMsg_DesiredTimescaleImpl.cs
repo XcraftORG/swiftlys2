@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_DesiredTimescaleImpl : NetMessage<CCSUsrMsg_DesiredTime
 
   public float StartBlendTime
   { get => Accessor.GetFloat("start_blend_time"); set => Accessor.SetFloat("start_blend_time", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class MLEventImpl : TypedProtobuf<MLEvent>, MLEvent
 
   public IProtobufRepeatedFieldSubMessageType<MLDict> Data
   { get => new ProtobufRepeatedFieldSubMessageType<MLDict>(Accessor, "data"); }
-
 }

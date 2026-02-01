@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSource2PerfIntervalSample_TagImpl : TypedProtobuf<CMsgSource2
 
   public uint MaxValue
   { get => Accessor.GetUInt32("max_value"); set => Accessor.SetUInt32("max_value", value); }
-
 }

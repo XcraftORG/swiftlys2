@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgTEArmorRicochetImpl : NetMessage<CMsgTEArmorRicochet>, CMsgTE
 
   public Vector Dir
   { get => Accessor.GetVector("dir"); set => Accessor.SetVector("dir", value); }
-
 }

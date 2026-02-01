@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -88,5 +87,4 @@ internal class CSVCMsg_Sounds_sounddata_tImpl : TypedProtobuf<CSVCMsg_Sounds_sou
 
   public ulong SoundResourceId
   { get => Accessor.GetUInt64("sound_resource_id"); set => Accessor.SetUInt64("sound_resource_id", value); }
-
 }

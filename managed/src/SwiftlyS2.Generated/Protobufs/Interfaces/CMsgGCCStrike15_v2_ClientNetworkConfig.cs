@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -11,5 +10,4 @@ public interface CMsgGCCStrike15_v2_ClientNetworkConfig : ITypedProtobuf<CMsgGCC
 
 
   public byte[] Data { get; set; }
-
 }

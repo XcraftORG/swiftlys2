@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUIFontFilePackagePB_CUIEncryptedFontFilePBImpl : TypedProtobuf<C
 
   public byte[] EncryptedContents
   { get => Accessor.GetBytes("encrypted_contents"); set => Accessor.SetBytes("encrypted_contents", value); }
-
 }

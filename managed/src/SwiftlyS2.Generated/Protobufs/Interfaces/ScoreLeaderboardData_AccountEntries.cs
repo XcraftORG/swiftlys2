@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -14,5 +13,4 @@ public interface ScoreLeaderboardData_AccountEntries : ITypedProtobuf<ScoreLeade
 
 
   public IProtobufRepeatedFieldSubMessageType<ScoreLeaderboardData_Entry> Entries { get; }
-
 }

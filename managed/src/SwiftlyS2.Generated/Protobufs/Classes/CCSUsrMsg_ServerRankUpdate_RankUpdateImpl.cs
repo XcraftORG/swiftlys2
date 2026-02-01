@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CCSUsrMsg_ServerRankUpdate_RankUpdateImpl : TypedProtobuf<CCSUsrM
 
   public int RankTypeId
   { get => Accessor.GetInt32("rank_type_id"); set => Accessor.SetInt32("rank_type_id", value); }
-
 }

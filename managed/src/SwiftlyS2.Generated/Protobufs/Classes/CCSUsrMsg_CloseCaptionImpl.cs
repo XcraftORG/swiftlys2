@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_CloseCaptionImpl : NetMessage<CCSUsrMsg_CloseCaption>, 
 
   public string Cctoken
   { get => Accessor.GetString("cctoken"); set => Accessor.SetString("cctoken", value); }
-
 }

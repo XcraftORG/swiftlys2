@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCToGCDirtySDOCacheImpl : TypedProtobuf<CMsgGCToGCDirtySDOCac
 
   public ulong KeyUint64
   { get => Accessor.GetUInt64("key_uint64"); set => Accessor.SetUInt64("key_uint64", value); }
-
 }

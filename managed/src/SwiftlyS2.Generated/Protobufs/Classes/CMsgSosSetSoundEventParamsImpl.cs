@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSosSetSoundEventParamsImpl : NetMessage<CMsgSosSetSoundEventP
 
   public byte[] PackedParams
   { get => Accessor.GetBytes("packed_params"); set => Accessor.SetBytes("packed_params", value); }
-
 }

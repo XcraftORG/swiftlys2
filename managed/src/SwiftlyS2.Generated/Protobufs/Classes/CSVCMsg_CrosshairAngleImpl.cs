@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_CrosshairAngleImpl : TypedProtobuf<CSVCMsg_CrosshairAngle
 
   public QAngle Angle
   { get => Accessor.GetQAngle("angle"); set => Accessor.SetQAngle("angle", value); }
-
 }

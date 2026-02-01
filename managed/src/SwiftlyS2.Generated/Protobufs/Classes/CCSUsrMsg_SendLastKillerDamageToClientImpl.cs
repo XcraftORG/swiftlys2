@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CCSUsrMsg_SendLastKillerDamageToClientImpl : NetMessage<CCSUsrMsg
 
   public int ActualDamageTaken
   { get => Accessor.GetInt32("actual_damage_taken"); set => Accessor.SetInt32("actual_damage_taken", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSource1LegacyListenEventsImpl : NetMessage<CMsgSource1LegacyL
 
   public IProtobufRepeatedFieldValueType<uint> Eventarraybits
   { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "eventarraybits"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -56,5 +55,4 @@ internal class CSOItemCriteriaImpl : TypedProtobuf<CSOItemCriteria>, CSOItemCrit
 
   public bool RecentOnly
   { get => Accessor.GetBool("recent_only"); set => Accessor.SetBool("recent_only", value); }
-
 }

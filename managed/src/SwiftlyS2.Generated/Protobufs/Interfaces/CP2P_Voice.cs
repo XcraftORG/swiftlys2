@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -14,5 +13,4 @@ public interface CP2P_Voice : ITypedProtobuf<CP2P_Voice>
 
 
   public uint BroadcastGroup { get; set; }
-
 }

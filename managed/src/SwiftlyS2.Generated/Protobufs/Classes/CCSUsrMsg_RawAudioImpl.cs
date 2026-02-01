@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_RawAudioImpl : NetMessage<CCSUsrMsg_RawAudio>, CCSUsrMs
 
   public string VoiceFilename
   { get => Accessor.GetString("voice_filename"); set => Accessor.SetString("voice_filename", value); }
-
 }

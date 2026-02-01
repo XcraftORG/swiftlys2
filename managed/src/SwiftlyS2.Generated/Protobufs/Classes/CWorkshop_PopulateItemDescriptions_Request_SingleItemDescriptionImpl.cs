@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CWorkshop_PopulateItemDescriptions_Request_SingleItemDescriptionI
 
   public bool OnePerAccount
   { get => Accessor.GetBool("one_per_account"); set => Accessor.SetBool("one_per_account", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -32,5 +31,4 @@ public interface CUserMsg_ParticleManager_UpdateParticleEnt : ITypedProtobuf<CUs
 
 
   public QAngle OffsetAngles { get; set; }
-
 }

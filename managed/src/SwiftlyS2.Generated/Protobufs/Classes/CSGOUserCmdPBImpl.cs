@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CSGOUserCmdPBImpl : TypedProtobuf<CSGOUserCmdPB>, CSGOUserCmdPB
 
   public bool IsPredictingKillRagdolls
   { get => Accessor.GetBool("is_predicting_kill_ragdolls"); set => Accessor.SetBool("is_predicting_kill_ragdolls", value); }
-
 }

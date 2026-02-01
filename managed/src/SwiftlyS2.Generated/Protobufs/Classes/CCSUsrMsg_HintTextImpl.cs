@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_HintTextImpl : NetMessage<CCSUsrMsg_HintText>, CCSUsrMs
 
   public string Message
   { get => Accessor.GetString("message"); set => Accessor.SetString("message", value); }
-
 }

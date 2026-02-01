@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_SurvivalStats_FactImpl : TypedProtobuf<CCSUsrMsg_Surviv
 
   public float Interestingness
   { get => Accessor.GetFloat("interestingness"); set => Accessor.SetFloat("interestingness", value); }
-
 }

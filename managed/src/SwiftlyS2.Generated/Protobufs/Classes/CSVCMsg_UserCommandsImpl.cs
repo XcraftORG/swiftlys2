@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_UserCommandsImpl : TypedProtobuf<CSVCMsg_UserCommands>, C
 
   public IProtobufRepeatedFieldSubMessageType<CMsgServerUserCmd> Commands
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgServerUserCmd>(Accessor, "commands"); }
-
 }

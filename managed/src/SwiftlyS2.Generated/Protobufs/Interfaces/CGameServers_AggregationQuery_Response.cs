@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -11,5 +10,4 @@ public interface CGameServers_AggregationQuery_Response : ITypedProtobuf<CGameSe
 
 
   public IProtobufRepeatedFieldSubMessageType<CGameServers_AggregationQuery_Response_Group> Groups { get; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -28,5 +27,4 @@ public interface CSVCMsg_BSPDecal : ITypedProtobuf<CSVCMsg_BSPDecal>, INetMessag
 
 
   public bool LowPriority { get; set; }
-
 }

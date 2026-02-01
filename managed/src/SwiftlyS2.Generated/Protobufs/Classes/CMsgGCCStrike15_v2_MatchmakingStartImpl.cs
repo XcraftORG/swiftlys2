@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingStartImpl : TypedProtobuf<CMsgGCCSt
 
   public ulong LobbyId
   { get => Accessor.GetUInt64("lobby_id"); set => Accessor.SetUInt64("lobby_id", value); }
-
 }

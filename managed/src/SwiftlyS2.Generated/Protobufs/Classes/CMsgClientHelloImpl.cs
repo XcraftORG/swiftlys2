@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CMsgClientHelloImpl : TypedProtobuf<CMsgClientHello>, CMsgClientH
 
   public uint SteamLauncher
   { get => Accessor.GetUInt32("steam_launcher"); set => Accessor.SetUInt32("steam_launcher", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CSubtickMoveStepImpl : TypedProtobuf<CSubtickMoveStep>, CSubtickM
 
   public float YawDelta
   { get => Accessor.GetFloat("yaw_delta"); set => Accessor.SetFloat("yaw_delta", value); }
-
 }

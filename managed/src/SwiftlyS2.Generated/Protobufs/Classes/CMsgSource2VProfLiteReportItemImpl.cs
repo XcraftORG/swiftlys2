@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -84,5 +83,4 @@ internal class CMsgSource2VProfLiteReportItemImpl : TypedProtobuf<CMsgSource2VPr
 
   public uint Usec1secmaxP99All
   { get => Accessor.GetUInt32("usec_1secmax_p99_all"); set => Accessor.SetUInt32("usec_1secmax_p99_all", value); }
-
 }

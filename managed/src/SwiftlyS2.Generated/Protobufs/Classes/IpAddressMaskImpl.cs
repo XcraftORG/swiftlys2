@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class IpAddressMaskImpl : TypedProtobuf<IpAddressMask>, IpAddressMask
 
   public uint Token
   { get => Accessor.GetUInt32("token"); set => Accessor.SetUInt32("token", value); }
-
 }

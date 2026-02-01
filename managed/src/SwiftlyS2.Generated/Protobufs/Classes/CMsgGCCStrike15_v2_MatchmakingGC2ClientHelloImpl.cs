@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -92,5 +91,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingGC2ClientHelloImpl : TypedProtobuf<
 
   public ulong Owcaseid
   { get => Accessor.GetUInt64("owcaseid"); set => Accessor.SetUInt64("owcaseid", value); }
-
 }

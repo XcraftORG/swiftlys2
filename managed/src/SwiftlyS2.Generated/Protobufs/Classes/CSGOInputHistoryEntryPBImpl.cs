@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -72,5 +71,4 @@ internal class CSGOInputHistoryEntryPBImpl : TypedProtobuf<CSGOInputHistoryEntry
 
   public QAngle TargetAbsAngCheck
   { get => Accessor.GetQAngle("target_abs_ang_check"); set => Accessor.SetQAngle("target_abs_ang_check", value); }
-
 }

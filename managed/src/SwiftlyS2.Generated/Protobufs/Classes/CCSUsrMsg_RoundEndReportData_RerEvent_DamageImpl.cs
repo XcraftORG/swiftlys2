@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CCSUsrMsg_RoundEndReportData_RerEvent_DamageImpl : TypedProtobuf<
 
   public int ReturnNumHits
   { get => Accessor.GetInt32("return_num_hits"); set => Accessor.SetInt32("return_num_hits", value); }
-
 }

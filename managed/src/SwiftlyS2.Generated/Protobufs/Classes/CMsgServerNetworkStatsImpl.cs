@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -112,5 +111,4 @@ internal class CMsgServerNetworkStatsImpl : TypedProtobuf<CMsgServerNetworkStats
 
   public IProtobufRepeatedFieldSubMessageType<CMsgServerNetworkStats_Player> Players
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgServerNetworkStats_Player>(Accessor, "players"); }
-
 }

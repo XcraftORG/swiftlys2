@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCommunity_GetGamePersonalDataCategories_ResponseImpl : TypedProt
 
   public string AppAssetsBasename
   { get => Accessor.GetString("app_assets_basename"); set => Accessor.SetString("app_assets_basename", value); }
-
 }

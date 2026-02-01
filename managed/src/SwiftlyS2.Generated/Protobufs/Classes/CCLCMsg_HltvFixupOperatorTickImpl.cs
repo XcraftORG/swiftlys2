@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CCLCMsg_HltvFixupOperatorTickImpl : TypedProtobuf<CCLCMsg_HltvFix
 
   public Vector ViewOffset
   { get => Accessor.GetVector("view_offset"); set => Accessor.SetVector("view_offset", value); }
-
 }

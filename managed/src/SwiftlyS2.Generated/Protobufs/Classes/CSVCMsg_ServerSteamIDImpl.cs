@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_ServerSteamIDImpl : NetMessage<CSVCMsg_ServerSteamID>, CS
 
   public ulong SteamId
   { get => Accessor.GetUInt64("steam_id"); set => Accessor.SetUInt64("steam_id", value); }
-
 }

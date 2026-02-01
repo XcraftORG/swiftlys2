@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_GCToClientChatImpl : TypedProtobuf<CMsgGCCStri
 
   public string Text
   { get => Accessor.GetString("text"); set => Accessor.SetString("text", value); }
-
 }

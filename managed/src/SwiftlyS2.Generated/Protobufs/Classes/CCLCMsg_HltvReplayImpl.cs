@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CCLCMsg_HltvReplayImpl : NetMessage<CCLCMsg_HltvReplay>, CCLCMsg_
 
   public float EventTime
   { get => Accessor.GetFloat("event_time"); set => Accessor.SetFloat("event_time", value); }
-
 }

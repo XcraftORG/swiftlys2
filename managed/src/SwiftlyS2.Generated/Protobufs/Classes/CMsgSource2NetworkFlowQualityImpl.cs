@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -188,5 +187,4 @@ internal class CMsgSource2NetworkFlowQualityImpl : TypedProtobuf<CMsgSource2Netw
 
   public uint NetPingP95
   { get => Accessor.GetUInt32("net_ping_p95"); set => Accessor.SetUInt32("net_ping_p95", value); }
-
 }

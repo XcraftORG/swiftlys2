@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCItemCustomizationNotificationImpl : TypedProtobuf<CMsgGCIte
 
   public IProtobufRepeatedFieldValueType<ulong> ExtraData
   { get => new ProtobufRepeatedFieldValueType<ulong>(Accessor, "extra_data"); }
-
 }

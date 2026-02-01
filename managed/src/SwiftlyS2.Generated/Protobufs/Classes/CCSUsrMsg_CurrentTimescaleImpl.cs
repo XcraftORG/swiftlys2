@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_CurrentTimescaleImpl : NetMessage<CCSUsrMsg_CurrentTime
 
   public float CurTimescale
   { get => Accessor.GetFloat("cur_timescale"); set => Accessor.SetFloat("cur_timescale", value); }
-
 }

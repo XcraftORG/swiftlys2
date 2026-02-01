@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -35,5 +34,4 @@ public interface CMsgGCCStrike15_v2_GC2ClientInitSystem : ITypedProtobuf<CMsgGCC
 
 
   public bool LoadSystem { get; set; }
-
 }

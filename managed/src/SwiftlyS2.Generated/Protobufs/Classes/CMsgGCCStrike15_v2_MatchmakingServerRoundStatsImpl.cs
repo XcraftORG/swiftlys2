@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -140,5 +139,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingServerRoundStatsImpl : TypedProtobu
 
   public int MapId
   { get => Accessor.GetInt32("map_id"); set => Accessor.SetInt32("map_id", value); }
-
 }

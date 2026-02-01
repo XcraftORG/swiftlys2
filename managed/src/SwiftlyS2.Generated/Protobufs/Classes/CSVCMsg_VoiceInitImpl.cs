@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSVCMsg_VoiceInitImpl : NetMessage<CSVCMsg_VoiceInit>, CSVCMsg_Vo
 
   public int Version
   { get => Accessor.GetInt32("version"); set => Accessor.SetInt32("version", value); }
-
 }

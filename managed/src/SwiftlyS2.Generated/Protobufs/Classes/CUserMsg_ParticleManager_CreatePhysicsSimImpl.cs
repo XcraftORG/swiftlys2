@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CUserMsg_ParticleManager_CreatePhysicsSimImpl : TypedProtobuf<CUs
 
   public uint MaxParticleCount
   { get => Accessor.GetUInt32("max_particle_count"); set => Accessor.SetUInt32("max_particle_count", value); }
-
 }

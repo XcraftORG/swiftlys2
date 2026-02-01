@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgUseItemImpl : TypedProtobuf<CMsgUseItem>, CMsgUseItem
 
   public ulong InitiatorSteamId
   { get => Accessor.GetUInt64("initiator_steam_id"); set => Accessor.SetUInt64("initiator_steam_id", value); }
-
 }

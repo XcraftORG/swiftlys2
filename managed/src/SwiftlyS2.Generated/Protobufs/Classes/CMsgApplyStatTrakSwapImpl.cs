@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgApplyStatTrakSwapImpl : TypedProtobuf<CMsgApplyStatTrakSwap>,
 
   public ulong Item2ItemId
   { get => Accessor.GetUInt64("item_2_item_id"); set => Accessor.SetUInt64("item_2_item_id", value); }
-
 }

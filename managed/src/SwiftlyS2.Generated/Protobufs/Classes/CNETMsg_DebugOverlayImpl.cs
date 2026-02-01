@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CNETMsg_DebugOverlayImpl : NetMessage<CNETMsg_DebugOverlay>, CNET
 
   public IProtobufRepeatedFieldValueType<string> Strings
   { get => new ProtobufRepeatedFieldValueType<string>(Accessor, "strings"); }
-
 }

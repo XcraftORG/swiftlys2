@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -23,5 +22,4 @@ public interface CGameInfo_CDotaGameInfo_CPlayerInfo : ITypedProtobuf<CGameInfo_
 
 
   public int GameTeam { get; set; }
-
 }

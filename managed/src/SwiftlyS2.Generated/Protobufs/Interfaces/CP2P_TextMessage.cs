@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -11,5 +10,4 @@ public interface CP2P_TextMessage : ITypedProtobuf<CP2P_TextMessage>
 
 
   public byte[] Text { get; set; }
-
 }

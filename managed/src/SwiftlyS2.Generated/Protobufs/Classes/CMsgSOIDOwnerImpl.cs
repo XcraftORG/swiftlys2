@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgSOIDOwnerImpl : TypedProtobuf<CMsgSOIDOwner>, CMsgSOIDOwner
 
   public ulong Id
   { get => Accessor.GetUInt64("id"); set => Accessor.SetUInt64("id", value); }
-
 }

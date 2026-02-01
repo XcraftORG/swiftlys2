@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCommunity_GamePersonalDataCategoryInfoImpl : TypedProtobuf<CComm
 
   public string TemplateFile
   { get => Accessor.GetString("template_file"); set => Accessor.SetString("template_file", value); }
-
 }

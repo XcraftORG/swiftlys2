@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCLCMsg_RequestPauseImpl : NetMessage<CCLCMsg_RequestPause>, CCLC
 
   public int PauseGroup
   { get => Accessor.GetInt32("pause_group"); set => Accessor.SetInt32("pause_group", value); }
-
 }

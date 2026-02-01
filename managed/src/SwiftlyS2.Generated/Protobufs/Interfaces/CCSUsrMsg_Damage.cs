@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -22,5 +21,4 @@ public interface CCSUsrMsg_Damage : ITypedProtobuf<CCSUsrMsg_Damage>, INetMessag
 
 
   public int VictimEntindex { get; set; }
-
 }

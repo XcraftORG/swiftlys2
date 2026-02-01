@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CMsgServerPeerImpl : TypedProtobuf<CMsgServerPeer>, CMsgServerPee
 
   public bool IsListenserverHost
   { get => Accessor.GetBool("is_listenserver_host"); set => Accessor.SetBool("is_listenserver_host", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgGCHAccountPhoneNumberChangeImpl : TypedProtobuf<CMsgGCHAccoun
 
   public bool IsIdentifying
   { get => Accessor.GetBool("is_identifying"); set => Accessor.SetBool("is_identifying", value); }
-
 }

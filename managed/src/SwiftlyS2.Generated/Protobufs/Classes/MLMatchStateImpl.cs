@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class MLMatchStateImpl : TypedProtobuf<MLMatchState>, MLMatchState
 
   public int ScoreT
   { get => Accessor.GetInt32("score_t"); set => Accessor.SetInt32("score_t", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -77,5 +76,4 @@ public interface CEconItemPreviewDataBlock : ITypedProtobuf<CEconItemPreviewData
 
 
   public uint UpgradeLevel { get; set; }
-
 }

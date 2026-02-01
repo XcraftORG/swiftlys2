@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -52,5 +51,4 @@ public interface CMsgTEPhysicsProp : ITypedProtobuf<CMsgTEPhysicsProp>, INetMess
 
 
   public int Dmgtype { get; set; }
-
 }

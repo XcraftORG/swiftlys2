@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -176,5 +175,4 @@ internal class CUserMsg_ParticleManagerImpl : TypedProtobuf<CUserMsg_ParticleMan
 
   public CUserMsg_ParticleManager_RemoveFan RemoveFan
   { get => new CUserMsg_ParticleManager_RemoveFanImpl(NativeNetMessages.GetNestedMessage(Address, "remove_fan"), false); }
-
 }

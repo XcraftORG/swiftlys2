@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CSVCMsg_HLTVStatusImpl : NetMessage<CSVCMsg_HLTVStatus>, CSVCMsg_
 
   public int Proxies
   { get => Accessor.GetInt32("proxies"); set => Accessor.SetInt32("proxies", value); }
-
 }

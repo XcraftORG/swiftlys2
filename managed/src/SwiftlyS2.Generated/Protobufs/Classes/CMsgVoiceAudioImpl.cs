@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class CMsgVoiceAudioImpl : TypedProtobuf<CMsgVoiceAudio>, CMsgVoiceAudi
 
   public float VoiceLevel
   { get => Accessor.GetFloat("voice_level"); set => Accessor.SetFloat("voice_level", value); }
-
 }

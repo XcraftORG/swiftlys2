@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -96,5 +95,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingGC2ServerReserveImpl : TypedProtobu
 
   public uint MatchIdAdditional
   { get => Accessor.GetUInt32("match_id_additional"); set => Accessor.SetUInt32("match_id_additional", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CNETMsg_TickImpl : NetMessage<CNETMsg_Tick>, CNETMsg_Tick
 
   public uint HostFrameIrregularArrivalPctX10
   { get => Accessor.GetUInt32("host_frame_irregular_arrival_pct_x10"); set => Accessor.SetUInt32("host_frame_irregular_arrival_pct_x10", value); }
-
 }

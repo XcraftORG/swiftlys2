@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCCStrike15_v2_PremierSeasonSummary_DataPerWeekImpl : TypedPr
 
   public uint MatchesPlayed
   { get => Accessor.GetUInt32("matches_played"); set => Accessor.SetUInt32("matches_played", value); }
-
 }

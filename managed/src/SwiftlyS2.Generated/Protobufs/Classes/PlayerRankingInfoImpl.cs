@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -72,5 +71,4 @@ internal class PlayerRankingInfoImpl : TypedProtobuf<PlayerRankingInfo>, PlayerR
 
   public uint RankExpiry
   { get => Accessor.GetUInt32("rank_expiry"); set => Accessor.SetUInt32("rank_expiry", value); }
-
 }

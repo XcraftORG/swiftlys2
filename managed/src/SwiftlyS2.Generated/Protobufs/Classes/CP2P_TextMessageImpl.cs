@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CP2P_TextMessageImpl : TypedProtobuf<CP2P_TextMessage>, CP2P_Text
 
   public byte[] Text
   { get => Accessor.GetBytes("text"); set => Accessor.SetBytes("text", value); }
-
 }

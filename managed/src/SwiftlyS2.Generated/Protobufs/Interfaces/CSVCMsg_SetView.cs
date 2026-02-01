@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -19,5 +18,4 @@ public interface CSVCMsg_SetView : ITypedProtobuf<CSVCMsg_SetView>, INetMessage<
 
 
   public int Slot { get; set; }
-
 }

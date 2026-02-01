@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CQuest_PublisherAddCommunityItemsToPlayer_Request_AttributeImpl :
 
   public ulong Value
   { get => Accessor.GetUInt64("value"); set => Accessor.SetUInt64("value", value); }
-
 }

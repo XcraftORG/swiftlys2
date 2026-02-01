@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -23,5 +22,4 @@ public interface CSOEconRentalHistory : ITypedProtobuf<CSOEconRentalHistory>
 
 
   public uint ExpirationDate { get; set; }
-
 }

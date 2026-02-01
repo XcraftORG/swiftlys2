@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgIPCAddressImpl : TypedProtobuf<CMsgIPCAddress>, CMsgIPCAddres
 
   public uint ProcessId
   { get => Accessor.GetUInt32("process_id"); set => Accessor.SetUInt32("process_id", value); }
-
 }

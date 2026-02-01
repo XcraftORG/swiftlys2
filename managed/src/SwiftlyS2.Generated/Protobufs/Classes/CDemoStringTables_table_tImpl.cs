@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CDemoStringTables_table_tImpl : TypedProtobuf<CDemoStringTables_t
 
   public int TableFlags
   { get => Accessor.GetInt32("table_flags"); set => Accessor.SetInt32("table_flags", value); }
-
 }

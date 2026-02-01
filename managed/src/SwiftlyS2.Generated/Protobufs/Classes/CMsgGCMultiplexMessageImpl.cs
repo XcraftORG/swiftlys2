@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCMultiplexMessageImpl : TypedProtobuf<CMsgGCMultiplexMessage
 
   public bool Replytogc
   { get => Accessor.GetBool("replytogc"); set => Accessor.SetBool("replytogc", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_GetEventFavorites_RequestImpl : TypedProtobuf<
 
   public bool AllEvents
   { get => Accessor.GetBool("all_events"); set => Accessor.SetBool("all_events", value); }
-
 }

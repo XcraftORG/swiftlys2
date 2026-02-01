@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -11,5 +10,4 @@ public interface CMsg_CVars : ITypedProtobuf<CMsg_CVars>
 
 
   public IProtobufRepeatedFieldSubMessageType<CMsg_CVars_CVar> Cvars { get; }
-
 }

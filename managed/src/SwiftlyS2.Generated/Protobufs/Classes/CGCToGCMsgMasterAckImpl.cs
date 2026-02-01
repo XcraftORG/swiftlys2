@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CGCToGCMsgMasterAckImpl : TypedProtobuf<CGCToGCMsgMasterAck>, CGC
 
   public uint GcType
   { get => Accessor.GetUInt32("gc_type"); set => Accessor.SetUInt32("gc_type", value); }
-
 }

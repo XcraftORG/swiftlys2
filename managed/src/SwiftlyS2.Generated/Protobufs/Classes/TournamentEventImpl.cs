@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -48,5 +47,4 @@ internal class TournamentEventImpl : TypedProtobuf<TournamentEvent>, TournamentE
 
   public uint ActiveSectionId
   { get => Accessor.GetUInt32("active_section_id"); set => Accessor.SetUInt32("active_section_id", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CSVCMsg_SendTableImpl : TypedProtobuf<CSVCMsg_SendTable>, CSVCMsg
 
   public IProtobufRepeatedFieldSubMessageType<CSVCMsg_SendTable_sendprop_t> Props
   { get => new ProtobufRepeatedFieldSubMessageType<CSVCMsg_SendTable_sendprop_t>(Accessor, "props"); }
-
 }

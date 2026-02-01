@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -64,5 +63,4 @@ internal class CMsgGCCStrike15_v2_PremierSeasonSummary_DataPerMapImpl : TypedPro
 
   public uint Rounds5k
   { get => Accessor.GetUInt32("rounds_5k"); set => Accessor.SetUInt32("rounds_5k", value); }
-
 }

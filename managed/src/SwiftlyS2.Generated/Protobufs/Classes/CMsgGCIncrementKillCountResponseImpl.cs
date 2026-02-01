@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCIncrementKillCountResponseImpl : TypedProtobuf<CMsgGCIncrem
 
   public uint LevelType
   { get => Accessor.GetUInt32("level_type"); set => Accessor.SetUInt32("level_type", value); }
-
 }

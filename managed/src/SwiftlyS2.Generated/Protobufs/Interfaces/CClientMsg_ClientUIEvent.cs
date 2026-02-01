@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -23,5 +22,4 @@ public interface CClientMsg_ClientUIEvent : ITypedProtobuf<CClientMsg_ClientUIEv
 
 
   public string Data2 { get; set; }
-
 }

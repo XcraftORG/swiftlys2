@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCToClientSteamDatagramTicketImpl : TypedProtobuf<CMsgGCToCli
 
   public byte[] SerializedTicket
   { get => Accessor.GetBytes("serialized_ticket"); set => Accessor.SetBytes("serialized_ticket", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_EndOfMatchAllPlayersData_AccoladeImpl : TypedProtobuf<C
 
   public int Position
   { get => Accessor.GetInt32("position"); set => Accessor.SetInt32("position", value); }
-
 }

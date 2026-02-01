@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CPredictionEvent_DiagnosticImpl : TypedProtobuf<CPredictionEvent_
 
   public IProtobufRepeatedFieldValueType<uint> ExecutionSync
   { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "execution_sync"); }
-
 }

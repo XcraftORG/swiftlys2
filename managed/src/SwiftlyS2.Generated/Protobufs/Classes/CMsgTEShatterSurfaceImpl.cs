@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -52,5 +51,4 @@ internal class CMsgTEShatterSurfaceImpl : NetMessage<CMsgTEShatterSurface>, CMsg
 
   public uint Backcolor
   { get => Accessor.GetUInt32("backcolor"); set => Accessor.SetUInt32("backcolor", value); }
-
 }

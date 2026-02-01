@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -84,5 +83,4 @@ internal class CMsgGameServerInfoImpl : TypedProtobuf<CMsgGameServerInfo>, CMsgG
 
   public ulong TvSecretCode
   { get => Accessor.GetUInt64("tv_secret_code"); set => Accessor.SetUInt64("tv_secret_code", value); }
-
 }

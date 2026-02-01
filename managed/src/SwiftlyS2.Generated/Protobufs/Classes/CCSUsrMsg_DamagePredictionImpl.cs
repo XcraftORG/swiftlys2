@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CCSUsrMsg_DamagePredictionImpl : NetMessage<CCSUsrMsg_DamagePredi
 
   public QAngle AimPunch
   { get => Accessor.GetQAngle("aim_punch"); set => Accessor.SetQAngle("aim_punch", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgTEBloodStreamImpl : NetMessage<CMsgTEBloodStream>, CMsgTEBloo
 
   public uint Amount
   { get => Accessor.GetUInt32("amount"); set => Accessor.SetUInt32("amount", value); }
-
 }

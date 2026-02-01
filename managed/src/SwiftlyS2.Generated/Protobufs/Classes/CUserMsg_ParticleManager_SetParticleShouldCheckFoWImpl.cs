@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMsg_ParticleManager_SetParticleShouldCheckFoWImpl : TypedPro
 
   public bool CheckFow
   { get => Accessor.GetBool("check_fow"); set => Accessor.SetBool("check_fow", value); }
-
 }

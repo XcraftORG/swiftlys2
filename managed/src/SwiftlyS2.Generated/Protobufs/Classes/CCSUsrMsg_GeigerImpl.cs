@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_GeigerImpl : NetMessage<CCSUsrMsg_Geiger>, CCSUsrMsg_Ge
 
   public int Range
   { get => Accessor.GetInt32("range"); set => Accessor.SetInt32("range", value); }
-
 }

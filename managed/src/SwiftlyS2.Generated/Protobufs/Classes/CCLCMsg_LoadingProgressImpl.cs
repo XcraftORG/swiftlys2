@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCLCMsg_LoadingProgressImpl : NetMessage<CCLCMsg_LoadingProgress>
 
   public int Progress
   { get => Accessor.GetInt32("progress"); set => Accessor.SetInt32("progress", value); }
-
 }

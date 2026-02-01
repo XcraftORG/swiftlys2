@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CWorkshop_SetItemPaymentRules_Request_WorkshopItemPaymentRuleImpl
 
   public uint RuleType
   { get => Accessor.GetUInt32("rule_type"); set => Accessor.SetUInt32("rule_type", value); }
-
 }

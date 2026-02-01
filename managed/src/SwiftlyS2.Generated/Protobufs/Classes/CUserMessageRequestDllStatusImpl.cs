@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMessageRequestDllStatusImpl : NetMessage<CUserMessageRequest
 
   public bool FullReport
   { get => Accessor.GetBool("full_report"); set => Accessor.SetBool("full_report", value); }
-
 }

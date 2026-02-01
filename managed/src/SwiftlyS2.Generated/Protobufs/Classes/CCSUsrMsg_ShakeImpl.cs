@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_ShakeImpl : NetMessage<CCSUsrMsg_Shake>, CCSUsrMsg_Shak
 
   public float Duration
   { get => Accessor.GetFloat("duration"); set => Accessor.SetFloat("duration", value); }
-
 }

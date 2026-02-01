@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGC_GlobalGame_SubscribeImpl : TypedProtobuf<CMsgGC_GlobalGame
 
   public ulong Ticket
   { get => Accessor.GetUInt64("ticket"); set => Accessor.SetUInt64("ticket", value); }
-
 }

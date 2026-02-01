@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCLCMsg_RespondCvarValueImpl : NetMessage<CCLCMsg_RespondCvarValu
 
   public string Value
   { get => Accessor.GetString("value"); set => Accessor.SetString("value", value); }
-
 }

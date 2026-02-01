@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -60,5 +59,4 @@ internal class CUserMessage_UtilMsg_ResponseImpl : TypedProtobuf<CUserMessage_Ut
 
   public int TotalCount2
   { get => Accessor.GetInt32("total_count2"); set => Accessor.SetInt32("total_count2", value); }
-
 }

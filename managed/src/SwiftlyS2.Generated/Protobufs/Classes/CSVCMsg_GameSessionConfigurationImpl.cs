@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -88,5 +87,4 @@ internal class CSVCMsg_GameSessionConfigurationImpl : TypedProtobuf<CSVCMsg_Game
 
   public string Landmarkname
   { get => Accessor.GetString("landmarkname"); set => Accessor.SetString("landmarkname", value); }
-
 }

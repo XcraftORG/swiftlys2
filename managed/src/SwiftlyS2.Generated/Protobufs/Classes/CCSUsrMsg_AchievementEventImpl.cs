@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_AchievementEventImpl : NetMessage<CCSUsrMsg_Achievement
 
   public int UserId
   { get => Accessor.GetInt32("user_id"); set => Accessor.SetInt32("user_id", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -35,5 +34,4 @@ public interface TournamentEvent : ITypedProtobuf<TournamentEvent>
 
 
   public uint ActiveSectionId { get; set; }
-
 }

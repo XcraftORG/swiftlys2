@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -16,5 +15,4 @@ public interface CSVCMsg_Broadcast_Command : ITypedProtobuf<CSVCMsg_Broadcast_Co
 
 
   public string Cmd { get; set; }
-
 }

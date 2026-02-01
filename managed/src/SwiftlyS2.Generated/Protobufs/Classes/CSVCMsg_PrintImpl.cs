@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CSVCMsg_PrintImpl : NetMessage<CSVCMsg_Print>, CSVCMsg_Print
 
   public string Text
   { get => Accessor.GetString("text"); set => Accessor.SetString("text", value); }
-
 }

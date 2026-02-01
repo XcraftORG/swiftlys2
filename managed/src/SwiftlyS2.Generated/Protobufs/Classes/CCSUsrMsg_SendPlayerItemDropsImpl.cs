@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_SendPlayerItemDropsImpl : NetMessage<CCSUsrMsg_SendPlay
 
   public IProtobufRepeatedFieldSubMessageType<CEconItemPreviewDataBlock> EntityUpdates
   { get => new ProtobufRepeatedFieldSubMessageType<CEconItemPreviewDataBlock>(Accessor, "entity_updates"); }
-
 }

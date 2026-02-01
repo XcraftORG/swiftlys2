@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CP2P_PingImpl : TypedProtobuf<CP2P_Ping>, CP2P_Ping
 
   public bool IsReply
   { get => Accessor.GetBool("is_reply"); set => Accessor.SetBool("is_reply", value); }
-
 }

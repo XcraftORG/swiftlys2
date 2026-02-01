@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CCSUsrMsg_SurvivalStatsImpl : NetMessage<CCSUsrMsg_SurvivalStats>
 
   public int Ticknumber
   { get => Accessor.GetInt32("ticknumber"); set => Accessor.SetInt32("ticknumber", value); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -14,5 +13,4 @@ public interface C2S_CONNECT_SameProcessCheck : ITypedProtobuf<C2S_CONNECT_SameP
 
 
   public ulong Key { get; set; }
-
 }

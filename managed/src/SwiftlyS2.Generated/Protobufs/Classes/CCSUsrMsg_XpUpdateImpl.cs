@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CCSUsrMsg_XpUpdateImpl : NetMessage<CCSUsrMsg_XpUpdate>, CCSUsrMs
 
   public CMsgGCCstrike15_v2_GC2ServerNotifyXPRewarded Data
   { get => new CMsgGCCstrike15_v2_GC2ServerNotifyXPRewardedImpl(NativeNetMessages.GetNestedMessage(Address, "data"), false); }
-
 }

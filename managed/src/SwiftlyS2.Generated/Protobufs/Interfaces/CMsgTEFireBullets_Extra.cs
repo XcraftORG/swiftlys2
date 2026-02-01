@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -32,5 +31,4 @@ public interface CMsgTEFireBullets_Extra : ITypedProtobuf<CMsgTEFireBullets_Extr
 
 
   public int Type { get; set; }
-
 }

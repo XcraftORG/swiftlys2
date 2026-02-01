@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCSUsrMsg_MatchEndConditionsImpl : NetMessage<CCSUsrMsg_MatchEndC
 
   public float MpTimelimit
   { get => Accessor.GetFloat("mp_timelimit"); set => Accessor.SetFloat("mp_timelimit", value); }
-
 }

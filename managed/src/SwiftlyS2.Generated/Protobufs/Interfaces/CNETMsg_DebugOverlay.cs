@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -37,5 +36,4 @@ public interface CNETMsg_DebugOverlay : ITypedProtobuf<CNETMsg_DebugOverlay>, IN
 
 
   public IProtobufRepeatedFieldValueType<string> Strings { get; }
-
 }

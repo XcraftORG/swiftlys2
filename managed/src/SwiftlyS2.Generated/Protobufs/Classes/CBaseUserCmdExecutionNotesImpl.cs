@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CBaseUserCmdExecutionNotesImpl : TypedProtobuf<CBaseUserCmdExecut
 
   public string IgnoredReason
   { get => Accessor.GetString("ignored_reason"); set => Accessor.SetString("ignored_reason", value); }
-
 }

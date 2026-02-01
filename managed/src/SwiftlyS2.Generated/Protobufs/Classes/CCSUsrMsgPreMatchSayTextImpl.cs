@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsgPreMatchSayTextImpl : TypedProtobuf<CCSUsrMsgPreMatchSay
 
   public bool AllChat
   { get => Accessor.GetBool("all_chat"); set => Accessor.SetBool("all_chat", value); }
-
 }

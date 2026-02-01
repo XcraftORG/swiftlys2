@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CCommunity_GetGamePersonalDataEntries_ResponseImpl : TypedProtobu
 
   public string ContinueText
   { get => Accessor.GetString("continue_text"); set => Accessor.SetString("continue_text", value); }
-
 }

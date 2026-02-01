@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -7,9 +6,9 @@ using SwiftlyS2.Shared.ProtobufDefinitions;
 
 namespace SwiftlyS2.Core.ProtobufDefinitions;
 
-internal class CMsgSource1LegacyGameEventImpl : NetMessage<CMsgSource1LegacyGameEvent>, CMsgSource1LegacyGameEvent
+internal class CMsgSource1LegacyGameEventImpl : TypedProtobuf<CMsgSource1LegacyGameEvent>, CMsgSource1LegacyGameEvent
 {
-  public CMsgSource1LegacyGameEventImpl(nint handle, bool isManuallyAllocated): base(handle, isManuallyAllocated)
+  public CMsgSource1LegacyGameEventImpl(nint handle, bool isManuallyAllocated): base(handle)
   {
   }
 
@@ -32,5 +31,4 @@ internal class CMsgSource1LegacyGameEventImpl : NetMessage<CMsgSource1LegacyGame
 
   public int Passthrough
   { get => Accessor.GetInt32("passthrough"); set => Accessor.SetInt32("passthrough", value); }
-
 }

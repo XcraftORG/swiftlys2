@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -88,5 +87,4 @@ internal class CMsgGCCStrike15_v2_MatchmakingServerReservationResponseImpl : Typ
 
   public uint CpusOnline
   { get => Accessor.GetUInt32("cpus_online"); set => Accessor.SetUInt32("cpus_online", value); }
-
 }

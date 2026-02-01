@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -31,5 +30,4 @@ public interface CCSUsrMsg_SendLastKillerDamageToClient : ITypedProtobuf<CCSUsrM
 
 
   public int ActualDamageTaken { get; set; }
-
 }

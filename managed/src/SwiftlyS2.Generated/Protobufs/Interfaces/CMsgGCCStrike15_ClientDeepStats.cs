@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -17,5 +16,4 @@ public interface CMsgGCCStrike15_ClientDeepStats : ITypedProtobuf<CMsgGCCStrike1
 
 
   public IProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_ClientDeepStats_DeepStatsMatch> Matches { get; }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCToGCUpdateSQLKeyValueImpl : TypedProtobuf<CMsgGCToGCUpdateS
 
   public string KeyName
   { get => Accessor.GetString("key_name"); set => Accessor.SetString("key_name", value); }
-
 }

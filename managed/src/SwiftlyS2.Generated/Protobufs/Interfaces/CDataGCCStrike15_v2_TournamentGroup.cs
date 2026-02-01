@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -38,5 +37,4 @@ public interface CDataGCCStrike15_v2_TournamentGroup : ITypedProtobuf<CDataGCCSt
 
 
   public IProtobufRepeatedFieldSubMessageType<CDataGCCStrike15_v2_TournamentGroup_Picks> Picks { get; }
-
 }

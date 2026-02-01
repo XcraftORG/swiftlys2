@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CEntityMsgImpl : TypedProtobuf<CEntityMsg>, CEntityMsg
 
   public uint TargetEntity
   { get => Accessor.GetUInt32("target_entity"); set => Accessor.SetUInt32("target_entity", value); }
-
 }

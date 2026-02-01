@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class ProtoFlattenedSerializer_tImpl : TypedProtobuf<ProtoFlattenedSeri
 
   public IProtobufRepeatedFieldValueType<int> FieldsIndex
   { get => new ProtobufRepeatedFieldValueType<int>(Accessor, "fields_index"); }
-
 }

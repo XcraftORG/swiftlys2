@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CSource2Metrics_MatchPerfSummary_NotificationImpl : TypedProtobuf
 
   public string Map
   { get => Accessor.GetString("map"); set => Accessor.SetString("map", value); }
-
 }

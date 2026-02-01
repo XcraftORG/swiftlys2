@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CMsgServerUserCmdImpl : TypedProtobuf<CMsgServerUserCmd>, CMsgSer
 
   public int ClientTick
   { get => Accessor.GetInt32("client_tick"); set => Accessor.SetInt32("client_tick", value); }
-
 }

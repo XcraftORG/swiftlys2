@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CGCToGCMsgRoutedReplyImpl : TypedProtobuf<CGCToGCMsgRoutedReply>,
 
   public byte[] NetMessage
   { get => Accessor.GetBytes("net_message"); set => Accessor.SetBytes("net_message", value); }
-
 }

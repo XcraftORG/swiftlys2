@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CDemoRecoveryImpl : TypedProtobuf<CDemoRecovery>, CDemoRecovery
 
   public byte[] SpawnGroupMessage
   { get => Accessor.GetBytes("spawn_group_message"); set => Accessor.SetBytes("spawn_group_message", value); }
-
 }

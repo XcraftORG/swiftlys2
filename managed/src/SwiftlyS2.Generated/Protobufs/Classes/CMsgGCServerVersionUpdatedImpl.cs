@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCServerVersionUpdatedImpl : TypedProtobuf<CMsgGCServerVersio
 
   public uint ServerVersion
   { get => Accessor.GetUInt32("server_version"); set => Accessor.SetUInt32("server_version", value); }
-
 }

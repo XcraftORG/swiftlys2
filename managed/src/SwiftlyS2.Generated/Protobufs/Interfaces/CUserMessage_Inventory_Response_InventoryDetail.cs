@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -38,5 +37,4 @@ public interface CUserMessage_Inventory_Response_InventoryDetail : ITypedProtobu
 
 
   public int BaseHash { get; set; }
-
 }

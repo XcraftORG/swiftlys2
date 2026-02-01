@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CUserMessageItemPickupImpl : NetMessage<CUserMessageItemPickup>, 
 
   public string Itemname
   { get => Accessor.GetString("itemname"); set => Accessor.SetString("itemname", value); }
-
 }

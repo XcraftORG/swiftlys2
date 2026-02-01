@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_RecurringMissionSchemaImpl : NetMessage<CCSUsrMsg_Recur
 
   public byte[] MissionSchema
   { get => Accessor.GetBytes("mission_schema"); set => Accessor.SetBytes("mission_schema", value); }
-
 }

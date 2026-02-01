@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -36,5 +35,4 @@ internal class CSOEconGameAccountClientImpl : TypedProtobuf<CSOEconGameAccountCl
 
   public uint ElevatedTimestamp
   { get => Accessor.GetUInt32("elevated_timestamp"); set => Accessor.SetUInt32("elevated_timestamp", value); }
-
 }

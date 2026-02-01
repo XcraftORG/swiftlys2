@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class MLTickImpl : TypedProtobuf<MLTick>, MLTick
 
   public IProtobufRepeatedFieldSubMessageType<MLEvent> Events
   { get => new ProtobufRepeatedFieldSubMessageType<MLEvent>(Accessor, "events"); }
-
 }

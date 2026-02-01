@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_RoundEndReportData_InitialConditionsImpl : TypedProtobu
 
   public int TerroristOdds
   { get => Accessor.GetInt32("terrorist_odds"); set => Accessor.SetInt32("terrorist_odds", value); }
-
 }

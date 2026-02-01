@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCCStrike15_v2_ClientToGCRequestTicketImpl : TypedProtobuf<CM
 
   public string GameserverSdrRouting
   { get => Accessor.GetString("gameserver_sdr_routing"); set => Accessor.SetString("gameserver_sdr_routing", value); }
-
 }

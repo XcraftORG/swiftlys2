@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CUserMessageShowMenuImpl : NetMessage<CUserMessageShowMenu>, CUse
 
   public string Menustring
   { get => Accessor.GetString("menustring"); set => Accessor.SetString("menustring", value); }
-
 }

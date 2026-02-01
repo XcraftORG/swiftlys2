@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -60,5 +59,4 @@ internal class ProtoFlattenedSerializerField_tImpl : TypedProtobuf<ProtoFlattene
 
   public int VarSerializerSym
   { get => Accessor.GetInt32("var_serializer_sym"); set => Accessor.SetInt32("var_serializer_sym", value); }
-
 }

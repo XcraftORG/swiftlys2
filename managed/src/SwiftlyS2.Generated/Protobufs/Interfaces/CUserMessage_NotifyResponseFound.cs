@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -49,5 +48,4 @@ public interface CUserMessage_NotifyResponseFound : ITypedProtobuf<CUserMessage_
 
 
   public int SpeakResult { get; set; }
-
 }

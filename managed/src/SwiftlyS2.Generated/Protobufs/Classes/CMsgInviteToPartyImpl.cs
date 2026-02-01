@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgInviteToPartyImpl : TypedProtobuf<CMsgInviteToParty>, CMsgInv
 
   public uint TeamInvite
   { get => Accessor.GetUInt32("team_invite"); set => Accessor.SetUInt32("team_invite", value); }
-
 }

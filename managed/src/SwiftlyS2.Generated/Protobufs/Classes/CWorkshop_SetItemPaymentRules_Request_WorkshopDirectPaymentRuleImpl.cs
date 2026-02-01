@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CWorkshop_SetItemPaymentRules_Request_WorkshopDirectPaymentRuleIm
 
   public string RuleDescription
   { get => Accessor.GetString("rule_description"); set => Accessor.SetString("rule_description", value); }
-
 }

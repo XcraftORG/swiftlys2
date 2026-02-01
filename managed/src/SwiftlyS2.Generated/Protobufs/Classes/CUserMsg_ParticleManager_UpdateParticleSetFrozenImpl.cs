@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CUserMsg_ParticleManager_UpdateParticleSetFrozenImpl : TypedProto
 
   public float TransitionDuration
   { get => Accessor.GetFloat("transition_duration"); set => Accessor.SetFloat("transition_duration", value); }
-
 }

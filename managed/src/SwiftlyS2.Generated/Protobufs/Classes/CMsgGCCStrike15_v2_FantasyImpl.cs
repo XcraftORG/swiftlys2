@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgGCCStrike15_v2_FantasyImpl : TypedProtobuf<CMsgGCCStrike15_v2
 
   public IProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_Fantasy_FantasyTeam> Teams
   { get => new ProtobufRepeatedFieldSubMessageType<CMsgGCCStrike15_v2_Fantasy_FantasyTeam>(Accessor, "teams"); }
-
 }

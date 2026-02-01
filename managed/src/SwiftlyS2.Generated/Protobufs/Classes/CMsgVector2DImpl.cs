@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgVector2DImpl : TypedProtobuf<CMsgVector2D>, CMsgVector2D
 
   public float Y
   { get => Accessor.GetFloat("y"); set => Accessor.SetFloat("y", value); }
-
 }

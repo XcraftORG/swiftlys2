@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -44,5 +43,4 @@ internal class CSVCMsg_GameEvent_key_tImpl : TypedProtobuf<CSVCMsg_GameEvent_key
 
   public ulong ValUint64
   { get => Accessor.GetUInt64("val_uint64"); set => Accessor.SetUInt64("val_uint64", value); }
-
 }

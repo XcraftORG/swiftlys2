@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CSVCMsg_ClearAllStringTablesImpl : NetMessage<CSVCMsg_ClearAllStr
 
   public bool CreateTablesSkipped
   { get => Accessor.GetBool("create_tables_skipped"); set => Accessor.SetBool("create_tables_skipped", value); }
-
 }

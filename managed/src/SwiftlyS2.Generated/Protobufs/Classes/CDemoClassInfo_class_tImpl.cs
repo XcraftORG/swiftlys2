@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CDemoClassInfo_class_tImpl : TypedProtobuf<CDemoClassInfo_class_t
 
   public string TableName
   { get => Accessor.GetString("table_name"); set => Accessor.SetString("table_name", value); }
-
 }

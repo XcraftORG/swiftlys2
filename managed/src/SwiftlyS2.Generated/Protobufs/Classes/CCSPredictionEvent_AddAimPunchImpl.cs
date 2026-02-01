@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSPredictionEvent_AddAimPunchImpl : TypedProtobuf<CCSPredictionE
 
   public float WhenTickFrac
   { get => Accessor.GetFloat("when_tick_frac"); set => Accessor.SetFloat("when_tick_frac", value); }
-
 }

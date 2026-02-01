@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -124,5 +123,4 @@ internal class DeepPlayerStatsEntryImpl : TypedProtobuf<DeepPlayerStatsEntry>, D
 
   public IProtobufRepeatedFieldValueType<uint> Mates
   { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "mates"); }
-
 }

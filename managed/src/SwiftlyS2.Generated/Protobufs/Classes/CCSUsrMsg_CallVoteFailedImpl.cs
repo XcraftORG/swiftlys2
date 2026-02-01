@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CCSUsrMsg_CallVoteFailedImpl : NetMessage<CCSUsrMsg_CallVoteFaile
 
   public int Time
   { get => Accessor.GetInt32("time"); set => Accessor.SetInt32("time", value); }
-
 }

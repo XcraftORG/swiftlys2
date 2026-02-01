@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -28,5 +27,4 @@ internal class CMsgGCRequestAnnouncementsResponseImpl : TypedProtobuf<CMsgGCRequ
 
   public string Nextmatch
   { get => Accessor.GetString("nextmatch"); set => Accessor.SetString("nextmatch", value); }
-
 }

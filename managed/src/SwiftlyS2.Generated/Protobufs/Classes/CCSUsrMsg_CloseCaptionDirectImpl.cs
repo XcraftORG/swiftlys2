@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CCSUsrMsg_CloseCaptionDirectImpl : NetMessage<CCSUsrMsg_CloseCapt
 
   public bool FromPlayer
   { get => Accessor.GetBool("from_player"); set => Accessor.SetBool("from_player", value); }
-
 }

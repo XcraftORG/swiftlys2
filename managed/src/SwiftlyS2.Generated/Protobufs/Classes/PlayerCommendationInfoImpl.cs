@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class PlayerCommendationInfoImpl : TypedProtobuf<PlayerCommendationInfo
 
   public uint CmdLeader
   { get => Accessor.GetUInt32("cmd_leader"); set => Accessor.SetUInt32("cmd_leader", value); }
-
 }

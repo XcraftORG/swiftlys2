@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CUserMessage_ExtraUserDataImpl : NetMessage<CUserMessage_ExtraUse
 
   public IProtobufRepeatedFieldValueType<byte[]> Detail2
   { get => new ProtobufRepeatedFieldValueType<byte[]>(Accessor, "detail2"); }
-
 }

@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CMsgVDebugGameSessionIDEventImpl : NetMessage<CMsgVDebugGameSessi
 
   public string Gamesessionid
   { get => Accessor.GetString("gamesessionid"); set => Accessor.SetString("gamesessionid", value); }
-
 }

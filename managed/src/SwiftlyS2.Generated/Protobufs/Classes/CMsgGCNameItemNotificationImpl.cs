@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgGCNameItemNotificationImpl : TypedProtobuf<CMsgGCNameItemNoti
 
   public string ItemNameCustom
   { get => Accessor.GetString("item_name_custom"); set => Accessor.SetString("item_name_custom", value); }
-
 }

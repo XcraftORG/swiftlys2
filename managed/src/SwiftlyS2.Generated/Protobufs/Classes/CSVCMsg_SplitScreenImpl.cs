@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSVCMsg_SplitScreenImpl : NetMessage<CSVCMsg_SplitScreen>, CSVCMs
 
   public int PlayerIndex
   { get => Accessor.GetInt32("player_index"); set => Accessor.SetInt32("player_index", value); }
-
 }

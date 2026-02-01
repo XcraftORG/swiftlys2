@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -32,5 +31,4 @@ internal class CGameInfo_CDotaGameInfo_CPlayerInfoImpl : TypedProtobuf<CGameInfo
 
   public int GameTeam
   { get => Accessor.GetInt32("game_team"); set => Accessor.SetInt32("game_team", value); }
-
 }

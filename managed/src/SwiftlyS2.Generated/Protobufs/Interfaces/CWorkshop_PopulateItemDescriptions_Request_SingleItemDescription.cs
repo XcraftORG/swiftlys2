@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -17,5 +16,4 @@ public interface CWorkshop_PopulateItemDescriptions_Request_SingleItemDescriptio
 
 
   public bool OnePerAccount { get; set; }
-
 }

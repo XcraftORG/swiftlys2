@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgLegacySource1ClientWelcome_LocationImpl : TypedProtobuf<CMsgL
 
   public string Country
   { get => Accessor.GetString("country"); set => Accessor.SetString("country", value); }
-
 }

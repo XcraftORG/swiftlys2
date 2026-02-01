@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CSOVolatileItemOfferImpl : TypedProtobuf<CSOVolatileItemOffer>, C
 
   public IProtobufRepeatedFieldValueType<uint> GenerationTime
   { get => new ProtobufRepeatedFieldValueType<uint>(Accessor, "generation_time"); }
-
 }

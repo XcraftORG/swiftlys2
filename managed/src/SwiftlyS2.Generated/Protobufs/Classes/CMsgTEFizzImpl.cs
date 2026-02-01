@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -24,5 +23,4 @@ internal class CMsgTEFizzImpl : NetMessage<CMsgTEFizz>, CMsgTEFizz
 
   public int Current
   { get => Accessor.GetInt32("current"); set => Accessor.SetInt32("current", value); }
-
 }

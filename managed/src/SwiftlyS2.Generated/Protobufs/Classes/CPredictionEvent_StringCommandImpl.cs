@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CPredictionEvent_StringCommandImpl : TypedProtobuf<CPredictionEve
 
   public string Command
   { get => Accessor.GetString("command"); set => Accessor.SetString("command", value); }
-
 }

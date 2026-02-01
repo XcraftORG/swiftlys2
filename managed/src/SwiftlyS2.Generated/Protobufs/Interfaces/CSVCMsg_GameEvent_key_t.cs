@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.ProtobufDefinitions;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.NetMessages;
@@ -32,5 +31,4 @@ public interface CSVCMsg_GameEvent_key_t : ITypedProtobuf<CSVCMsg_GameEvent_key_
 
 
   public ulong ValUint64 { get; set; }
-
 }

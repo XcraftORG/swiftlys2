@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -16,5 +15,4 @@ internal class CMsgGCCStrike15_v2_AcknowledgePenaltyImpl : TypedProtobuf<CMsgGCC
 
   public int Acknowledged
   { get => Accessor.GetInt32("acknowledged"); set => Accessor.SetInt32("acknowledged", value); }
-
 }

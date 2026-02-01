@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -40,5 +39,4 @@ internal class CCSUsrMsg_PostRoundDamageReportImpl : NetMessage<CCSUsrMsg_PostRo
 
   public int TakenNumHits
   { get => Accessor.GetInt32("taken_num_hits"); set => Accessor.SetInt32("taken_num_hits", value); }
-
 }

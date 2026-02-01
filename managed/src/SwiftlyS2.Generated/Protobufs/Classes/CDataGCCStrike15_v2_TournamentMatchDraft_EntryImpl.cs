@@ -1,4 +1,3 @@
-
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.NetMessages;
 using SwiftlyS2.Shared.Natives;
@@ -20,5 +19,4 @@ internal class CDataGCCStrike15_v2_TournamentMatchDraft_EntryImpl : TypedProtobu
 
   public int TeamIdCt
   { get => Accessor.GetInt32("team_id_ct"); set => Accessor.SetInt32("team_id_ct", value); }
-
 }
