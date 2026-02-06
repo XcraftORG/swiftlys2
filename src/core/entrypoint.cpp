@@ -99,6 +99,7 @@ bool SwiftlyCore::Load(BridgeKind_t kind)
     {
         m_sLogPath += WIN_LINUX("\\", "/");
     }
+    m_sLogPath = replace(m_sLogPath, WIN_LINUX("addons\\swiftlys2", "addons/swiftlys2"), m_sCorePath);
 
     auto crashreporter = g_ifaceService.FetchInterface<ICrashReporter>(CRASHREPORTER_INTERFACE_VERSION);
     crashreporter->Init();
