@@ -26,7 +26,7 @@ internal class CoreCommandService
         this.pluginManager = pluginManager;
         this.rootDirService = rootDirService;
         this.profileService = profileService;
-        _ = core.Command.RegisterCommand("sw", OnCommand, true);
+        _ = core.Command.RegisterCommand("sw", OnCommand, true, helpText: "SwiftlyS2 Core Command");
     }
 
     private void OnCommand( ICommandContext context )

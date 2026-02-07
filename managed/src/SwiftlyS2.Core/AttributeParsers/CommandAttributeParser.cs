@@ -20,6 +20,7 @@ internal static class CommandAttributeParser
                 var commandName = commandAttribute.Name;
                 var registerRaw = commandAttribute.RegisterRaw;
                 var permission = commandAttribute.Permission;
+                var helpText = commandAttribute.HelpText;
 
                 var cmdGuid = self.RegisterCommand(commandName, method.CreateDelegate<ICommandService.CommandListener>(instance), registerRaw, permission);
                 foreach (var aliasAttr in commandAliasAttributes)

@@ -258,7 +258,7 @@ bool CServerCommands::HandleClientChat(int playerid, const std::string& text, bo
     return true;
 }
 
-uint64_t CServerCommands::RegisterCommand(std::string commandName, std::function<void(int, std::vector<std::string>, std::string, std::string, bool)> handler, bool registerRaw)
+uint64_t CServerCommands::RegisterCommand(std::string commandName, std::function<void(int, std::vector<std::string>, std::string, std::string, bool)> handler, bool registerRaw, std::string helpText)
 {
     std::transform(commandName.begin(), commandName.end(), commandName.begin(), ::tolower);
 
@@ -274,8 +274,7 @@ uint64_t CServerCommands::RegisterCommand(std::string commandName, std::function
     static uint64_t commandId = 0;
     if (!conCommandCreated.contains(commandName))
     {
-        // printf("RegisterCommand -> commandName: %s, handler: %p, registerRaw: %d\n", commandName.c_str(), handler, registerRaw);
-        conCommandCreated[commandName] = new ConCommand(commandName.c_str(), CommandsCallback, "SwiftlyS2 registered command", FCVAR_CLIENT_CAN_EXECUTE | FCVAR_LINKED_CONCOMMAND);
+        conCommandCreated[commandName] = new ConCommand(commandName.c_str(), CommandsCallback, strdup(helpText.c_str()), FCVAR_CLIENT_CAN_EXECUTE | FCVAR_LINKED_CONCOMMAND);
         conCommandMapping[++commandId] = commandName;
         commandHandlers[commandName] = handler;
         conCommandCreated[commandName]->RemoveFlags(FCVAR_SERVER_CAN_EXECUTE);
@@ -316,6 +315,7 @@ void CServerCommands::UnregisterCommand(uint64_t commandId)
         conCommandCreated.erase(createdIt);
     }
 
+    free((void*)(conCommand->GetHelpText()));
     delete conCommand;
 }
 
@@ -347,7 +347,7 @@ uint64_t CServerCommands::RegisterAlias(std::string aliasCommand, std::string co
             return 0;
         }
     }
-    return RegisterCommand(aliasCommand, commandHandlers[commandName], registerRaw);
+    return RegisterCommand(aliasCommand, commandHandlers[commandName], registerRaw, conCommandCreated[commandName]->GetHelpText());
 }
 
 void CServerCommands::UnregisterAlias(uint64_t aliasId)

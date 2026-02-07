@@ -40,7 +40,7 @@ internal class CommandCallback : CommandCallbackBase
     private readonly ulong nativeListenerId;
     private readonly ILogger<CommandCallback> logger;
 
-    public CommandCallback( string commandName, bool registerRaw, ICommandService.CommandListener handler, string permission, IPlayerManagerService playerManagerService, IPermissionManager permissionManager, ILoggerFactory loggerFactory, IContextedProfilerService profiler ) : base(loggerFactory, profiler)
+    public CommandCallback( string commandName, bool registerRaw, ICommandService.CommandListener handler, string permission, string helpText, IPlayerManagerService playerManagerService, IPermissionManager permissionManager, ILoggerFactory loggerFactory, IContextedProfilerService profiler ) : base(loggerFactory, profiler)
     {
         this.logger = LoggerFactory.CreateLogger<CommandCallback>();
 
@@ -79,7 +79,7 @@ internal class CommandCallback : CommandCallbackBase
         };
 
         commandCallbackPtr = Marshal.GetFunctionPointerForDelegate(commandCallback);
-        nativeListenerId = NativeCommands.RegisterCommand(commandName, commandCallbackPtr, registerRaw);
+        nativeListenerId = NativeCommands.RegisterCommand(commandName, commandCallbackPtr, registerRaw, helpText);
     }
 
     public override void Dispose()
