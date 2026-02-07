@@ -11,6 +11,10 @@ public class Command : Attribute
 
     public string HelpText { get; set; } = "SwiftlyS2 registered command";
 
+    public Command( string name, bool registerRaw, string permission ) : this(name, registerRaw, permission, "SwiftlyS2 registered command")
+    {
+    }
+
     public Command( string name, bool registerRaw = false, string permission = "", string helpText = "SwiftlyS2 registered command" )
     {
         Name = name;
