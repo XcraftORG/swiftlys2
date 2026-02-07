@@ -344,9 +344,6 @@ internal class PluginManager : IPluginManager
         try
         {
             context?.Dispose();
-            context?.Loader?.Dispose();
-            context?.Core?.Dispose();
-            context!.Status = PluginStatus.Unloaded;
             return true;
         }
         catch
@@ -394,7 +391,7 @@ internal class PluginManager : IPluginManager
 
         if (string.IsNullOrWhiteSpace(context?.PluginDirectory))
         {
-            logger.LogWarning("Failed to load plugin by id: {Id}", id);
+            if (!silent) logger.LogWarning("Failed to load plugin by id: {Id}", id);
             return false;
         }
 
@@ -406,7 +403,7 @@ internal class PluginManager : IPluginManager
         var pluginDir = FindPluginDirectoryByDllName(dllName);
         if (string.IsNullOrWhiteSpace(pluginDir))
         {
-            logger.LogWarning("Failed to load plugin by name: {DllName}", dllName);
+            if (!silent) logger.LogWarning("Failed to load plugin by name: {DllName}", dllName);
             return false;
         }
 
