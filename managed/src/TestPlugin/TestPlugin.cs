@@ -677,6 +677,7 @@ public class TestPlugin : BasePlugin
     public void TestCommand33( ICommandContext context )
     {
         var ent = Core.EntitySystem.CreateEntity<CPhysicsPropOverride>();
+        Console.WriteLine($"addr: {ent.Address:X}");
         using CEntityKeyValues kv = new();
         kv.Set<uint>("m_spawnflags", 256);
         ent.DispatchSpawn(kv);

@@ -13,6 +13,9 @@ internal static class EntityManager
 
     public static CEntityInstance OnEntityCreated( nint entityPtr )
     {
+        var ent = GetEntityByAddress(entityPtr);
+        if (ent != null) return ent;
+
         _Dummy.DangerousSetHandle(entityPtr);
         var index = _Dummy.Index;
         var entity = ClassConvertor.ConvertEntityByDesignerName(entityPtr, _Dummy.DesignerName);
