@@ -174,7 +174,7 @@ int CServerCommands::HandleCommand(int playerid, const std::string& text, bool d
         }
     }
 
-    if (!dryrun && (isCommand || isSilentCommand))
+    if (isCommand || isSilentCommand)
     {
         CCommand tokenizedArgs;
         tokenizedArgs.Tokenize(text.c_str());
@@ -194,18 +194,21 @@ int CServerCommands::HandleCommand(int playerid, const std::string& text, bool d
         }
 
         commandName.erase(0, selectedPrefix.size());
+
         std::transform(commandName.begin(), commandName.end(), commandName.begin(), ::tolower);
         std::string originalCommandName = commandName;
+
         if (!commandHandlers.contains(commandName))
         {
             commandName = "sw_" + commandName;
         }
+
         if (!commandHandlers.contains(commandName))
         {
             return 0;
         }
 
-        commandHandlers[commandName](playerid, cmdString, originalCommandName, selectedPrefix, isSilentCommand);
+        if (!dryrun) commandHandlers[commandName](playerid, cmdString, originalCommandName, selectedPrefix, isSilentCommand);
     }
 
     if (isCommand)
