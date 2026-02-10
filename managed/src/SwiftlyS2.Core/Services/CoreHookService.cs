@@ -136,8 +136,8 @@ internal class CoreHookService : IDisposable
                         return;
                     }
                     var inputName = pInputName != nint.Zero ? pInputName.AsRef<CUtlSymbolLarge>().Value : "";
-                    var activator = pActivator != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pActivator) : null;
-                    var caller = pCaller != nint.Zero ? core.Memory.ToSchemaClass<CEntityInstance>(pCaller) : null;
+                    var activator = pActivator != nint.Zero ? EntityManager.GetEntityByAddress(pActivator) : null;
+                    var caller = pCaller != nint.Zero ? EntityManager.GetEntityByAddress(pCaller) : null;
 
                     var @event = new OnEntityIdentityAcceptInputHookEvent {
                         Identity = entityIdentity,
