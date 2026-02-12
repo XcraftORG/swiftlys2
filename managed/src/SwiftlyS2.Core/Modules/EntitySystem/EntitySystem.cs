@@ -80,9 +80,7 @@ internal class EntitySystemService : IEntitySystemService, IDisposable
     public IEnumerable<T> GetAllEntitiesByClass<T>() where T : class, ISchemaClass<T>
     {
         ThrowIfEntitySystemInvalid();
-        return string.IsNullOrWhiteSpace(T.ClassName)
-            ? throw new ArgumentException($"Can't get entities with class {typeof(T).Name}, which doesn't have a designer name")
-            : GetAllEntities().Where(( entity ) => entity.Entity?.DesignerName == T.ClassName).Select(entity => (entity as T)!);
+        return GetAllEntities().OfType<T>();
     }
 
     public IEnumerable<T> GetAllEntitiesByDesignerName<T>( string designerName ) where T : class, ISchemaClass<T>
