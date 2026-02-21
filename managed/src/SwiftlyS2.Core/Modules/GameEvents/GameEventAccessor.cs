@@ -26,6 +26,7 @@ internal class GameEventAccessor : NativeHandle, IGameEventAccessor, IDisposable
     private void CheckIsValid()
     {
         if (!_IsValid) throw new InvalidOperationException("The event is already disposed.");
+        if (Address == 0) throw new InvalidOperationException("The event is invalid.");
     }
 
     public void SetBool( string key, bool value )
