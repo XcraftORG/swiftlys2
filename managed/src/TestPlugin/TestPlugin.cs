@@ -172,7 +172,13 @@ public class TestPlugin : BasePlugin
     [CommandAlias("cat", true)]
     public void CommandAliasTest( ICommandContext context )
     {
-        context.Reply("CommandAliasTest\n");
+        foreach (var player in Core.PlayerManager.GetAllPlayers())
+        {
+            var controller = player.Controller;
+            if (controller is null) continue;
+
+            Console.WriteLine($"PawnIsAlive: {controller.PawnIsAlive}");
+        }
     }
 
     [Command("dbtest")]
@@ -199,6 +205,16 @@ public class TestPlugin : BasePlugin
         {
             Core.Logger.LogError(ex, "[Database] Connection failed: {Message}", ex.Message);
         }
+    }
+
+    [GameEventHandler(HookMode.Pre)]
+    public HookResult OnPlayerDeath( EventPlayerDeath @event )
+    {
+        foreach (var record in @event.AttackerPlayer!.Controller!.DamageServices!.DamageList)
+        {
+            Console.WriteLine($"Damage service: {record.Damage} {record.DamagerXuid} {record.PlayerDamagerName}");
+        }
+        return HookResult.Continue;
     }
 
     [GameEventHandler(HookMode.Pre)]
