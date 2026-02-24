@@ -5,10 +5,10 @@ namespace SwiftlyS2.Core.EntitySystem;
 
 internal static class EntityManager
 {
-    private static CEntityInstance?[] _Entities = new CEntityInstance?[1 << 15];
-    private static List<uint> _ActiveEntityIndices = [];
-    private static Dictionary<nint, uint> _PtrToIndex = [];
-    private static CEntityInstanceImpl _Dummy = new(0);
+    private static readonly CEntityInstance?[] _Entities = new CEntityInstance?[1 << 15];
+    private static readonly List<uint> _ActiveEntityIndices = [];
+    private static readonly Dictionary<nint, uint> _PtrToIndex = [];
+    private static readonly CEntityInstanceImpl _Dummy = new(0);
     private static readonly ReaderWriterLockSlim _rw = new(LockRecursionPolicy.NoRecursion);
 
     public static CEntityInstance OnEntityCreated( nint entityPtr )

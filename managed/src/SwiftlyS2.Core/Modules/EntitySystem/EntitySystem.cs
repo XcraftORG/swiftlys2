@@ -73,19 +73,16 @@ internal class EntitySystemService : IEntitySystemService, IDisposable
 
     public IEnumerable<CEntityInstance> GetAllEntities()
     {
-        ThrowIfEntitySystemInvalid();
         return EntityManager.GetAllEntities();
     }
 
     public IEnumerable<T> GetAllEntitiesByClass<T>() where T : class, ISchemaClass<T>
     {
-        ThrowIfEntitySystemInvalid();
         return GetAllEntities().OfType<T>();
     }
 
     public IEnumerable<T> GetAllEntitiesByDesignerName<T>( string designerName ) where T : class, ISchemaClass<T>
     {
-        ThrowIfEntitySystemInvalid();
         return GetAllEntities()
             .Where(entity => entity.Entity?.DesignerName == designerName)
             .Select(entity => (entity as T)!);
@@ -98,17 +95,14 @@ internal class EntitySystemService : IEntitySystemService, IDisposable
         {
             return null;
         }
-        if (ent is T e)
-        {
-            return e;
-        } else {
-            throw new InvalidOperationException($"Invalid entity type. Requested: {typeof(T).Name}, Actual: {ent!.GetType().Name}.");
-        }
+
+        return ent is T e
+            ? e
+            : throw new InvalidOperationException($"Invalid entity type. Requested: {typeof(T).Name}, Actual: {ent!.GetType().Name}.");
     }
 
     public CEntityInstance? GetEntityByIndex( uint index )
     {
-        ThrowIfEntitySystemInvalid();
         return EntityManager.GetEntityByIndex(index);
     }
 
@@ -289,14 +283,15 @@ internal class EntitySystemService : IEntitySystemService, IDisposable
         if (ent is T e)
         {
             return e;
-        } else {
+        }
+        else
+        {
             throw new InvalidOperationException($"Invalid entity type. Requested: {typeof(T).Name}, Actual: {ent!.GetType().Name}.");
         }
     }
 
     public CEntityInstance? GetEntityByAddress( nint address )
     {
-        ThrowIfEntitySystemInvalid();
         return EntityManager.GetEntityByAddress(address);
     }
 
