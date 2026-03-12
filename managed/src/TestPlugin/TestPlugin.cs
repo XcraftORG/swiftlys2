@@ -28,6 +28,7 @@ using SwiftlyS2.Shared.Menus;
 using SwiftlyS2.Shared.SteamAPI;
 using SwiftlyS2.Core.Menus.OptionsBase;
 using System.Diagnostics;
+using SwiftlyS2.Shared.Convars;
 
 namespace TestPlugin;
 
@@ -141,8 +142,11 @@ public class InProcessConfig : ManualConfig
 [PluginMetadata(Id = "sw2.testplugin", Version = "1.0.0", MinimumAPIVersion = "1.1.6")]
 public class TestPlugin : BasePlugin
 {
+    private IConVar<bool>? _autobunnyhopping;
+
     public TestPlugin( ISwiftlyCore core ) : base(core)
     {
+        _autobunnyhopping = Core.ConVar.Find<bool>("sv_autobunnyhopping");
         Console.WriteLine("[TestPlugin] TestPlugin constructed successfully!");
         // Console.WriteLine($"sizeof(bool): {sizeof(bool)}");
         // Console.WriteLine($"Marshal.SizeOf<bool>: {Marshal.SizeOf<bool>()}");
@@ -1441,11 +1445,35 @@ public class TestPlugin : BasePlugin
     [CommandAlias("cmat")]
     public void CommandTestCommand( ICommandContext context )
     {
-        Console.WriteLine("start");
-        var sw = Stopwatch.StartNew();
-        _ = Core.EntitySystem.GetAllEntities().Where(e => e.IsValid);
-        sw.Stop();
-        Console.WriteLine($"end - elapsed: {sw.ElapsedMilliseconds} ms");
+        for (var i = 0; i < 1024; i++)
+        {
+            _ = Core.EntitySystem.CreateEntity<CPointWorldText>();
+        }
+    }
+
+    [EventListener<EventDelegates.OnMovementServicesRunCommandHook>]
+    public void OnMovementServicesRunCommandHook( IOnMovementServicesRunCommandHookEvent @event )
+    {
+        var movementServices = @event.MovementServices;
+        var pawn = movementServices?.Pawn;
+        var player = pawn?.ToPlayer();
+
+        if (player == null || !player.IsValid)
+        {
+            return;
+        }
+
+        if (!player.IsAlive)
+        {
+            return;
+        }
+
+        if (pawn!.MoveType == MoveType_t.MOVETYPE_NOCLIP || pawn.ActualMoveType == MoveType_t.MOVETYPE_NOCLIP)
+        {
+            return;
+        }
+
+        _autobunnyhopping!.Value = !_autobunnyhopping.Value;
     }
 
     [Command("ecwb")]

@@ -1,15 +1,16 @@
-﻿using SwiftlyS2.Shared.SchemaDefinitions;
+﻿using SwiftlyS2.Core.EntitySystem;
+using SwiftlyS2.Shared.SchemaDefinitions;
 using System.Runtime.InteropServices;
 
 namespace SwiftlyS2.Shared.Natives;
 
-[StructLayout(LayoutKind.Explicit, Pack = 8, Size = 72)]
+[StructLayout(LayoutKind.Explicit, Pack = 8, Size = 64)]
 public struct CTraceFilter
 {
     [FieldOffset(0x0)] private nint _pVTable;
     [FieldOffset(0x8)] public RnQueryShapeAttr_t QueryShapeAttributes;
-    
-    [FieldOffset(0x40)] 
+
+    [FieldOffset(0x3A)]
     [MarshalAs(UnmanagedType.U1)]
     public bool IterateEntities;
 
@@ -46,7 +47,13 @@ internal static class CTraceFilterVTable
     }
 
     [UnmanagedCallersOnly]
-    public unsafe static byte ShouldHitEntity()
+    public unsafe static nint SomeLinuxFunction( CTraceFilter* filter )
+    {
+        return 0;
+    }
+
+    [UnmanagedCallersOnly]
+    public static byte ShouldHitEntity()
     {
         return 1;
     }
@@ -54,22 +61,40 @@ internal static class CTraceFilterVTable
     [UnmanagedCallersOnly]
     public unsafe static byte ShouldHitEntity( CTraceFilter* filter, nint entity )
     {
-        var ent = Helper.AsSchema<CBaseEntity>(entity);
-        if (ent == null || !ent.IsValid) return 0;
+        var ent = EntityManager.GetEntityByAddress(entity) as CBaseEntity ?? Helper.AsSchema<CBaseEntity>(entity);
 
-        return filter->QueryShapeAttributes.EntityIdsToIgnore[0] != ent.Index && filter->QueryShapeAttributes.EntityIdsToIgnore[1] != ent.Index ? (byte)1 : (byte)0;
+        return ent == null || !ent.IsValid
+            ? (byte)0
+            : filter->QueryShapeAttributes.EntityIdsToIgnore[0] != ent.Index && filter->QueryShapeAttributes.EntityIdsToIgnore[1] != ent.Index ? (byte)1 : (byte)0;
     }
 
     static unsafe CTraceFilterVTable()
     {
-        pCTraceFilterVTable = Marshal.AllocHGlobal(sizeof(nint) * 2);
-        Span<nint> vtable = new((void*)pCTraceFilterVTable, 2);
-        vtable[0] = (nint)(delegate* unmanaged< CTraceFilter*, byte, void >)(&Destructor);
-        vtable[1] = (nint)(delegate* unmanaged< byte >)(&ShouldHitEntity);
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            pCTraceFilterVTable = Marshal.AllocHGlobal(sizeof(nint) * 2);
+            Span<nint> vtable = new((void*)pCTraceFilterVTable, 2);
+            vtable[0] = (nint)(delegate* unmanaged< CTraceFilter*, byte, void >)(&Destructor);
+            vtable[1] = (nint)(delegate* unmanaged< byte >)(&ShouldHitEntity);
 
-        pCTraceFilterShouldHitFunctionCall = Marshal.AllocHGlobal(sizeof(nint) * 2);
-        Span<nint> funcTable = new((void*)pCTraceFilterShouldHitFunctionCall, 2);
-        funcTable[0] = (nint)(delegate* unmanaged< CTraceFilter*, byte, void >)(&Destructor);
-        funcTable[1] = (nint)(delegate* unmanaged< CTraceFilter*, nint, byte >)(&ShouldHitEntity);
+            pCTraceFilterShouldHitFunctionCall = Marshal.AllocHGlobal(sizeof(nint) * 2);
+            Span<nint> funcTable = new((void*)pCTraceFilterShouldHitFunctionCall, 2);
+            funcTable[0] = (nint)(delegate* unmanaged< CTraceFilter*, byte, void >)(&Destructor);
+            funcTable[1] = (nint)(delegate* unmanaged< CTraceFilter*, nint, byte >)(&ShouldHitEntity);
+        }
+        else
+        {
+            pCTraceFilterVTable = Marshal.AllocHGlobal(sizeof(nint) * 3);
+            Span<nint> vtable = new((void*)pCTraceFilterVTable, 3);
+            vtable[0] = (nint)(delegate* unmanaged< CTraceFilter*, byte, void >)(&Destructor);
+            vtable[1] = (nint)(delegate* unmanaged< CTraceFilter*, nint >)(&SomeLinuxFunction);
+            vtable[2] = (nint)(delegate* unmanaged< byte >)(&ShouldHitEntity);
+
+            pCTraceFilterShouldHitFunctionCall = Marshal.AllocHGlobal(sizeof(nint) * 3);
+            Span<nint> funcTable = new((void*)pCTraceFilterShouldHitFunctionCall, 3);
+            funcTable[0] = (nint)(delegate* unmanaged< CTraceFilter*, byte, void >)(&Destructor);
+            funcTable[1] = (nint)(delegate* unmanaged< CTraceFilter*, nint >)(&SomeLinuxFunction);
+            funcTable[2] = (nint)(delegate* unmanaged< CTraceFilter*, nint, byte >)(&ShouldHitEntity);
+        }
     }
 }
