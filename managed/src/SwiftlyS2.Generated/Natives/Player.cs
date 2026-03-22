@@ -286,4 +286,18 @@ internal static class NativePlayer
             _ = _GetName((byte*)retBufferPtr, playerid);
         });
     }
+
+    private unsafe static delegate* unmanaged<byte*, int, byte*, int> _GetClientConvarValue;
+
+    public unsafe static string GetClientConvarValue(int playerid, string convarName)
+    {
+        return StringAlloc.CreateCString(convarName, convarNameBufferPtr =>
+        {
+            var ret = _GetClientConvarValue(null, playerid, (byte*)convarNameBufferPtr);
+            return StringAlloc.CreateCSharpString(ret, retBufferPtr =>
+            {
+                _ = _GetClientConvarValue((byte*)retBufferPtr, playerid, (byte*)convarNameBufferPtr);
+            });
+        });
+    }
 }

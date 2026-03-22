@@ -350,6 +350,11 @@ public interface IPlayer : IEquatable<IPlayer>
     public ListenOverride GetListenOverride( int player );
 
     /// <summary>
+    /// Retrieves userinfo values for convars such as: m_yaw, sensitivity.
+    /// </summary>
+    public string GetClientConvarValue( string convarName );
+
+    /// <summary>
     /// Applies damage to the entity based on the specified damage information.
     /// 
     /// Thread unsafe, use async variant instead for non-main thread context.

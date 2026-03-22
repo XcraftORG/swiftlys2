@@ -103,6 +103,12 @@ internal class Player : IPlayer, IDisposable
         return NativePlayer.IsTransmitEntityBlocked(Slot, entityid);
     }
 
+    public string GetClientConvarValue( string convarName )
+    {
+        ThrowIfDisposed();
+        return NativePlayer.GetClientConvarValue(Slot, convarName);
+    }
+
     public void Kick( string reason, ENetworkDisconnectionReason gameReason )
     {
         ThrowIfDisposed();
