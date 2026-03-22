@@ -1,4 +1,5 @@
-﻿using SwiftlyS2.Core.Natives;
+﻿
+using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Shared.Natives;
 using SwiftlyS2.Shared.Services;
 using SwiftlyS2.Shared.SchemaDefinitions;

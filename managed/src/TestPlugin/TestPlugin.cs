@@ -182,6 +182,7 @@ public class TestPlugin : BasePlugin
             if (controller is null) continue;
 
             Console.WriteLine($"PawnIsAlive: {controller.PawnIsAlive}");
+            Console.WriteLine($"PawnHealth: {controller.As<CBasePlayerController>().PlayerName}");
         }
     }
 
@@ -209,22 +210,6 @@ public class TestPlugin : BasePlugin
         {
             Core.Logger.LogError(ex, "[Database] Connection failed: {Message}", ex.Message);
         }
-    }
-
-    [GameEventHandler(HookMode.Pre)]
-    public HookResult OnPlayerDeath( EventPlayerDeath @event )
-    {
-        Console.WriteLine($"Is main thread?: {Core.IsGameThread}");
-        if (@event.AttackerPlayer == null) return HookResult.Continue;
-        if (@event.AttackerPlayer.Controller == null) return HookResult.Continue;
-        if (@event.AttackerPlayer.Controller.DamageServices == null) return HookResult.Continue;
-
-        foreach (var record in @event.AttackerPlayer.Controller.DamageServices.DamageList)
-        {
-            Console.WriteLine($"Damage service: {record.Damage} {record.DamagerXuid} {record.PlayerDamagerName}");
-        }
-
-        return HookResult.Continue;
     }
 
     [GameEventHandler(HookMode.Pre)]
@@ -744,6 +729,12 @@ public class TestPlugin : BasePlugin
         Core.Engine.ExecuteCommandWithBuffer("@ping", ( buffer ) => { Console.WriteLine($"pong: {buffer}"); });
     }
 
+    [Command("tround")]
+    public void TestRoundCommand( ICommandContext context )
+    {
+        Core.EntitySystem.GetGameRules()!.TerminateRound(RoundEndReason.BombDefused, 10.0f);
+    }
+
     [Command("tt8")]
     public unsafe void TestCommand8( ICommandContext context )
     {
@@ -765,13 +756,10 @@ public class TestPlugin : BasePlugin
         Console.WriteLine($"Origin: {origin}");
         Console.WriteLine($"Target Origin: {targetOrigin}");
 
-        // Ray_t* ray = stackalloc Ray_t[1];
-        // ray->Init(Vector.Zero, Vector.Zero);
         Ray_t ray = new();
         ray.Init(Vector.Zero, Vector.Zero);
 
         var filter = new CTraceFilter {
-            // unk01 = 1,
             IterateEntities = true,
             QueryShapeAttributes = new RnQueryShapeAttr_t {
                 InteractsWith = MaskTrace.Player | MaskTrace.Solid | MaskTrace.Hitbox | MaskTrace.Npc,
@@ -780,20 +768,8 @@ public class TestPlugin : BasePlugin
                 CollisionGroup = CollisionGroup.PlayerMovement,
                 ObjectSetMask = RnQueryObjectSet.AllGameEntities,
                 HitSolid = true,
-                // HitTrigger = false,
-                // HitSolidRequiresGenerateContacts = false,
-                // ShouldIgnoreDisabledPairs = true,
-                // IgnoreIfBothInteractWithHitboxes = true,
-                // ForceHitEverything = true
             }
         };
-
-        // filter.QueryShapeAttributes.EntityIdsToIgnore[0] = unchecked((uint)-1);
-        // filter.QueryShapeAttributes.EntityIdsToIgnore[1] = unchecked((uint)-1);
-        // filter.QueryShapeAttributes.OwnerIdsToIgnore[0] = unchecked((uint)-1);
-        // filter.QueryShapeAttributes.OwnerIdsToIgnore[1] = unchecked((uint)-1);
-        // filter.QueryShapeAttributes.HierarchyIds[0] = 0;
-        // filter.QueryShapeAttributes.HierarchyIds[1] = 0;
 
         var trace = new CGameTrace();
         Core.Trace.TraceShape(origin, targetOrigin, ray, filter, ref trace);
@@ -805,6 +781,44 @@ public class TestPlugin : BasePlugin
         Console.WriteLine($"! RayType: {trace.RayType}, StartInSolid: {trace.StartInSolid}, ExactHitPoint: {trace.ExactHitPoint}");
         Console.WriteLine("\n");
     }
+
+    [Command("ttbbox")]
+    public void TestTraceBBox( ICommandContext context )
+    {
+        var player = context.Sender;
+        var pawn = player?.Pawn;
+        var start = (Vector)pawn?.AbsOrigin!;
+        var end = (Vector)pawn?.AbsOrigin!;
+        var bbox = new BBox_t() {
+            Mins = new Vector(-16.0f, -16.0f, 0.0f),
+            Maxs = new Vector(16.0f, 16.0f, 72.0f)
+        };
+
+        var filter = new CTraceFilter() {
+            IterateEntities = true,
+        };
+        var trace = new CGameTrace();
+
+        unsafe
+        {
+            var filterRef = &filter;
+            Console.WriteLine($"Filter at: {(nint)filterRef:X}");
+        }
+
+        Core.Trace.TracePlayerBBox(start, end, bbox, filter, ref trace);
+
+        var filter2 = new CTraceFilter() {
+            IterateEntities = true,
+            // ShouldHitEntity = ( ent ) =>
+            // {
+            // Console.WriteLine($"ShouldHitEntity: {(ent != null ? ent.DesignerName : "null")}");
+            // return true;
+            // }
+        };
+
+        Core.Trace.TracePlayerBBox(start, end, bbox, filter2, ref trace);
+    }
+
 
     [GameEventHandler(HookMode.Pre)]
     public HookResult HandleRoundStart( EventRoundStart @event )

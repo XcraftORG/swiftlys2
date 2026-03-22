@@ -10,6 +10,7 @@ using SwiftlyS2.Core.Events;
 using SwiftlyS2.Core.Hosting;
 using SwiftlyS2.Core.Natives;
 using SwiftlyS2.Core.Services;
+using SwiftlyS2.Core.Translations;
 using SwiftlyS2.Shared.SteamAPI;
 
 namespace SwiftlyS2.Core;
@@ -58,6 +59,7 @@ internal static class Bootstrap
         Environment.SetEnvironmentVariable("SWIFTLY_MANAGED_LOG", logPath);
         NativeBinding.BindNatives(nativeTable, nativeTableSize);
         NativeLibrary.SetDllImportResolver(typeof(NativeMethods).Assembly, SteamAPIDLLResolver);
+        GlobalLocalization.InitializeFromCore(basePath);
 
         EventPublisher.Register();
         GameFunctions.Initialize();
@@ -83,6 +85,7 @@ internal static class Bootstrap
             {
                 _ = config.SetBasePath(Path.Combine(Environment.GetEnvironmentVariable("SWIFTLY_MANAGED_ROOT")!, "configs"));
                 _ = config.AddJsonFile("permissions.jsonc", optional: false, reloadOnChange: true);
+                _ = config.AddJsonFile("command_overrides.jsonc", optional: true, reloadOnChange: true);
             })
             .ConfigureServices(( context, services ) =>
             {
@@ -95,6 +98,7 @@ internal static class Bootstrap
                     .AddPluginManager()
                     .AddHookManager()
                     .AddTraceManagerService()
+                    .AddCommandOverrideConfig()
                     .AddPermissionManager()
                     .AddCoreHookService()
                     .AddCoreCommandService()

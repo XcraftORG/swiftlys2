@@ -4,16 +4,21 @@ using System.Runtime.InteropServices;
 
 namespace SwiftlyS2.Shared.Natives;
 
-[StructLayout(LayoutKind.Explicit, Pack = 8, Size = 64)]
+[StructLayout(LayoutKind.Explicit, Pack = 8, Size = 72)]
 public struct CTraceFilter
 {
+    private static bool IsWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
     [FieldOffset(0x0)] private nint _pVTable;
     [FieldOffset(0x8)] public RnQueryShapeAttr_t QueryShapeAttributes;
 
     [FieldOffset(0x3A)]
     [MarshalAs(UnmanagedType.U1)]
-    public bool IterateEntities;
+    internal bool _IterateEntitiesLinux;
 
+    [FieldOffset(0x40)]
+    [MarshalAs(UnmanagedType.U1)]
+    public bool IterateEntities;
 
     public CTraceFilter()
     {
@@ -31,6 +36,11 @@ public struct CTraceFilter
         if (this._pVTable == 0)
         {
             _pVTable = CTraceFilterVTable.pCTraceFilterShouldHitFunctionCall;
+        }
+
+        if (!IsWindows)
+        {
+            _IterateEntitiesLinux = IterateEntities;
         }
     }
 }
@@ -62,10 +72,11 @@ internal static class CTraceFilterVTable
     public unsafe static byte ShouldHitEntity( CTraceFilter* filter, nint entity )
     {
         var ent = EntityManager.GetEntityByAddress(entity) as CBaseEntity ?? Helper.AsSchema<CBaseEntity>(entity);
+        var entityIndex = ent.Index;
 
         return ent == null || !ent.IsValid
             ? (byte)0
-            : filter->QueryShapeAttributes.EntityIdsToIgnore[0] != ent.Index && filter->QueryShapeAttributes.EntityIdsToIgnore[1] != ent.Index ? (byte)1 : (byte)0;
+            : filter->QueryShapeAttributes.EntityIdsToIgnore[0] != entityIndex && filter->QueryShapeAttributes.EntityIdsToIgnore[1] != entityIndex ? (byte)1 : (byte)0;
     }
 
     static unsafe CTraceFilterVTable()
